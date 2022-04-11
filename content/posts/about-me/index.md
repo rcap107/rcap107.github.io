@@ -13,6 +13,7 @@ TocOpen: false
 draft: false
 hidemeta: false
 comments: false
+canonicalURL: "https://rcap107.github.io/about"
 description: "Something about myself."
 disableHLJS: true # to disable highlightjs
 disableShare: false
@@ -66,4 +67,4 @@ On the personal side, I am a big fan of gaming (in some posts I might nerd out
   on some of my favorite titles), technology and history, as some of my
 previous colleagues might attest.
 
-If you read this far, thanks, and I hope you'll enjoy the blog! 
+If you read this far, thanks, and I hope you'll enjoy the blog!

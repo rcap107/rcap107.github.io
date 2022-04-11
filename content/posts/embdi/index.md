@@ -14,7 +14,6 @@ draft: false
 hidemeta: false
 comments: false
 description: "A short introduction to EmbDI."
-canonicalURL: "https://canonical.url/to/page"
 disableHLJS: true # to disable highlightjs
 disableShare: false
 disableHLJS: false

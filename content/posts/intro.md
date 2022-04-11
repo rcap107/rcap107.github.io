@@ -11,7 +11,7 @@ TocOpen: false
 draft: false
 hidemeta: false
 comments: false
-description: "An introudction to the blog"
+description: "An introduction to the blog"
 # canonicalURL: "https://canonical.url/to/page"
 disableHLJS: true # to disable highlightjs
 disableShare: false
@@ -60,4 +60,4 @@ Hopefully this blog will be a compelling enough reason for me to get to do that
 in the future. No guarantees yet, though.
 
 # Tell me about yourself
-Check [posts/about] for a brief story of my recent life. 
+Check the [About](/posts/about-me) page for a brief story of my recent life.
