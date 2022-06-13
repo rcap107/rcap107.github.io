@@ -9,23 +9,24 @@
       <link>https://rcap107.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 12 Apr 2022 00:52:11 +0200</lastBuildDate><atom:link href="https://rcap107.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 12 Apr 2022 15:08:12 +0200</lastBuildDate><atom:link href="https://rcap107.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Getting to know embeddings</title>
-      <link>https://rcap107.github.io/posts/embeddings/</link>
-      <pubDate>Tue, 12 Apr 2022 00:52:11 +0200</pubDate>
+      <title>Something about this myself</title>
+      <link>https://rcap107.github.io/posts/about-me/about/</link>
+      <pubDate>Fri, 08 Apr 2022 16:45:31 +0200</pubDate>
       
-      <guid>https://rcap107.github.io/posts/embeddings/</guid>
-      <description>Introducing embeddings. </description>
+      <guid>https://rcap107.github.io/posts/about-me/about/</guid>
+      <description>Hi! My name is Riccardo Cappuzzo, and I&amp;rsquo;m the author of this blog. I hold a PhD in Computer Science, which I&amp;rsquo;ve obtained from Sorbonne University after working for three and a half years at EURECOM, in Sophia Antipolis. I&amp;rsquo;ve been living in the south of France for almost six years now, starting as a student at EURECOM during my Master Degree.
+I got my Bachelor&amp;rsquo;s degree in Computer Engineering from Politecnico di Torino in Turin, then I continued on with a Master degree in Communications and Computer Networks Engineering from the same university.</description>
     </item>
     
     <item>
-      <title>About Me</title>
-      <link>https://rcap107.github.io/posts/about-me/</link>
-      <pubDate>Fri, 08 Apr 2022 16:45:31 +0200</pubDate>
+      <title>Something about this blog</title>
+      <link>https://rcap107.github.io/posts/about-me/intro-blog/</link>
+      <pubDate>Tue, 29 Mar 2022 22:38:21 +0200</pubDate>
       
-      <guid>https://rcap107.github.io/posts/about-me/</guid>
-      <description>Something about myself.</description>
+      <guid>https://rcap107.github.io/posts/about-me/intro-blog/</guid>
+      <description>Something about this blog</description>
     </item>
     
     <item>
@@ -39,20 +40,38 @@
     
     <item>
       <title>Introducing EmbDI</title>
-      <link>https://rcap107.github.io/posts/embdi/</link>
-      <pubDate>Wed, 06 Apr 2022 18:11:54 +0200</pubDate>
+      <link>https://rcap107.github.io/posts/embdi/intro-embdi/</link>
+      <pubDate>Tue, 12 Apr 2022 14:07:48 +0200</pubDate>
       
-      <guid>https://rcap107.github.io/posts/embdi/</guid>
-      <description>A short introduction to EmbDI.</description>
+      <guid>https://rcap107.github.io/posts/embdi/intro-embdi/</guid>
+      <description>Desc Text.</description>
     </item>
     
     <item>
-      <title>Intro</title>
-      <link>https://rcap107.github.io/posts/intro/</link>
-      <pubDate>Tue, 29 Mar 2022 22:38:21 +0200</pubDate>
+      <title>Operations Embeddings</title>
+      <link>https://rcap107.github.io/posts/embeddings/operations-embeddings/</link>
+      <pubDate>Tue, 12 Apr 2022 02:03:13 +0200</pubDate>
       
-      <guid>https://rcap107.github.io/posts/intro/</guid>
-      <description>An introduction to the blog</description>
+      <guid>https://rcap107.github.io/posts/embeddings/operations-embeddings/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>Intro Embeddings</title>
+      <link>https://rcap107.github.io/posts/embeddings/intro-embeddings/</link>
+      <pubDate>Tue, 12 Apr 2022 02:02:56 +0200</pubDate>
+      
+      <guid>https://rcap107.github.io/posts/embeddings/intro-embeddings/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>Emb Heatmaps</title>
+      <link>https://rcap107.github.io/posts/embeddings/emb-heatmaps/</link>
+      <pubDate>Tue, 12 Apr 2022 01:10:58 +0200</pubDate>
+      
+      <guid>https://rcap107.github.io/posts/embeddings/emb-heatmaps/</guid>
+      <description>Desc Text.</description>
     </item>
     
   </channel>
