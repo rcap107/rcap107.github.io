@@ -1,7 +1,7 @@
 ---
-title: "Intro"
+title: "Something about this blog"
 date: 2022-03-29T22:38:21+02:00
-# weight: 1
+weight: 200
 # aliases: ["/first"]
 tags: ["Introduction"]
 author: "Riccardo Cappuzzo"
@@ -11,7 +11,7 @@ TocOpen: false
 draft: false
 hidemeta: false
 comments: false
-description: "An introduction to the blog"
+description: "Something about this blog"
 # canonicalURL: "https://canonical.url/to/page"
 disableHLJS: true # to disable highlightjs
 disableShare: false

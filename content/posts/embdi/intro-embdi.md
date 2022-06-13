@@ -1,6 +1,6 @@
 ---
 title: "Introducing EmbDI"
-date: 2022-04-06T18:11:54+02:00
+date: 2022-04-12T14:07:48+02:00
 
 
 # weight: 1
@@ -13,7 +13,8 @@ TocOpen: false
 draft: false
 hidemeta: false
 comments: false
-description: "A short introduction to EmbDI."
+description: "Desc Text."
+canonicalURL: "https://canonical.url/to/page"
 disableHLJS: true # to disable highlightjs
 disableShare: false
 disableHLJS: false
@@ -23,7 +24,7 @@ ShowReadingTime: true
 ShowBreadCrumbs: true
 ShowPostNavLinks: true
 cover:
-    image: "./embdi_workflow.png" # image path/url
+    image: "<image path/url>" # image path/url
     alt: "<alt text>" # alt text
     caption: "<text>" # display caption under cover
     relative: false # when using page bundles set this to true
@@ -33,6 +34,7 @@ editPost:
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
 ---
+
 Out of all the work I've carried out during my PhD, EmbDI is by far the most
 important contribution. I've dedicated about half of PhD years working on
 designing, developing and implementing the system, and I can say I have been
@@ -43,11 +45,11 @@ to work on EmbDI. This post will act as introduction and as index for later post
 
 ## What is EmbDI?
 EmbDI stands for Embeddings for Data Integration, and is a system that generates
-embeddings for tabular data (specifically, pre-processed CSV tables) and then
+embeddings for tabular data (specifically, CSV tables) and then
 uses said embeddings for performing Entity Resolution and Schema Matching. It was
 developed during my PhD as a solution to the problem of automating those data
 curation procedures and does so remarkably well, beating previous state of the
-art systems by pretty large margins.
+art systems by a pretty large margin.
 
 While the ideas behind the implementation
 of the code were developed together my supervisor (Prof. Paolo Papotti), and another
@@ -64,7 +66,7 @@ embeddings themselves.
 
 The code has been *thoroughly* tested to produce results for a paper that
 made it to SIGMOD 2020, which can be
-found [here](./sigmod-2020-embdi.pdf).
+found [here](/pubs/sigmod-2020-embdi.pdf).
 The slides used for the SIGMOD 2020 presentation are also available
 [here](https://docs.google.com/presentation/d/e/2PACX-1vRqWYodB5N6J68WxohcnmxIIWMaac98TwNsM4K8fh15u5wKNQxUtlIpIa7_nebVEeedD8ZhJXgoizPf/pub?start=true&loop=true&delayms=3000).
 
@@ -88,6 +90,7 @@ random walks).
 4. Feed the training corpus to the word2vec embeddings training algorithm.
 5. Use the geometric properties of the embeddings to find related tuples and columns.
 
-This is, of course, extremely summarized. I would like to explore how EmbDI works more in depth over the course of a series
-of blog posts that will go into far more detail than what I'll do here, so I'll make sure to link back to those posts once
-they're ready.
+This is, of course, extremely summarized. I would like to explore how EmbDI
+works more in depth over the course of a series of blog posts that will go into
+far more detail than what I'll do here, so I'll make sure to link back to those
+posts once they're ready.

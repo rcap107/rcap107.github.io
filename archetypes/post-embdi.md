@@ -5,7 +5,7 @@ date: {{ .Date }}
 
 # weight: 1
 # aliases: ["/first"]
-tags: [""]
+tags: ["embdi"]
 author: "Riccardo Cappuzzo"
 # author: ["Me", "You"] # multiple authors
 showToc: true

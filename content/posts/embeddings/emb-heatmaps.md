@@ -1,12 +1,12 @@
 ---
-title: "{{ replace .Name "-" " " | title }}"
-date: {{ .Date }}
+title: "Emb Heatmaps"
+date: 2022-04-12T01:10:58+02:00
 
 
 # weight: 1
 # aliases: ["/first"]
-tags: [""]
-author: "Riccardo Cappuzzo"
+tags: ["first"]
+author: "Me"
 # author: ["Me", "You"] # multiple authors
 showToc: true
 TocOpen: false
@@ -34,3 +34,5 @@ editPost:
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
 ---
+
+Heatmaps are cool

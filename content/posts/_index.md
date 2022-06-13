@@ -1,26 +1,26 @@
 ---
-title: "Getting to know embeddings"
-date: 2022-04-12T00:52:11+02:00
+title: "Main Subjects"
+date: 2022-04-12T14:24:17+02:00
 
 
 # weight: 1
 # aliases: ["/first"]
-tags: ["embdi", "embeddings"]
+tags: [""]
 author: "Riccardo Cappuzzo"
 # author: ["Me", "You"] # multiple authors
-showToc: true
+showToc: false
 TocOpen: false
 draft: false
 hidemeta: false
 comments: false
-description: "Introducing embeddings. "
-canonicalURL: ""
+description: "An index of all the main subjects examined in the blog. "
+canonicalURL: "https://canonical.url/to/page"
 disableHLJS: true # to disable highlightjs
 disableShare: false
 disableHLJS: false
 hideSummary: false
 searchHidden: true
-ShowReadingTime: true
+ShowReadingTime: false
 ShowBreadCrumbs: true
 ShowPostNavLinks: true
 cover:

@@ -1,12 +1,12 @@
 ---
-title: "{{ replace .Name "-" " " | title }}"
-date: {{ .Date }}
+title: "Operations Embeddings"
+date: 2022-04-12T02:03:13+02:00
 
 
 # weight: 1
 # aliases: ["/first"]
-tags: [""]
-author: "Riccardo Cappuzzo"
+tags: ["first"]
+author: "Me"
 # author: ["Me", "You"] # multiple authors
 showToc: true
 TocOpen: false

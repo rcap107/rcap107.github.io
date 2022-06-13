@@ -1,6 +1,6 @@
 ---
-title: "{{ replace .Name "-" " " | title }}"
-date: {{ .Date }}
+title: "About"
+date: 2022-04-12T15:08:12+02:00
 
 
 # weight: 1
@@ -13,7 +13,7 @@ TocOpen: false
 draft: false
 hidemeta: false
 comments: false
-description: "Desc Text."
+description: ""
 canonicalURL: "https://canonical.url/to/page"
 disableHLJS: true # to disable highlightjs
 disableShare: false

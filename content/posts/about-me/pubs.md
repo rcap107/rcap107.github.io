@@ -6,12 +6,12 @@ layout: "post"
 url: "/publications/"
 canonicalURL: "https://rcap107.github.io/publications"
 summary: The list of publications I have worked on.
-
+weight: 300
 ---
 
 Here are my main publications:
 
-* Riccardo Cappuzzo, Paolo Papotti, and Saravanan Thirumuruganathan: **Creating Embeddings of Heterogeneous Relational Datasets for Data Integration Tasks.** SIGMOD 2020, DOI: https://doi.org/10.1145/3318464.3389742 [PDF](/pubs/sigmod-2020-embdi.pdf)
+* Riccardo Cappuzzo, Paolo Papotti, and Saravanan Thirumuruganathan: **Creating Embeddings of Heterogeneous Relational Datasets for Data Integration Tasks.** SIGMOD 2020,  [PDF](/pubs/sigmod-2020-embdi.pdf)
 
 * Riccardo Cappuzzo, Paolo Papotti, Saravanan Thirumuruganathan:
 **EmbDI: Generating Embeddings for Relational Data Integration (Discussion Paper).** SEBD 2021 [PDF](/pubs/embdi-sebd-2021.pdf)
