@@ -21,21 +21,21 @@ I got my Bachelor&amp;rsquo;s degree in Computer Engineering from Politecnico di
     </item>
     
     <item>
-      <title>Something about this blog</title>
-      <link>https://rcap107.github.io/posts/about-me/intro-blog/</link>
-      <pubDate>Tue, 29 Mar 2022 22:38:21 +0200</pubDate>
-      
-      <guid>https://rcap107.github.io/posts/about-me/intro-blog/</guid>
-      <description>Something about this blog</description>
-    </item>
-    
-    <item>
       <title>Publications</title>
       <link>https://rcap107.github.io/publications/</link>
       <pubDate>Thu, 07 Apr 2022 17:50:08 +0200</pubDate>
       
       <guid>https://rcap107.github.io/publications/</guid>
       <description>The list of publications I have worked on.</description>
+    </item>
+    
+    <item>
+      <title>Something about this blog</title>
+      <link>https://rcap107.github.io/posts/about-me/intro-blog/</link>
+      <pubDate>Tue, 29 Mar 2022 22:38:21 +0200</pubDate>
+      
+      <guid>https://rcap107.github.io/posts/about-me/intro-blog/</guid>
+      <description>Something about this blog</description>
     </item>
     
   </channel>

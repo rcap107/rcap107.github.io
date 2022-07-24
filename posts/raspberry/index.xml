@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Playing with IoT devices on A blog by RCAP</title>
+    <link>https://rcap107.github.io/posts/raspberry/</link>
+    <description>Recent content in Playing with IoT devices on A blog by RCAP</description>
+    <image>
+      <url>https://rcap107.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://rcap107.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 07 Jul 2022 00:58:49 +0200</lastBuildDate><atom:link href="https://rcap107.github.io/posts/raspberry/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Studying</title>
+      <link>https://rcap107.github.io/posts/raspberry/study-temperature/</link>
+      <pubDate>Sun, 17 Jul 2022 00:06:04 +0200</pubDate>
+      
+      <guid>https://rcap107.github.io/posts/raspberry/study-temperature/</guid>
+      <description>Notes on plots and dataframes Before we begin, a couple of notes on plots dataframes: this post has been prepared by converting a jupyter notebook into a markdown file using nbconvert. As it turns out, the default output format used by nbconvert to display dataframes isn&amp;rsquo;t rendered correctly by the Hugo backend I&amp;rsquo;m using for the blog. I was not able to find a &amp;ldquo;clean&amp;rdquo; solution for it, so for this post (and until I&amp;rsquo;ll find the actual fix) all tables are represented in raw html, rather than in a more decent format.</description>
+    </item>
+    
+    <item>
+      <title>Setting Up Thermometer</title>
+      <link>https://rcap107.github.io/posts/raspberry/setting-up-thermometer/</link>
+      <pubDate>Tue, 12 Jul 2022 00:33:56 +0200</pubDate>
+      
+      <guid>https://rcap107.github.io/posts/raspberry/setting-up-thermometer/</guid>
+      <description>In this post I will be explaining how I prepared the Raspberry Pi so that it could be used to read data from a DHT22 temperature/humidity sensor. To be clear, I did not exactly do much besides following a few guides, but still.
+The main links I have used are the following:
+Ardumotive - How to use the DHT22 </description>
+    </item>
+    
+    <item>
+      <title>Coding the Thermometer</title>
+      <link>https://rcap107.github.io/posts/raspberry/coding-the-thermometer/</link>
+      <pubDate>Tue, 12 Jul 2022 00:24:01 +0200</pubDate>
+      
+      <guid>https://rcap107.github.io/posts/raspberry/coding-the-thermometer/</guid>
+      <description>In this post, I will describe the code I have developed to run the thermometer, log the data and save it in such a way that it can be used to carry out some (limited) analytics. At this point, the thermometer has already been installed and the libraries have been installed (check Setting up the thermometer)
+Part of the code I am showing here was taken from the Ardumotive - How to use the DHT22 I have already referenced.</description>
+    </item>
+    
+    <item>
+      <title>The setup</title>
+      <link>https://rcap107.github.io/posts/raspberry/the_setup/</link>
+      <pubDate>Mon, 11 Jul 2022 00:54:30 +0200</pubDate>
+      
+      <guid>https://rcap107.github.io/posts/raspberry/the_setup/</guid>
+      <description>The device, and the accessories.</description>
+    </item>
+    
+    <item>
+      <title>Accessing the Pi remotely</title>
+      <link>https://rcap107.github.io/posts/raspberry/accessing-remotely/</link>
+      <pubDate>Sun, 10 Jul 2022 01:14:44 +0200</pubDate>
+      
+      <guid>https://rcap107.github.io/posts/raspberry/accessing-remotely/</guid>
+      <description>I&amp;rsquo;ll start my trip in the development with my Pi by explaining what I did to access it remotely, which normally is pretty straightforwards. I will also add a section on some absolutely not-straightforwards things that happened randomly one day, then stopped.
+For most of the setup, I had direct access to the Pi with keyboard and a screen (it was not headless). I also relied a lot on a bunch of guides and tutorials I found online, which I will try to link in the post.</description>
+    </item>
+    
+  </channel>
+</rss>
