@@ -1,7 +1,7 @@
 ---
 title: "Something about this blog"
 date: 2022-03-29T22:38:21+02:00
-weight: 200
+# weight: 200
 # aliases: ["/first"]
 tags: ["Introduction"]
 author: "Riccardo Cappuzzo"

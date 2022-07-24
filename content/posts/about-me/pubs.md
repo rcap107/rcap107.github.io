@@ -6,7 +6,7 @@ layout: "post"
 url: "/publications/"
 canonicalURL: "https://rcap107.github.io/publications"
 summary: The list of publications I have worked on.
-weight: 300
+# weight: 300
 ---
 
 Here are my main publications:

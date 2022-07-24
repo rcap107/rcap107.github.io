@@ -1,7 +1,7 @@
 ---
 title: "Something about this myself"
 date: 2022-04-08T16:45:31+02:00
-weight: 100
+# weight: 100
 # aliases: ["/first"]
 tags: ["about"]
 author: "Riccardo Cappuzzo"
@@ -9,30 +9,24 @@ author: "Riccardo Cappuzzo"
 showToc: false
 TocOpen: false
 draft: false
-hidemeta: false
+hidemeta: true
 comments: false
 canonicalURL: "https://rcap107.github.io/about"
 description: ""
 disableHLJS: true # to disable highlightjs
-disableShare: false
+disableShare: true
 disableHLJS: false
 hideSummary: false
 searchHidden: true
 ShowReadingTime: false
 ShowBreadCrumbs: false
-ShowPostNavLinks: true
-cover:
-    image: "<image path/url>" # image path/url
-    alt: "<alt text>" # alt text
-    caption: "<text>" # display caption under cover
-    relative: false # when using page bundles set this to true
-    hidden: true # only hide on current single page
+ShowPostNavLinks: false
 ---
 Hi! My name is Riccardo Cappuzzo, and I'm the author of this blog. I hold a PhD
 in Computer Science, which I've obtained from Sorbonne University after working
 for three and a half years at EURECOM, in Sophia Antipolis.
 I've been living in the south of France for almost six years now, starting as a
-student at EURECOM during my Master Degree.
+student at EURECOM during my Master Degree. 
 
 I got my Bachelor's degree in Computer Engineering from Politecnico di Torino in
 Turin, then I continued on with a Master degree in Communications and Computer
@@ -42,7 +36,7 @@ abroad to complete a double degree in Computer Security from EURECOM.
 As a part of the double degree program, I worked as an intern in SAP Labs,
 working on a method for anonymizing data under the scope of the Toreador
 European project. The results that I've obtained during the internship were
-reported in my master thesis (in [posts/publications/]) and in a student research
+reported in my master thesis and in a student research
 abstract that I presented at SIGAPP in 2018.
 Finally, I spent five more months as a junior developer with
 the same team to wrap up what I had done over the internship and better integrate
@@ -52,10 +46,11 @@ In October 2018 I went back to EURECOM, this time to work as a PhD student on th
 subject of automated models for data cleaning. During my PhD,  I worked mostly
 on how to convert tabular data into embeddings, and on how to use said embeddings
 for "doing stuff". I have published my work in SIGMOD and presented it in a
-number of different venues.
+number of different venues. All my publications are available in [here](/publications). 
 
 On the personal side, I am a big fan of gaming (in some posts I might nerd out
   on some of my favorite titles), technology and history, as some of my
-previous colleagues might attest.
+previous colleagues might attest. I'm also trying to become a "maker" and build 
+IoT devices to bore my dad with. 
 
 If you read this far, thanks, and I hope you'll enjoy the blog!

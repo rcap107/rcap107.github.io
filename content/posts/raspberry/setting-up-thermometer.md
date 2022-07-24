@@ -1,6 +1,6 @@
 ---
-title: "{{ replace .Name "-" " " | title }}"
-date: {{ .Date }}
+title: "Setting Up Thermometer"
+date: 2022-07-12T00:33:56+02:00
 
 
 # weight: 1
@@ -34,3 +34,11 @@ editPost:
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
 ---
+In this post I will be explaining how I prepared the Raspberry Pi so that it
+could be used to read data from a DHT22 temperature/humidity sensor. To be 
+clear, I did not exactly do much besides following a few guides, but still. 
+
+The main links I have used are the following: 
+- [Ardumotive - How to use the DHT22](https://www.ardumotive.com/how-to-use-the-dht-22-en.html)
+-
+-
