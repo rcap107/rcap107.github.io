@@ -20,8 +20,8 @@ disqusShortname: rcap107-github-io
 params:
     env: production # to enable google analytics, opengraph, twitter-cards and schema.
     title: A blog by RCAP
-    description: "A collection of stuff from RCAP"
-    keywords: [Blog, Portfolio, PaperMod]
+    description: "A collection of posts on data science, IoT, programming and miscellaneous. Also cats."
+    keywords: [Blog, Portfolio]
     author: Riccardo Cappuzzo
     # author: ["Me", "You"] # multiple authors
     images: ["<link or path of image for opengraph, twitter-cards>"]
@@ -58,23 +58,26 @@ params:
 
     # profile-mode
     profileMode:
-        enabled: false # needs to be explicitly set
-        title: ExampleSite
-        subtitle: "This is subtitle"
-        imageUrl: "<img location>"
-        imageWidth: 120
-        imageHeight: 120
-        imageTitle: my image
+        enabled: true # needs to be explicitly set
+        title: A blog by RicCap
+        subtitle: "A collection of posts on data science, IoT, programming and miscellaneous. Also cats."
+        imageUrl: "logo.png"
+        imageWidth: 200
+        imageHeight: 200
+        imageTitle: A logo I should fix at some point in the future. 
         buttons:
+            - name: About me
+              url: about
+            - name: Publications
+              url: publications
             - name: Posts
               url: posts
-            - name: Tags
-              url: tags
+
 
     # home-info mode
     homeInfoParams:
         Title: "A blog by RCAP"
-        Content: Welcome to my blog
+        Content: A blog on programming, data science and stuff I learn online. 
 
     socialIcons:
         # - name: twitter
@@ -83,6 +86,8 @@ params:
         #   url: "https://stackoverflow.com"
         - name: github
           url: "https://github.com/rcap107"
+        - name: linkedin
+          url: "https://www.linkedin.com/in/riccardo-cappuzzo-33a364ab/"
 
     analytics:
         google:
@@ -98,7 +103,7 @@ params:
     editPost:
         URL: "https://github.com/rcap107.github.io/content"
         Text: "Suggest Changes" # edit text
-        appendFilePath: true # to append file path to Edit link
+        appendFilePath: false # to append file path to Edit link
 
     # for search
     # https://fusejs.io/api/options.html

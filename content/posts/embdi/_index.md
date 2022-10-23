@@ -13,7 +13,7 @@ TocOpen: false
 draft: false
 hidemeta: false
 comments: false
-description: "A short introduction to EmbDI."
+summary: "EmbDI is the main contribution in my PhD. There is a lot of nuance and information to talk about, so I'll try to compile some of that in these posts."
 disableHLJS: true # to disable highlightjs
 disableShare: false
 disableHLJS: false

@@ -1,5 +1,5 @@
 ---
-title: "Something about this myself"
+title: "Something about myself"
 date: 2022-04-08T16:45:31+02:00
 # weight: 100
 # aliases: ["/first"]
@@ -12,7 +12,8 @@ draft: false
 hidemeta: true
 comments: false
 canonicalURL: "https://rcap107.github.io/about"
-description: ""
+url: "/about"
+summary: "A short bio on what I have studied and worked on during the years. "
 disableHLJS: true # to disable highlightjs
 disableShare: true
 disableHLJS: false
@@ -21,16 +22,19 @@ searchHidden: true
 ShowReadingTime: false
 ShowBreadCrumbs: false
 ShowPostNavLinks: false
----
-Hi! My name is Riccardo Cappuzzo, and I'm the author of this blog. I hold a PhD
-in Computer Science, which I've obtained from Sorbonne University after working
-for three and a half years at EURECOM, in Sophia Antipolis.
-I've been living in the south of France for almost six years now, starting as a
-student at EURECOM during my Master Degree. 
 
-I got my Bachelor's degree in Computer Engineering from Politecnico di Torino in
+---
+Hi! My name is Riccardo Cappuzzo, and I'm the author of this blog. I'm Italian, but I have been living in France for a few years now (unfortunately, I have yet to properly learn the language).
+
+I hold a PhD in Computer Science, which I've obtained from Sorbonne University after working for three and a half years at [EURECOM](https://www.eurecom.fr), in Sophia Antipolis.
+
+I am currently working as Postdoctoral Researcher, researching methods for producing general use embedded representations of tabular data, and how to apply them to custom(er) data. I am part of the [SODA Team](https://team.inria.fr/soda/) at [Inria Saclay](https://www.inria.fr/fr/centre-inria-de-saclay), and a researcher for [Dataiku](https://www.dataiku.com) at the same time. 
+
+Before moving to Paris, I've been living in the south of France for almost six years, starting as a student at EURECOM during my Master Degree. 
+
+I got my Bachelor's degree in Computer Engineering from [Politecnico di Torino](https://www.polito.it) in
 Turin, then I continued on with a Master degree in Communications and Computer
-Networks Engineering from the same university. At the same time, I did a year
+Networks Engineering from the same University. At the same time, I did a year
 abroad to complete a double degree in Computer Security from EURECOM.
 
 As a part of the double degree program, I worked as an intern in SAP Labs,

@@ -13,7 +13,7 @@ TocOpen: false
 draft: false
 hidemeta: false
 comments: false
-description: "A trip in the world of prototyping boards with Raspberries and Arduinos."
+summary: "A trip in the world of prototyping boards with Raspberries and Arduinos."
 canonicalURL: ""
 disableHLJS: true # to disable highlightjs
 disableShare: false

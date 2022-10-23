@@ -5,7 +5,7 @@ date: 2022-07-17T00:06:04+02:00
 
 # weight: 1
 # aliases: ["/first"]
-tags: [""]
+tags: ["raspberry", "IoT"]
 author: "Riccardo Cappuzzo"
 # author: ["Me", "You"] # multiple authors
 showToc: true
@@ -23,6 +23,7 @@ searchHidden: true
 ShowReadingTime: true
 ShowBreadCrumbs: true
 ShowPostNavLinks: true
+canonicalURL: "/posts/raspberry/study-temperature"
 cover:
     image: "<image path/url>" # image path/url
     alt: "<alt text>" # alt text
@@ -37,6 +38,8 @@ editPost:
 
 ### Notes on plots and dataframes
 Before we begin, a couple of notes on plots dataframes: this post has been prepared by converting a jupyter notebook into a markdown file using `nbconvert`. As it turns out, the default output format used by `nbconvert` to display dataframes isn't rendered correctly by the Hugo backend I'm using for the blog. I was not able to find a "clean" solution for it, so for this post (and until I'll find the actual fix) all tables are represented in raw html, rather than in a more decent format. I also need to figure out a better way of saving the plots, which allow to specify a `facecolor`, so that figures have a white background both in light and dark mode. For the time being, it's possible to switch to light mode to fix that particular problem. 
+
+The `nbconvert`-generated version of this post is also available [here](/posts/raspberry/study-temperature-auto).
 
 # Plotting temperature and humidity sensor readings with matplotlib
 

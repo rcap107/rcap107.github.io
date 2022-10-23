@@ -16,7 +16,9 @@ Here are my main publications:
 * Riccardo Cappuzzo, Paolo Papotti, Saravanan Thirumuruganathan:
 **EmbDI: Generating Embeddings for Relational Data Integration (Discussion Paper).** SEBD 2021 [PDF](/pubs/embdi-sebd-2021.pdf)
 
-* Riccardo Cappuzzo, Paolo Papotti, Elena Baralis: **Clustering of Categorical Data for Anonymization and Anomaly Detection**.
+* Riccardo Cappuzzo, under the supervision of Paolo Papotti, Elena Baralis: **Clustering of Categorical Data for Anonymization and Anomaly Detection**.
 Master Thesis at Politecnico di Torino [PDF](/pubs/master-thesis-polito.pdf)
 
-My PhD dissertation is yet to be published, it will be added here once it becomes available to public use.
+* Riccardo Cappuzzo, under the supervision of Paolo Papotti:
+**Deep Learning Models for Tabular Data Curation**.
+PhD Thesis at EURECOM/Sorbonne University [PDF](/pubs/phd-thesis-cappuzzo.pdf)

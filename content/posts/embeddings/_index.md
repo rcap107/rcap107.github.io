@@ -13,7 +13,7 @@ TocOpen: false
 draft: false
 hidemeta: false
 comments: false
-description: "Introducing embeddings. "
+summary: "Embeddings are *a cool way* of representing things with vectors. Let's talk about that.  "
 canonicalURL: ""
 disableHLJS: true # to disable highlightjs
 disableShare: false
@@ -35,10 +35,8 @@ editPost:
     appendFilePath: true # to append file path to Edit link
 ---
 
-Embedding models describe methods for transforming "regular data" into modified
-representations that somehow "encode" some property of the data. These representations
-are implemented as "vectors" and have a number of nice properties that can be
-exploited for a number of applications.
+Embedding models describe methods for encoding "regular data" (more often than not, text data) into representations that somehow maintain some property of the data. These representations
+are implemented as vectors, whose properties can be used for various applications.
 
-I will explore these concepts in a series of posts here. As EmbDI is based on
-embeddings, these series will be strongly connnected to each other. 
+Embeddings are a major part of my current research, so I will try to discuss some 
+of the results of that (as well as some things I did during my PhD) in these posts. 
