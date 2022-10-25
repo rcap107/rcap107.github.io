@@ -9,7 +9,16 @@
       <link>https://rcap107.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 17 Jul 2022 00:06:04 +0200</lastBuildDate><atom:link href="https://rcap107.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 Jul 2022 13:02:35 +0200</lastBuildDate><atom:link href="https://rcap107.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Studying the thermometer readings and playing with timeseries in Python</title>
+      <link>https://rcap107.github.io/posts/raspberry/study-temperature-auto/</link>
+      <pubDate>Sun, 17 Jul 2022 13:02:35 +0200</pubDate>
+      
+      <guid>https://rcap107.github.io/posts/raspberry/study-temperature-auto/</guid>
+      <description>A notebook where I&amp;rsquo;m learning to play with timeseries using data I gathered over a few weeks with a thermometer set up in the attic of my house.</description>
+    </item>
+    
     <item>
       <title>Studying</title>
       <link>https://rcap107.github.io/posts/raspberry/study-temperature/</link>
@@ -69,15 +78,6 @@ For most of the setup, I had direct access to the Pi with keyboard and a screen 
     </item>
     
     <item>
-      <title>Operations Embeddings</title>
-      <link>https://rcap107.github.io/posts/embeddings/operations-embeddings/</link>
-      <pubDate>Tue, 12 Apr 2022 02:03:13 +0200</pubDate>
-      
-      <guid>https://rcap107.github.io/posts/embeddings/operations-embeddings/</guid>
-      <description>Desc Text.</description>
-    </item>
-    
-    <item>
       <title>Intro Embeddings</title>
       <link>https://rcap107.github.io/posts/embeddings/intro-embeddings/</link>
       <pubDate>Tue, 12 Apr 2022 02:02:56 +0200</pubDate>
@@ -96,13 +96,12 @@ For most of the setup, I had direct access to the Pi with keyboard and a screen 
     </item>
     
     <item>
-      <title>Something about this myself</title>
-      <link>https://rcap107.github.io/posts/about-me/about/</link>
+      <title>Something about myself</title>
+      <link>https://rcap107.github.io/about/</link>
       <pubDate>Fri, 08 Apr 2022 16:45:31 +0200</pubDate>
       
-      <guid>https://rcap107.github.io/posts/about-me/about/</guid>
-      <description>Hi! My name is Riccardo Cappuzzo, and I&amp;rsquo;m the author of this blog. I hold a PhD in Computer Science, which I&amp;rsquo;ve obtained from Sorbonne University after working for three and a half years at EURECOM, in Sophia Antipolis. I&amp;rsquo;ve been living in the south of France for almost six years now, starting as a student at EURECOM during my Master Degree.
-I got my Bachelor&amp;rsquo;s degree in Computer Engineering from Politecnico di Torino in Turin, then I continued on with a Master degree in Communications and Computer Networks Engineering from the same university.</description>
+      <guid>https://rcap107.github.io/about/</guid>
+      <description>A short bio on what I have studied and worked on during the years.</description>
     </item>
     
     <item>
@@ -120,7 +119,7 @@ I got my Bachelor&amp;rsquo;s degree in Computer Engineering from Politecnico di
       <pubDate>Tue, 29 Mar 2022 22:38:21 +0200</pubDate>
       
       <guid>https://rcap107.github.io/posts/about-me/intro-blog/</guid>
-      <description>Something about this blog</description>
+      <description>Something about the content you should expect from this blog.</description>
     </item>
     
   </channel>
