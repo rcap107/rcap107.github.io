@@ -1,5 +1,5 @@
 ---
-title: "Studying"
+title: "Studying the temperature readings"
 date: 2022-07-17T00:06:04+02:00
 
 
