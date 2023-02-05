@@ -9,7 +9,16 @@
       <link>https://rcap107.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 17 Jul 2022 00:06:04 +0200</lastBuildDate><atom:link href="https://rcap107.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 05 Feb 2023 20:17:56 +0100</lastBuildDate><atom:link href="https://rcap107.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>about</title>
+      <link>https://rcap107.github.io/tags/about/</link>
+      <pubDate>Sun, 05 Feb 2023 20:17:56 +0100</pubDate>
+      
+      <guid>https://rcap107.github.io/tags/about/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>IoT</title>
       <link>https://rcap107.github.io/tags/iot/</link>
@@ -52,15 +61,6 @@
       <pubDate>Tue, 12 Apr 2022 02:02:56 +0200</pubDate>
       
       <guid>https://rcap107.github.io/tags/embeddings/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>about</title>
-      <link>https://rcap107.github.io/tags/about/</link>
-      <pubDate>Fri, 08 Apr 2022 16:45:31 +0200</pubDate>
-      
-      <guid>https://rcap107.github.io/tags/about/</guid>
       <description></description>
     </item>
     

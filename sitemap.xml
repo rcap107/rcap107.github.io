@@ -3,7 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://rcap107.github.io/</loc>
-    <lastmod>2022-07-17T13:02:35+02:00</lastmod>
+    <lastmod>2023-02-05T20:17:56+01:00</lastmod>
+  </url><url>
+    <loc>https://rcap107.github.io/tags/about/</loc>
+    <lastmod>2023-02-05T20:17:56+01:00</lastmod>
+  </url><url>
+    <loc>https://rcap107.github.io/tags/</loc>
+    <lastmod>2023-02-05T20:17:56+01:00</lastmod>
+  </url><url>
+    <loc>https://rcap107.github.io/posts/about-me/wherehavibeen/</loc>
+    <lastmod>2023-02-05T20:17:56+01:00</lastmod>
+  </url><url>
+    <loc>https://rcap107.github.io/posts/data_preparation/</loc>
+    <lastmod>2023-02-05T18:34:07+01:00</lastmod>
+  </url><url>
+    <loc>https://rcap107.github.io/posts/data_preparation/gittables/</loc>
+    <lastmod>2023-02-05T18:33:44+01:00</lastmod>
   </url><url>
     <loc>https://rcap107.github.io/posts/raspberry/study-temperature-auto/</loc>
     <lastmod>2022-07-17T13:02:35+02:00</lastmod>
@@ -15,9 +30,6 @@
     <lastmod>2022-07-17T00:06:04+02:00</lastmod>
   </url><url>
     <loc>https://rcap107.github.io/posts/raspberry/study-temperature/</loc>
-    <lastmod>2022-07-17T00:06:04+02:00</lastmod>
-  </url><url>
-    <loc>https://rcap107.github.io/tags/</loc>
     <lastmod>2022-07-17T00:06:04+02:00</lastmod>
   </url><url>
     <loc>https://rcap107.github.io/posts/raspberry/setting-up-thermometer/</loc>
@@ -62,16 +74,13 @@
     <loc>https://rcap107.github.io/posts/embeddings/</loc>
     <lastmod>2022-04-12T00:52:11+02:00</lastmod>
   </url><url>
-    <loc>https://rcap107.github.io/tags/about/</loc>
-    <lastmod>2022-04-08T16:45:31+02:00</lastmod>
-  </url><url>
     <loc>https://rcap107.github.io/about/</loc>
     <lastmod>2022-04-08T16:45:31+02:00</lastmod>
   </url><url>
     <loc>https://rcap107.github.io/publications/</loc>
     <lastmod>2022-04-07T17:50:08+02:00</lastmod>
   </url><url>
-    <loc>https://rcap107.github.io/posts/embdi/</loc>
+    <loc>https://rcap107.github.io/embdi/</loc>
     <lastmod>2022-04-06T18:11:54+02:00</lastmod>
   </url><url>
     <loc>https://rcap107.github.io/tags/introduction/</loc>
@@ -81,5 +90,7 @@
     <lastmod>2022-03-29T22:38:21+02:00</lastmod>
   </url><url>
     <loc>https://rcap107.github.io/categories/</loc>
+  </url><url>
+    <loc>https://rcap107.github.io/posts/archives/</loc>
   </url>
 </urlset>

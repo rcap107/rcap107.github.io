@@ -9,7 +9,26 @@
       <link>https://rcap107.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 17 Jul 2022 13:02:35 +0200</lastBuildDate><atom:link href="https://rcap107.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 05 Feb 2023 20:17:56 +0100</lastBuildDate><atom:link href="https://rcap107.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Where have you been all this time?</title>
+      <link>https://rcap107.github.io/posts/about-me/wherehavibeen/</link>
+      <pubDate>Sun, 05 Feb 2023 20:17:56 +0100</pubDate>
+      
+      <guid>https://rcap107.github.io/posts/about-me/wherehavibeen/</guid>
+      <description>It&amp;rsquo;s been a while, hasn&amp;rsquo;t it? According the newly added archives page, the latest post in this blog goes back all the way to July 2012&amp;hellip; This is quite the embarassing showing given that I was hoping to release a post every week. Truth be told, up until (relatively) recently I did not quite have a lot I was interested in discussing.
+However, something quite major happened a few months ago (last October, in fact), which has changed my living arrangements quite a bit.</description>
+    </item>
+    
+    <item>
+      <title>Gittables</title>
+      <link>https://rcap107.github.io/posts/data_preparation/gittables/</link>
+      <pubDate>Sun, 05 Feb 2023 18:33:44 +0100</pubDate>
+      
+      <guid>https://rcap107.github.io/posts/data_preparation/gittables/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Studying the thermometer readings and playing with timeseries in Python</title>
       <link>https://rcap107.github.io/posts/raspberry/study-temperature-auto/</link>
@@ -74,7 +93,7 @@ For most of the setup, I had direct access to the Pi with keyboard and a screen 
       <pubDate>Tue, 12 Apr 2022 14:07:48 +0200</pubDate>
       
       <guid>https://rcap107.github.io/posts/embdi/intro-embdi/</guid>
-      <description>Desc Text.</description>
+      <description>A short introduction to EmbDI.</description>
     </item>
     
     <item>
@@ -121,6 +140,7 @@ For most of the setup, I had direct access to the Pi with keyboard and a screen 
       <guid>https://rcap107.github.io/posts/about-me/intro-blog/</guid>
       <description>Something about the content you should expect from this blog.</description>
     </item>
+    
     
   </channel>
 </rss>
