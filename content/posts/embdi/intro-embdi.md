@@ -13,8 +13,7 @@ TocOpen: false
 draft: false
 hidemeta: false
 comments: false
-description: "Desc Text."
-canonicalURL: "https://canonical.url/to/page"
+summary: "A short introduction to EmbDI."
 disableHLJS: true # to disable highlightjs
 disableShare: false
 disableHLJS: false
@@ -57,7 +56,7 @@ researcher from a different institution (Dr. Saravanan Thirumuruganathan), I wro
 the vast majority of the code alone. This, of course, means that the code was a
 mess, then it got a bit better as I kept on hammering on it to clean up bugs
 and make it available to other researchers. The code has its repository on
-[gitlab](https://gitlab.eurecom.fr/cappuzzo/embdi), together with a very
+[github](https://github.com/rcap107/embdi), together with a very
 in-depth readme and instructions on how to run it.
 
 EmbDI is written in Python and relies on the usual data science libraries in
@@ -79,7 +78,7 @@ tables as CSV files, and returns as output a list of matches of tuples that
 represent the same entity (a task I'll call Entity Resolution), or a list of
 matches between columns that represent the same attribute (Schema Matching).
 
-{{< figure src="./embdi_workflow.jpg" >}}
+![png](/images/embdi/embdi_workflow.png)
 
 The procedure followed by EmbDI is the following:
 

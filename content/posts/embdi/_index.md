@@ -22,6 +22,7 @@ searchHidden: true
 ShowReadingTime: true
 ShowBreadCrumbs: true
 ShowPostNavLinks: true
+url: "/embdi/"
 cover:
     image: "./embdi_workflow.png" # image path/url
     alt: "<alt text>" # alt text

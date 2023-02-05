@@ -60,7 +60,7 @@ params:
     profileMode:
         enabled: true # needs to be explicitly set
         title: A blog by RicCap
-        subtitle: "A collection of posts on data science, IoT, programming and miscellaneous. Also cats."
+        subtitle: "A collection of posts on data science, IoT, programming and miscellaneous."
         imageUrl: "logo.png"
         imageWidth: 200
         imageHeight: 200
@@ -71,7 +71,7 @@ params:
             - name: Publications
               url: publications
             - name: Posts
-              url: posts
+              url: /posts/archives
 
 
     # home-info mode
@@ -89,11 +89,11 @@ params:
         - name: linkedin
           url: "https://www.linkedin.com/in/riccardo-cappuzzo-33a364ab/"
 
-    analytics:
-        google:
-            SiteVerificationTag: "XYZabc"
-        bing:
-            SiteVerificationTag: "XYZabc"
+    # analytics:
+    #     google:
+    #         SiteVerificationTag: "XYZabc"
+    #     bing:
+    #         SiteVerificationTag: "XYZabc"
 
     cover:
         hidden: true # hide everywhere but not in structured data
@@ -137,6 +137,10 @@ menu:
           name: categories
           url: /posts/
           weight: 30
+        - identifier: archive
+          name: archive
+          url: /posts/archives
+          weight: 45
 
 
 

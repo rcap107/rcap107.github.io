@@ -16,7 +16,7 @@
       <pubDate>Tue, 12 Apr 2022 14:07:48 +0200</pubDate>
       
       <guid>https://rcap107.github.io/posts/embdi/intro-embdi/</guid>
-      <description>Desc Text.</description>
+      <description>A short introduction to EmbDI.</description>
     </item>
     
     <item>
@@ -34,16 +34,16 @@
       <pubDate>Tue, 12 Apr 2022 00:52:11 +0200</pubDate>
       
       <guid>https://rcap107.github.io/posts/embeddings/</guid>
-      <description>Introducing embeddings. </description>
+      <description>Embeddings are &lt;em&gt;a cool way&lt;/em&gt; of representing things with vectors. Let&amp;rsquo;s talk about that.</description>
     </item>
     
     <item>
       <title>EmbDI</title>
-      <link>https://rcap107.github.io/posts/embdi/</link>
+      <link>https://rcap107.github.io/embdi/</link>
       <pubDate>Wed, 06 Apr 2022 18:11:54 +0200</pubDate>
       
-      <guid>https://rcap107.github.io/posts/embdi/</guid>
-      <description>A short introduction to EmbDI.</description>
+      <guid>https://rcap107.github.io/embdi/</guid>
+      <description>EmbDI is the main contribution in my PhD. There is a lot of nuance and information to talk about, so I&amp;rsquo;ll try to compile some of that in these posts.</description>
     </item>
     
   </channel>
