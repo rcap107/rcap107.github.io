@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>data preparation on A blog by RCAP</title>
+    <link>https://rcap107.github.io/tags/data-preparation/</link>
+    <description>Recent content in data preparation on A blog by RCAP</description>
+    <image>
+      <title>A blog by RCAP</title>
+      <url>https://rcap107.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://rcap107.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 05 Feb 2023 18:34:07 +0100</lastBuildDate><atom:link href="https://rcap107.github.io/tags/data-preparation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Data preparation</title>
+      <link>https://rcap107.github.io/posts/data_preparation/</link>
+      <pubDate>Sun, 05 Feb 2023 18:34:07 +0100</pubDate>
+      
+      <guid>https://rcap107.github.io/posts/data_preparation/</guid>
+      <description>Posts in this section will go over some of the work I do on a daily basis, specifically how I procure, prepare and present datasets in order to make them fruible and understandable by my colleagues. If you have ever read any paper on the subject of data preparation, cleaning or curation, you might have seen statements along the lines of &amp;ldquo;data scientists spend 80% of their time cleaning data&amp;rdquo;. From my experience, that&amp;rsquo;s a trite statement that is also perfectly accurate.</description>
+    </item>
+    
+  </channel>
+</rss>
