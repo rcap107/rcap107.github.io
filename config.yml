@@ -66,7 +66,7 @@ params:
         imageHeight: 200
         imageTitle: A logo I should fix at some point in the future. 
         buttons:
-            - name: About me
+            - name: About
               url: about
             - name: Publications
               url: publications

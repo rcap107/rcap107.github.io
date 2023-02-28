@@ -41,11 +41,10 @@ every week. Truth be told, up until (relatively) recently I did not quite have a
 However, something quite major happened a few months ago (last October, in fact), which has changed my living 
 arrangements quite a bit. If you have (for some bizarre reason) been following my Linkedin profile, you might have 
 noticed that I have moved to Paris. Yes, Paris! For the next two years (starting last October), I have been/will be 
-working as a Postdoctoral Researcher for Inria Saclay in the [team SODA]() with [Gael Varoquaux](), and at [Dataiku]()
-in their research department. 
+working as a Postdoctoral Researcher for Inria Saclay in the [SODA Team](https://team.inria.fr/soda/) and at [Dataiku](https://www.dataiku.com) in their research department. 
 
 This is pretty cool! I get to be a part of a strong research group which includes the guys that maintain 
-[scikit-learn](), and I have contributed with some minor additions to [dirtycat](): this will definitely be a great
+[scikit-learn](https://scikit-learn.org/stable/), and I have contributed with some minor additions to [dirtycat](https://github.com/dirty-cat/dirty_cat): this will definitely be a great
 learning experience as collaborative programming is something I have little to no experience in. 
 
 On the other side, I get to work in a pretty cool, young company where everyone looks bright and prepared. That side of
