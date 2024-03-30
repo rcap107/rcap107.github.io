@@ -1,23 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Data_preparation on A blog by RCAP</title>
-    <link>https://rcap107.github.io/posts/data_preparation/</link>
-    <description>Recent content in Data_preparation on A blog by RCAP</description>
+    <title>Data preparation on A blog by RCAP</title>
+    <link>http://localhost:1313/posts/data_preparation/</link>
+    <description>Recent content in Data preparation on A blog by RCAP</description>
     <image>
-      <url>https://rcap107.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://rcap107.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <title>A blog by RCAP</title>
+      <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 05 Feb 2023 18:34:07 +0100</lastBuildDate><atom:link href="https://rcap107.github.io/posts/data_preparation/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Gittables</title>
-      <link>https://rcap107.github.io/posts/data_preparation/gittables/</link>
-      <pubDate>Sun, 05 Feb 2023 18:33:44 +0100</pubDate>
-      
-      <guid>https://rcap107.github.io/posts/data_preparation/gittables/</guid>
-      <description></description>
-    </item>
-    
+    <language>en</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/data_preparation/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

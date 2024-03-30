@@ -2,134 +2,73 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>A blog by RCAP</title>
-    <link>https://rcap107.github.io/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on A blog by RCAP</description>
     <image>
-      <url>https://rcap107.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://rcap107.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <title>A blog by RCAP</title>
+      <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 05 Feb 2023 18:34:07 +0100</lastBuildDate><atom:link href="https://rcap107.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Sun, 05 Feb 2023 20:17:56 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Gittables</title>
-      <link>https://rcap107.github.io/posts/data_preparation/gittables/</link>
-      <pubDate>Sun, 05 Feb 2023 18:33:44 +0100</pubDate>
-      
-      <guid>https://rcap107.github.io/posts/data_preparation/gittables/</guid>
-      <description></description>
+      <title>Where have you been all this time?</title>
+      <link>http://localhost:1313/posts/about-me/wherehavibeen/</link>
+      <pubDate>Sun, 05 Feb 2023 20:17:56 +0100</pubDate>
+      <guid>http://localhost:1313/posts/about-me/wherehavibeen/</guid>
+      <description>It&amp;rsquo;s been a while, hasn&amp;rsquo;t it? According the newly added archives page, the latest post in this blog goes back all the way to July 2012&amp;hellip; This is quite the embarassing showing given that I was hoping to release a post every week. Truth be told, up until (relatively) recently I did not quite have a lot I was interested in discussing.
+However, something quite major happened a few months ago (last October, in fact), which has changed my living arrangements quite a bit.</description>
     </item>
-    
     <item>
       <title>Studying the thermometer readings and playing with timeseries in Python</title>
-      <link>https://rcap107.github.io/posts/raspberry/study-temperature-auto/</link>
+      <link>http://localhost:1313/posts/raspberry/study-temperature-auto/</link>
       <pubDate>Sun, 17 Jul 2022 13:02:35 +0200</pubDate>
-      
-      <guid>https://rcap107.github.io/posts/raspberry/study-temperature-auto/</guid>
+      <guid>http://localhost:1313/posts/raspberry/study-temperature-auto/</guid>
       <description>A notebook where I&amp;rsquo;m learning to play with timeseries using data I gathered over a few weeks with a thermometer set up in the attic of my house.</description>
     </item>
-    
     <item>
       <title>Studying the temperature readings</title>
-      <link>https://rcap107.github.io/posts/raspberry/study-temperature/</link>
+      <link>http://localhost:1313/posts/raspberry/study-temperature/</link>
       <pubDate>Sun, 17 Jul 2022 00:06:04 +0200</pubDate>
-      
-      <guid>https://rcap107.github.io/posts/raspberry/study-temperature/</guid>
+      <guid>http://localhost:1313/posts/raspberry/study-temperature/</guid>
       <description>Notes on plots and dataframes Before we begin, a couple of notes on plots dataframes: this post has been prepared by converting a jupyter notebook into a markdown file using nbconvert. As it turns out, the default output format used by nbconvert to display dataframes isn&amp;rsquo;t rendered correctly by the Hugo backend I&amp;rsquo;m using for the blog. I was not able to find a &amp;ldquo;clean&amp;rdquo; solution for it, so for this post (and until I&amp;rsquo;ll find the actual fix) all tables are represented in raw html, rather than in a more decent format.</description>
     </item>
-    
-    <item>
-      <title>Setting Up Thermometer</title>
-      <link>https://rcap107.github.io/posts/raspberry/setting-up-thermometer/</link>
-      <pubDate>Tue, 12 Jul 2022 00:33:56 +0200</pubDate>
-      
-      <guid>https://rcap107.github.io/posts/raspberry/setting-up-thermometer/</guid>
-      <description>In this post I will be explaining how I prepared the Raspberry Pi so that it could be used to read data from a DHT22 temperature/humidity sensor. To be clear, I did not exactly do much besides following a few guides, but still.
-The main links I have used are the following:
-Ardumotive - How to use the DHT22 </description>
-    </item>
-    
-    <item>
-      <title>Coding the Thermometer</title>
-      <link>https://rcap107.github.io/posts/raspberry/coding-the-thermometer/</link>
-      <pubDate>Tue, 12 Jul 2022 00:24:01 +0200</pubDate>
-      
-      <guid>https://rcap107.github.io/posts/raspberry/coding-the-thermometer/</guid>
-      <description>In this post, I will describe the code I have developed to run the thermometer, log the data and save it in such a way that it can be used to carry out some (limited) analytics. At this point, the thermometer has already been installed and the libraries have been installed (check Setting up the thermometer)
-Part of the code I am showing here was taken from the Ardumotive - How to use the DHT22 I have already referenced.</description>
-    </item>
-    
     <item>
       <title>The setup</title>
-      <link>https://rcap107.github.io/posts/raspberry/the_setup/</link>
+      <link>http://localhost:1313/posts/raspberry/the_setup/</link>
       <pubDate>Mon, 11 Jul 2022 00:54:30 +0200</pubDate>
-      
-      <guid>https://rcap107.github.io/posts/raspberry/the_setup/</guid>
+      <guid>http://localhost:1313/posts/raspberry/the_setup/</guid>
       <description>The device, and the accessories.</description>
     </item>
-    
-    <item>
-      <title>Accessing the Pi remotely</title>
-      <link>https://rcap107.github.io/posts/raspberry/accessing-remotely/</link>
-      <pubDate>Sun, 10 Jul 2022 01:14:44 +0200</pubDate>
-      
-      <guid>https://rcap107.github.io/posts/raspberry/accessing-remotely/</guid>
-      <description>I&amp;rsquo;ll start my trip in the development with my Pi by explaining what I did to access it remotely, which normally is pretty straightforwards. I will also add a section on some absolutely not-straightforwards things that happened randomly one day, then stopped.
-For most of the setup, I had direct access to the Pi with keyboard and a screen (it was not headless). I also relied a lot on a bunch of guides and tutorials I found online, which I will try to link in the post.</description>
-    </item>
-    
     <item>
       <title>Introducing EmbDI</title>
-      <link>https://rcap107.github.io/posts/embdi/intro-embdi/</link>
+      <link>http://localhost:1313/posts/embdi/intro-embdi/</link>
       <pubDate>Tue, 12 Apr 2022 14:07:48 +0200</pubDate>
-      
-      <guid>https://rcap107.github.io/posts/embdi/intro-embdi/</guid>
+      <guid>http://localhost:1313/posts/embdi/intro-embdi/</guid>
       <description>A short introduction to EmbDI.</description>
     </item>
-    
-    <item>
-      <title>Intro Embeddings</title>
-      <link>https://rcap107.github.io/posts/embeddings/intro-embeddings/</link>
-      <pubDate>Tue, 12 Apr 2022 02:02:56 +0200</pubDate>
-      
-      <guid>https://rcap107.github.io/posts/embeddings/intro-embeddings/</guid>
-      <description>Desc Text.</description>
-    </item>
-    
-    <item>
-      <title>Emb Heatmaps</title>
-      <link>https://rcap107.github.io/posts/embeddings/emb-heatmaps/</link>
-      <pubDate>Tue, 12 Apr 2022 01:10:58 +0200</pubDate>
-      
-      <guid>https://rcap107.github.io/posts/embeddings/emb-heatmaps/</guid>
-      <description>How I stopped worrying and learned to love projections. </description>
-    </item>
-    
     <item>
       <title>Something about myself</title>
-      <link>https://rcap107.github.io/about/</link>
+      <link>http://localhost:1313/about/</link>
       <pubDate>Fri, 08 Apr 2022 16:45:31 +0200</pubDate>
-      
-      <guid>https://rcap107.github.io/about/</guid>
+      <guid>http://localhost:1313/about/</guid>
       <description>A short bio on what I have studied and worked on during the years.</description>
     </item>
-    
     <item>
       <title>Publications</title>
-      <link>https://rcap107.github.io/publications/</link>
+      <link>http://localhost:1313/publications/</link>
       <pubDate>Thu, 07 Apr 2022 17:50:08 +0200</pubDate>
-      
-      <guid>https://rcap107.github.io/publications/</guid>
+      <guid>http://localhost:1313/publications/</guid>
       <description>The list of publications I have worked on.</description>
     </item>
-    
     <item>
       <title>Something about this blog</title>
-      <link>https://rcap107.github.io/posts/about-me/intro-blog/</link>
+      <link>http://localhost:1313/posts/about-me/intro-blog/</link>
       <pubDate>Tue, 29 Mar 2022 22:38:21 +0200</pubDate>
-      
-      <guid>https://rcap107.github.io/posts/about-me/intro-blog/</guid>
+      <guid>http://localhost:1313/posts/about-me/intro-blog/</guid>
       <description>Something about the content you should expect from this blog.</description>
     </item>
-    
   </channel>
 </rss>

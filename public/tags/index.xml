@@ -2,76 +2,72 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on A blog by RCAP</title>
-    <link>https://rcap107.github.io/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on A blog by RCAP</description>
     <image>
-      <url>https://rcap107.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://rcap107.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <title>A blog by RCAP</title>
+      <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 17 Jul 2022 00:06:04 +0200</lastBuildDate><atom:link href="https://rcap107.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Sun, 05 Feb 2023 20:17:56 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/tags/about/</link>
+      <pubDate>Sun, 05 Feb 2023 20:17:56 +0100</pubDate>
+      <guid>http://localhost:1313/tags/about/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Data Preparation</title>
+      <link>http://localhost:1313/tags/data-preparation/</link>
+      <pubDate>Sun, 05 Feb 2023 18:34:07 +0100</pubDate>
+      <guid>http://localhost:1313/tags/data-preparation/</guid>
+      <description></description>
+    </item>
     <item>
       <title>IoT</title>
-      <link>https://rcap107.github.io/tags/iot/</link>
+      <link>http://localhost:1313/tags/iot/</link>
       <pubDate>Sun, 17 Jul 2022 00:06:04 +0200</pubDate>
-      
-      <guid>https://rcap107.github.io/tags/iot/</guid>
+      <guid>http://localhost:1313/tags/iot/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>raspberry</title>
-      <link>https://rcap107.github.io/tags/raspberry/</link>
+      <title>Raspberry</title>
+      <link>http://localhost:1313/tags/raspberry/</link>
       <pubDate>Sun, 17 Jul 2022 00:06:04 +0200</pubDate>
-      
-      <guid>https://rcap107.github.io/tags/raspberry/</guid>
+      <guid>http://localhost:1313/tags/raspberry/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>arduino</title>
-      <link>https://rcap107.github.io/tags/arduino/</link>
+      <title>Arduino</title>
+      <link>http://localhost:1313/tags/arduino/</link>
       <pubDate>Mon, 11 Jul 2022 00:54:30 +0200</pubDate>
-      
-      <guid>https://rcap107.github.io/tags/arduino/</guid>
+      <guid>http://localhost:1313/tags/arduino/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>embdi</title>
-      <link>https://rcap107.github.io/tags/embdi/</link>
+      <title>Embdi</title>
+      <link>http://localhost:1313/tags/embdi/</link>
       <pubDate>Tue, 12 Apr 2022 14:07:48 +0200</pubDate>
-      
-      <guid>https://rcap107.github.io/tags/embdi/</guid>
+      <guid>http://localhost:1313/tags/embdi/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>embeddings</title>
-      <link>https://rcap107.github.io/tags/embeddings/</link>
-      <pubDate>Tue, 12 Apr 2022 02:02:56 +0200</pubDate>
-      
-      <guid>https://rcap107.github.io/tags/embeddings/</guid>
+      <title>Embeddings</title>
+      <link>http://localhost:1313/tags/embeddings/</link>
+      <pubDate>Tue, 12 Apr 2022 00:52:11 +0200</pubDate>
+      <guid>http://localhost:1313/tags/embeddings/</guid>
       <description></description>
     </item>
-    
-    <item>
-      <title>about</title>
-      <link>https://rcap107.github.io/tags/about/</link>
-      <pubDate>Fri, 08 Apr 2022 16:45:31 +0200</pubDate>
-      
-      <guid>https://rcap107.github.io/tags/about/</guid>
-      <description></description>
-    </item>
-    
     <item>
       <title>Introduction</title>
-      <link>https://rcap107.github.io/tags/introduction/</link>
+      <link>http://localhost:1313/tags/introduction/</link>
       <pubDate>Tue, 29 Mar 2022 22:38:21 +0200</pubDate>
-      
-      <guid>https://rcap107.github.io/tags/introduction/</guid>
+      <guid>http://localhost:1313/tags/introduction/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

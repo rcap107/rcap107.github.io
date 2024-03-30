@@ -10,7 +10,7 @@ author: "Riccardo Cappuzzo"
 # author: ["Me", "You"] # multiple authors
 showToc: true
 TocOpen: false
-draft: false
+draft: true
 hidemeta: false
 comments: true
 description: ""
@@ -37,7 +37,8 @@ editPost:
 In this post, I will describe the code I have developed to run the thermometer, 
 log the data and save it in such a way that it can be used to carry out some 
 (limited) analytics. At this point, the thermometer has already been installed 
-and the libraries have been installed (check [Setting up the thermometer]({{< ref "/content/posts/raspberry/setting-up-thermometer.md" >}}))
+<!-- and the libraries have been installed (check [Setting up the thermometer]("/content/posts/raspberry/setting-up-thermometer.md") -->
+<!-- and the libraries have been installed (check [Setting up the thermometer]({{< ref "/content/posts/raspberry/setting-up-thermometer.md" >}})) -->
 
 Part of the code I am showing here was taken from the 
 [Ardumotive - How to use the DHT22](https://www.ardumotive.com/how-to-use-the-dht-22-en.html) 
@@ -45,7 +46,7 @@ I have already referenced. I then expanded on it to add some simple logging.
 
 ### Libraries
 To run the code, only three libraries are needed: the `Adafruit_DHT` library, 
-which was installed in the [previous post]({{< ref "/content/posts/raspberry/setting-up-thermometer.md" >}}), the 
+<!-- which was installed in the [previous post]({{< ref "/content/posts/raspberry/setting-up-thermometer.md" >}}), the  -->
 `time` library (for `sleep`), and the `datetime` library for better date/time
 utilities. 
 
