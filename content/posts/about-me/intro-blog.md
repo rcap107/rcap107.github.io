@@ -29,7 +29,7 @@ editPost:
 
 
 # What should you expect from this blog?
-I am writing this blog as I ~~complete my PhD~~ finished my PhD to put together
+I am writing this blog to put together
 some of the issues, solutions and discoveries I stumbled upon during my research.
 
 Since it appears that I have a knack for finding weird and hard to reproduce

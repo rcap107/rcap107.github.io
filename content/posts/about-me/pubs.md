@@ -11,6 +11,10 @@ summary: The list of publications I have worked on.
 
 Here are my main publications:
 
+* Riccardo Cappuzzo, Gael Varoquaux, Aimee Coelho, Paolo Papotti: **Retrieve, Merge, Predict: Augmenting Tables with Data Lakes** Pre-print, submitted at VLDB2024, [PDF](/pubs/arxiv-retrieve_merge_predict.pdf)
+
+* Riccardo Cappuzzo, Paolo Papotti, and Saravanan Thirumuruganathan: **Relational Data Imputation with Graph Neural Networks** EDBT2024, [PDF](/pubs/hal-grimp-edbt.pdf)
+
 * Riccardo Cappuzzo, Paolo Papotti, and Saravanan Thirumuruganathan: **Creating Embeddings of Heterogeneous Relational Datasets for Data Integration Tasks.** SIGMOD 2020,  [PDF](/pubs/sigmod-2020-embdi.pdf)
 
 * Riccardo Cappuzzo, Paolo Papotti, Saravanan Thirumuruganathan:
