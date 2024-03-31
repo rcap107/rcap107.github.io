@@ -1,5 +1,5 @@
 baseURL: "https://rcap107.github.io/"
-title: A blog by RCAP
+title: A blog by RicCap
 paginate: 5
 theme: PaperMod
 
@@ -19,18 +19,18 @@ disqusShortname: rcap107-github-io
 
 params:
     env: production # to enable google analytics, opengraph, twitter-cards and schema.
-    title: A blog by RCAP
-    description: "A collection of posts on data science, IoT, programming and miscellaneous. Also cats."
+    title: A blog by RicCap
+    description: "A collection of posts on data science, programming, and more."
     keywords: [Blog, Portfolio]
     author: Riccardo Cappuzzo
     # author: ["Me", "You"] # multiple authors
-    images: ["<link or path of image for opengraph, twitter-cards>"]
+    # images: ["<link or path of image for opengraph, twitter-cards>"]
     DateFormat: "January 2, 2006"
     defaultTheme: auto # dark, light
     disableThemeToggle: false
 
     ShowReadingTime: true
-    ShowShareButtons: true
+    ShowShareButtons: false
     ShowPostNavLinks: true
     ShowBreadCrumbs: true
     ShowCodeCopyButtons: false
@@ -60,11 +60,11 @@ params:
     profileMode:
         enabled: true # needs to be explicitly set
         title: A blog by RicCap
-        subtitle: "A collection of posts on data science, IoT, programming and miscellaneous."
+        subtitle: "A collection of posts on data science, programming and more."
         imageUrl: "logo.png"
         imageWidth: 200
         imageHeight: 200
-        imageTitle: A logo I should fix at some point in the future. 
+        imageTitle: My beautiful logo. 
         buttons:
             - name: About
               url: about
@@ -72,12 +72,14 @@ params:
               url: publications
             - name: Posts
               url: /posts/archives
+            - name: News
+              url: /posts/
 
 
     # home-info mode
     homeInfoParams:
         Title: "A blog by RCAP"
-        Content: A blog on programming, data science and stuff I learn online. 
+        Content: A blog on data science, programming, and more. 
 
     socialIcons:
         # - name: twitter
@@ -121,10 +123,10 @@ menu:
           name: about
           url: /posts/about-me/
           weight: 10
-        - identifier: tags
-          name: tags
-          url: /tags/
-          weight: 20
+        # - identifier: tags
+        #   name: tags
+        #   url: /tags/
+        #   weight: 20
         - identifier: home
           name: rcap107.github.io
           url: https://rcap107.github.io
@@ -133,23 +135,11 @@ menu:
           name: publications
           url: /publications/
           weight: 40
-        - identifier: categories
-          name: categories
-          url: /posts/
-          weight: 30
+        # - identifier: categories
+        #   name: categories
+        #   url: /posts/
+        #   weight: 30
         - identifier: archive
           name: archive
           url: /posts/archives
           weight: 45
-
-
-
-# Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
-# pygmentsUseClasses: true
-# markup:
-#     highlight:
-#         # anchorLineNos: true
-#         codeFences: true
-#         guessSyntax: true
-#         lineNos: true
-#         style: monokai
