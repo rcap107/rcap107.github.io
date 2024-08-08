@@ -10,7 +10,7 @@ author: "Riccardo Cappuzzo"
 # author: ["Me", "You"] # multiple authors
 showToc: true
 TocOpen: false
-draft: false
+draft: true
 hidemeta: false
 comments: false
 summary: "A short introduction to EmbDI."

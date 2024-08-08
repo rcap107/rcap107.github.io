@@ -10,7 +10,7 @@ author: "Riccardo Cappuzzo"
 # author: ["Me", "You"] # multiple authors
 showToc: true
 TocOpen: false
-draft: false
+draft: true
 hidemeta: false
 comments: false
 summary: "EmbDI is the main contribution in my PhD. There is a lot of nuance and information to talk about, so I'll try to compile some of that in these posts."
