@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Data preparation on A blog by RicCap</title>
+    <title>Data preparation on Riccardo Cappuzzo / Data Science, Machine Learning, Python</title>
     <link>https://rcap107.github.io/posts/data_preparation/</link>
-    <description>Recent content in Data preparation on A blog by RicCap</description>
+    <description>Recent content in Data preparation on Riccardo Cappuzzo / Data Science, Machine Learning, Python</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate></lastBuildDate>
