@@ -1,5 +1,5 @@
 baseURL: "https://rcap107.github.io/"
-title: A blog by RicCap
+title: Riccardo Cappuzzo / Data Science, Machine Learning, Python
 paginate: 5
 theme: PaperMod
 
@@ -19,8 +19,8 @@ disqusShortname: rcap107-github-io
 
 params:
     env: production # to enable google analytics, opengraph, twitter-cards and schema.
-    title: A blog by RicCap
-    description: "A collection of posts on data science, programming, and more."
+    title: "Riccardo Cappuzzo / Data Science, Machine Learning, Python"
+    description: "Information and personal news about Riccardo Cappuzzo"
     keywords: [Blog, Portfolio]
     author: Riccardo Cappuzzo
     # author: ["Me", "You"] # multiple authors
@@ -59,8 +59,8 @@ params:
     # profile-mode
     profileMode:
         enabled: true # needs to be explicitly set
-        title: A blog by RicCap
-        subtitle: "A collection of posts on data science, programming and more."
+        title: "Riccardo Cappuzzo / Data Science, Machine Learning, Python"
+        subtitle: "Information and personal news"
         imageUrl: "logo.png"
         imageWidth: 200
         imageHeight: 200
@@ -70,16 +70,16 @@ params:
               url: about
             - name: Publications
               url: publications
-            - name: Posts
-              url: /posts/archives
+            # - name: Posts
+            #   url: /posts/archives
             - name: News
               url: /posts/
 
 
     # home-info mode
     homeInfoParams:
-        Title: "A blog by RCAP"
-        Content: A blog on data science, programming, and more. 
+        Title: "Riccardo Cappuzzo / Data Science, Machine Learning, Python"
+        Content: Information and personal news
 
     socialIcons:
         # - name: twitter
@@ -89,7 +89,7 @@ params:
         - name: github
           url: "https://github.com/rcap107"
         - name: linkedin
-          url: "https://www.linkedin.com/in/riccardo-cappuzzo-33a364ab/"
+          url: "https://www.linkedin.com/in/riccardo-cappuzzo/"
 
     # analytics:
     #     google:
