@@ -1,13 +1,30 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Riccardo Cappuzzo / Data Science, Machine Learning, Python</title>
+    <title>Riccardo Cappuzzo</title>
     <link>https://rcap107.github.io/</link>
-    <description>Recent content on Riccardo Cappuzzo / Data Science, Machine Learning, Python</description>
+    <description>Recent content on Riccardo Cappuzzo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 17 Jul 2022 00:06:04 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 01 Feb 2024 09:10:28 +0200</lastBuildDate>
     <atom:link href="https://rcap107.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>New submission: Retrieve, Merge Predict at VLDB2024</title>
+      <link>https://rcap107.github.io/posts/news/vldb_2024/</link>
+      <pubDate>Thu, 01 Feb 2024 09:10:28 +0200</pubDate>
+      <guid>https://rcap107.github.io/posts/news/vldb_2024/</guid>
+      <description>We submitted a revised version of our benchmarking paper to VLDB 2024, with the title &amp;ldquo;Retrieve, Merge, Predict: Augmenting Tables with Data Lakes&amp;rdquo;.
+The preprint can be found on Arxiv, while the code has its own website, and is available on Github.
+We also release YADL, the semi-synthetic benchmarking data lake that we used to run our experiments. The repository is also available on Github.</description>
+    </item>
+    <item>
+      <title>Some updates</title>
+      <link>https://rcap107.github.io/posts/news/wherehavibeen/</link>
+      <pubDate>Sun, 05 Feb 2023 20:17:56 +0100</pubDate>
+      <guid>https://rcap107.github.io/posts/news/wherehavibeen/</guid>
+      <description>It&amp;rsquo;s been a while, hasn&amp;rsquo;t it? According the newly added archives page, the latest post in this blog goes back all the way to July 2022&amp;hellip; Well, it does not seem like I kept my (very tentative) promise of posting frequently.
+No matter! Something did happen a few months ago (last October), and I have been quite busy because of it. I have moved to Paris! For the next two years (starting last October), I have been/will be working as a Postdoctoral Researcher for Inria Saclay in the SODA Team and at Dataiku in their research department.</description>
+    </item>
     <item>
       <title>Studying the temperature readings</title>
       <link>https://rcap107.github.io/posts/raspberry/study-temperature/</link>
