@@ -30,8 +30,6 @@ can share my contributions and what I have been up to. I am not planning to upda
 can always change!).
 
 ### About myself
-My CV is available [here](/pubs/CV_cappuzzo.pdf).
-
 I am wrapping up my work as a postdoc, splitting my time between the [SODA Team](https://team.inria.fr/soda/) at 
 [Inria Saclay](https://www.inria.fr/fr/centre-inria-de-saclay) and the R&D department of [Dataiku](https://www.dataiku.com).
 
@@ -50,3 +48,5 @@ the results of which were presented as a Student Research Abstract at SIGAPP 201
 On the personal side, I am a big fan of gaming, anime/manga, technology and history. I'm also looking into IoT devices to have a "smart home" with OSS. 
 
 I have been living in France since 2016, though my French still leaves to be desired. 
+
+My personal CV is available [here](/pubs/CV_cappuzzo.pdf).

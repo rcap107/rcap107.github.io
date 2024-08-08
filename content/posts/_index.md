@@ -1,7 +1,7 @@
 ---
-title: "Main Subjects"
+title: "Post categories"
 date: 2022-04-12T14:24:17+02:00
-
+# layout: archives
 
 # weight: 1
 # aliases: ["/first"]

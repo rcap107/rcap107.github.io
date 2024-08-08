@@ -1,5 +1,5 @@
 baseURL: "https://rcap107.github.io/"
-title: Riccardo Cappuzzo / Data Science, Machine Learning, Python
+title: Riccardo Cappuzzo # / Data Science, Machine Learning, Python
 paginate: 5
 theme: PaperMod
 
@@ -19,8 +19,8 @@ disqusShortname: rcap107-github-io
 
 params:
     env: production # to enable google analytics, opengraph, twitter-cards and schema.
-    title: "Riccardo Cappuzzo / Data Science, Machine Learning, Python"
-    description: "Information and personal news about Riccardo Cappuzzo"
+    title: "Riccardo Cappuzzo"
+    description: "Data Science, Machine Learning, Python"
     keywords: [Blog, Portfolio]
     author: Riccardo Cappuzzo
     # author: ["Me", "You"] # multiple authors
@@ -59,8 +59,8 @@ params:
     # profile-mode
     profileMode:
         enabled: true # needs to be explicitly set
-        title: "Riccardo Cappuzzo / Data Science, Machine Learning, Python"
-        subtitle: "Information and personal news"
+        title: "Riccardo Cappuzzo"
+        subtitle: "Data Science, Machine Learning, Python"
         imageUrl: "logo.png"
         imageWidth: 200
         imageHeight: 200
@@ -70,16 +70,16 @@ params:
               url: about
             - name: Publications
               url: publications
-            # - name: Posts
-            #   url: /posts/archives
             - name: News
-              url: /posts/
+              url: /posts/archives
+            # - name: News
+            #   url: /posts/
 
 
     # home-info mode
     homeInfoParams:
-        Title: "Riccardo Cappuzzo / Data Science, Machine Learning, Python"
-        Content: Information and personal news
+        Title: "Riccardo Cappuzzo"  
+        Content: Data Science, Machine Learning, Python
 
     socialIcons:
         # - name: twitter
@@ -135,11 +135,11 @@ menu:
           name: publications
           url: /publications/
           weight: 40
-        # - identifier: categories
-        #   name: categories
-        #   url: /posts/
-        #   weight: 30
-        - identifier: archive
-          name: archive
-          url: /posts/archives
-          weight: 45
+        - identifier: categories
+          name: categories
+          url: /posts/
+          weight: 30
+        # - identifier: archive
+        #   name: archive
+        #   url: /posts/archives
+        #   weight: 45

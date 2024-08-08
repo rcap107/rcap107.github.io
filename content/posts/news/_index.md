@@ -1,20 +1,20 @@
 ---
-title: "{{ replace .Name "-" " " | title }}"
-date: {{ .Date }}
+title: "Personal News"
+date: 2024-08-08T19:24:35+02:00
 
 
 # weight: 1
 # aliases: ["/first"]
-tags: ["embdi"]
+tags: ["news"]
 author: "Riccardo Cappuzzo"
 # author: ["Me", "You"] # multiple authors
 showToc: true
 TocOpen: false
 draft: false
 hidemeta: false
-comments: false
-description: "Desc Text."
-canonicalURL: "https://canonical.url/to/page"
+comments: true
+description: ""
+# canonicalURL: ""
 disableHLJS: true # to disable highlightjs
 disableShare: false
 disableHLJS: false
