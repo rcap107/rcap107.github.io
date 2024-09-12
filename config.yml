@@ -1,4 +1,4 @@
-baseURL: "https://rcap107.github.io/"
+baseURL: "https://www.riccardocappuzzo.com/"
 title: Riccardo Cappuzzo # / Data Science, Machine Learning, Python
 paginate: 5
 theme: PaperMod
@@ -15,7 +15,7 @@ minify:
     disableXML: true
     minifyOutput: true
 
-disqusShortname: rcap107-github-io
+disqusShortname: riccardocappuzzo
 
 params:
     env: production # to enable google analytics, opengraph, twitter-cards and schema.
@@ -128,8 +128,8 @@ menu:
         #   url: /tags/
         #   weight: 20
         - identifier: home
-          name: rcap107.github.io
-          url: https://rcap107.github.io
+          name: home
+          url: https://www.riccardocappuzzo.com
           weight: 50
         - identifier: publications
           name: publications

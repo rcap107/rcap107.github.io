@@ -35,7 +35,7 @@ editPost:
     appendFilePath: true # to append file path to Edit link
 ---
 It's been a while, hasn't it? According the newly added [archives](/posts/archives) page, the latest post in this blog
-goes back all the way to July 2022... Well, it does not seem like I kept my (very tentative) promise of posting frequently. 
+goes back all the way to July 2022... Well, it does not seem like I kept my promise of posting with some frequency. 
 
 No matter! Something did happen a few months ago (last October), and I have been quite busy because of it. 
 I have moved to Paris! For the next two years (starting last October), I have been/will be 
