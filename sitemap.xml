@@ -2,65 +2,71 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://rcap107.github.io/tags/news/</loc>
+    <loc>https://www.riccardocappuzzo.com/posts/news/moving-up/</loc>
+    <lastmod>2024-09-13T00:07:21+02:00</lastmod>
+  </url><url>
+    <loc>https://www.riccardocappuzzo.com/tags/news/</loc>
+    <lastmod>2024-09-13T00:07:21+02:00</lastmod>
+  </url><url>
+    <loc>https://www.riccardocappuzzo.com/</loc>
+    <lastmod>2024-09-13T00:07:21+02:00</lastmod>
+  </url><url>
+    <loc>https://www.riccardocappuzzo.com/tags/</loc>
+    <lastmod>2024-09-13T00:07:21+02:00</lastmod>
+  </url><url>
+    <loc>https://www.riccardocappuzzo.com/posts/news/medium-post/</loc>
+    <lastmod>2024-09-12T23:57:15+02:00</lastmod>
+  </url><url>
+    <loc>https://www.riccardocappuzzo.com/posts/news/</loc>
     <lastmod>2024-08-08T19:24:35+02:00</lastmod>
   </url><url>
-    <loc>https://rcap107.github.io/posts/news/</loc>
-    <lastmod>2024-08-08T19:24:35+02:00</lastmod>
-  </url><url>
-    <loc>https://rcap107.github.io/</loc>
-    <lastmod>2024-08-08T19:24:35+02:00</lastmod>
-  </url><url>
-    <loc>https://rcap107.github.io/tags/</loc>
-    <lastmod>2024-08-08T19:24:35+02:00</lastmod>
-  </url><url>
-    <loc>https://rcap107.github.io/posts/news/vldb_2024/</loc>
+    <loc>https://www.riccardocappuzzo.com/posts/news/vldb_2024/</loc>
     <lastmod>2024-02-01T09:10:28+02:00</lastmod>
   </url><url>
-    <loc>https://rcap107.github.io/posts/news/wherehavibeen/</loc>
+    <loc>https://www.riccardocappuzzo.com/posts/news/wherehavibeen/</loc>
     <lastmod>2023-02-05T20:17:56+01:00</lastmod>
   </url><url>
-    <loc>https://rcap107.github.io/tags/iot/</loc>
+    <loc>https://www.riccardocappuzzo.com/tags/iot/</loc>
     <lastmod>2022-07-17T00:06:04+02:00</lastmod>
   </url><url>
-    <loc>https://rcap107.github.io/tags/raspberry/</loc>
+    <loc>https://www.riccardocappuzzo.com/tags/raspberry/</loc>
     <lastmod>2022-07-17T00:06:04+02:00</lastmod>
   </url><url>
-    <loc>https://rcap107.github.io/posts/raspberry/study-temperature/</loc>
+    <loc>https://www.riccardocappuzzo.com/posts/raspberry/study-temperature/</loc>
     <lastmod>2022-07-17T00:06:04+02:00</lastmod>
   </url><url>
-    <loc>https://rcap107.github.io/tags/arduino/</loc>
+    <loc>https://www.riccardocappuzzo.com/tags/arduino/</loc>
     <lastmod>2022-07-11T00:54:30+02:00</lastmod>
   </url><url>
-    <loc>https://rcap107.github.io/posts/raspberry/the_setup/</loc>
+    <loc>https://www.riccardocappuzzo.com/posts/raspberry/the_setup/</loc>
     <lastmod>2022-07-11T00:54:30+02:00</lastmod>
   </url><url>
-    <loc>https://rcap107.github.io/posts/raspberry/</loc>
+    <loc>https://www.riccardocappuzzo.com/posts/raspberry/</loc>
     <lastmod>2022-07-07T00:58:49+02:00</lastmod>
   </url><url>
-    <loc>https://rcap107.github.io/posts/about-me/</loc>
+    <loc>https://www.riccardocappuzzo.com/posts/about-me/</loc>
     <lastmod>2022-04-12T15:08:12+02:00</lastmod>
   </url><url>
-    <loc>https://rcap107.github.io/posts/</loc>
+    <loc>https://www.riccardocappuzzo.com/posts/</loc>
     <lastmod>2022-04-12T14:24:17+02:00</lastmod>
   </url><url>
-    <loc>https://rcap107.github.io/tags/about/</loc>
+    <loc>https://www.riccardocappuzzo.com/tags/about/</loc>
     <lastmod>2022-04-08T16:45:31+02:00</lastmod>
   </url><url>
-    <loc>https://rcap107.github.io/about/</loc>
+    <loc>https://www.riccardocappuzzo.com/about/</loc>
     <lastmod>2022-04-08T16:45:31+02:00</lastmod>
   </url><url>
-    <loc>https://rcap107.github.io/publications/</loc>
+    <loc>https://www.riccardocappuzzo.com/publications/</loc>
     <lastmod>2022-04-07T17:50:08+02:00</lastmod>
   </url><url>
-    <loc>https://rcap107.github.io/tags/introduction/</loc>
+    <loc>https://www.riccardocappuzzo.com/tags/introduction/</loc>
     <lastmod>2022-03-29T22:38:21+02:00</lastmod>
   </url><url>
-    <loc>https://rcap107.github.io/posts/about-me/intro-blog/</loc>
+    <loc>https://www.riccardocappuzzo.com/posts/about-me/intro-blog/</loc>
     <lastmod>2022-03-29T22:38:21+02:00</lastmod>
   </url><url>
-    <loc>https://rcap107.github.io/posts/archives/</loc>
+    <loc>https://www.riccardocappuzzo.com/posts/archives/</loc>
   </url><url>
-    <loc>https://rcap107.github.io/categories/</loc>
+    <loc>https://www.riccardocappuzzo.com/categories/</loc>
   </url>
 </urlset>

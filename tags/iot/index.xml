@@ -2,18 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>IoT on Riccardo Cappuzzo</title>
-    <link>https://rcap107.github.io/tags/iot/</link>
+    <link>https://www.riccardocappuzzo.com/tags/iot/</link>
     <description>Recent content in IoT on Riccardo Cappuzzo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sun, 17 Jul 2022 00:06:04 +0200</lastBuildDate>
-    <atom:link href="https://rcap107.github.io/tags/iot/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.riccardocappuzzo.com/tags/iot/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Studying the temperature readings</title>
-      <link>https://rcap107.github.io/posts/raspberry/study-temperature/</link>
+      <link>https://www.riccardocappuzzo.com/posts/raspberry/study-temperature/</link>
       <pubDate>Sun, 17 Jul 2022 00:06:04 +0200</pubDate>
-      <guid>https://rcap107.github.io/posts/raspberry/study-temperature/</guid>
-      <description>Notes on plots and dataframes Before we begin, a couple of notes on plots dataframes: this post has been prepared by converting a jupyter notebook into a markdown file using nbconvert. As it turns out, the default output format used by nbconvert to display dataframes isn&amp;rsquo;t rendered correctly by the Hugo backend I&amp;rsquo;m using for the blog. I was not able to find a &amp;ldquo;clean&amp;rdquo; solution for it, so for this post (and until I&amp;rsquo;ll find the actual fix) all tables are represented in raw html, rather than in a more decent format.</description>
+      <guid>https://www.riccardocappuzzo.com/posts/raspberry/study-temperature/</guid>
+      <description>&lt;h3 id=&#34;notes-on-plots-and-dataframes&#34;&gt;Notes on plots and dataframes&lt;/h3&gt;
+&lt;p&gt;Before we begin, a couple of notes on plots dataframes: this post has been prepared by converting a jupyter notebook into a markdown file using &lt;code&gt;nbconvert&lt;/code&gt;. As it turns out, the default output format used by &lt;code&gt;nbconvert&lt;/code&gt; to display dataframes isn&amp;rsquo;t rendered correctly by the Hugo backend I&amp;rsquo;m using for the blog. I was not able to find a &amp;ldquo;clean&amp;rdquo; solution for it, so for this post (and until I&amp;rsquo;ll find the actual fix) all tables are represented in raw html, rather than in a more decent format. I also need to figure out a better way of saving the plots, which allow to specify a &lt;code&gt;facecolor&lt;/code&gt;, so that figures have a white background both in light and dark mode. For the time being, it&amp;rsquo;s possible to switch to light mode to fix that particular problem.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

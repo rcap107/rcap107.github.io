@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>About this blog on Riccardo Cappuzzo</title>
-    <link>https://rcap107.github.io/posts/about-me/</link>
+    <link>https://www.riccardocappuzzo.com/posts/about-me/</link>
     <description>Recent content in About this blog on Riccardo Cappuzzo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Fri, 08 Apr 2022 16:45:31 +0200</lastBuildDate>
-    <atom:link href="https://rcap107.github.io/posts/about-me/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.riccardocappuzzo.com/posts/about-me/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Something about myself</title>
-      <link>https://rcap107.github.io/about/</link>
+      <link>https://www.riccardocappuzzo.com/about/</link>
       <pubDate>Fri, 08 Apr 2022 16:45:31 +0200</pubDate>
-      <guid>https://rcap107.github.io/about/</guid>
+      <guid>https://www.riccardocappuzzo.com/about/</guid>
       <description>A short bio on what I have studied and worked on during the years.</description>
     </item>
     <item>
       <title>Publications</title>
-      <link>https://rcap107.github.io/publications/</link>
+      <link>https://www.riccardocappuzzo.com/publications/</link>
       <pubDate>Thu, 07 Apr 2022 17:50:08 +0200</pubDate>
-      <guid>https://rcap107.github.io/publications/</guid>
+      <guid>https://www.riccardocappuzzo.com/publications/</guid>
       <description>The list of publications I have worked on.</description>
     </item>
     <item>
       <title>Something about this blog</title>
-      <link>https://rcap107.github.io/posts/about-me/intro-blog/</link>
+      <link>https://www.riccardocappuzzo.com/posts/about-me/intro-blog/</link>
       <pubDate>Tue, 29 Mar 2022 22:38:21 +0200</pubDate>
-      <guid>https://rcap107.github.io/posts/about-me/intro-blog/</guid>
+      <guid>https://www.riccardocappuzzo.com/posts/about-me/intro-blog/</guid>
       <description>What this site is about.</description>
     </item>
   </channel>
