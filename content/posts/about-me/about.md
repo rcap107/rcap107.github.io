@@ -26,11 +26,14 @@ ShowPostNavLinks: false
 ---
 ### About this website
 Hi! I'm Riccardo, and you're on my personal website. The main objective of this website is having a public page where I
-can share my contributions and what I have been up to. I am not planning to update this website very often (though things
-can always change!).
+can share my contributions and what I have been up to. I am not planning to update this website very often.
 
 ### About myself
-I am wrapping up my work as a postdoc, splitting my time between the [SODA Team](https://team.inria.fr/soda/) at 
+As of now, I am a research engineer employed by P16, a project (?) within Inria whose objective is developing promising scientific libraries in Python. I will be working on [Skrub](https://skrub-data.org/stable/), trying to implemenent in the library some of what I learned during my postdoc. 
+
+Speaking of the postdoc, the objective of the postdoc was figuring out the "best practices" on what to do to integrate information coming from data lakes on tables of interest. It was a whole thing, and everything turned
+out to be harder than we had expected at the beginning. 
+I split my time between  between the [SODA Team](https://team.inria.fr/soda/) at 
 [Inria Saclay](https://www.inria.fr/fr/centre-inria-de-saclay) and the R&D department of [Dataiku](https://www.dataiku.com).
 
 I obtained a PhD in Data Science from [EURECOM](https://www.eurecom.fr), in Sophia Antipolis (near Nice in the south of France).
@@ -47,6 +50,6 @@ the results of which were presented as a Student Research Abstract at SIGAPP 201
 
 On the personal side, I am a big fan of gaming, anime/manga, technology and history. I'm also looking into IoT devices to have a "smart home" with OSS. 
 
-I have been living in France since 2016, though my French still leaves to be desired. 
+I have been living in France since 2016, but please don't write to me in French because I _will_ reply in English.  
 
 My personal CV is available [here](/pubs/CV_cappuzzo.pdf).

@@ -1,6 +1,6 @@
 baseURL: "https://www.riccardocappuzzo.com/"
 title: Riccardo Cappuzzo # / Data Science, Machine Learning, Python
-paginate: 5
+# paginate: 5
 theme: PaperMod
 
 enableRobotsTXT: true
