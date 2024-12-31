@@ -13,7 +13,7 @@ hidemeta: true
 comments: false
 canonicalURL: "https://rcap107.github.io/about"
 url: "/about"
-summary: "A short bio on what I have studied and worked on during the years. "
+summary: "A short bio. "
 disableHLJS: true # to disable highlightjs
 disableShare: true
 disableHLJS: false
@@ -29,9 +29,9 @@ Hi! I'm Riccardo, and you're on my personal website. The main objective of this 
 can share my contributions and what I have been up to. I am not planning to update this website very often.
 
 ### About myself
-As of now, I am a research engineer employed by P16, a project (?) within Inria whose objective is developing promising scientific libraries in Python. I will be working on [Skrub](https://skrub-data.org/stable/), trying to implemenent in the library some of what I learned during my postdoc. 
+As of now, I am a research engineer employed by [P16](https://p16.inria.fr), a project within Inria whose objective is developing promising scientific libraries in Python. I will be working on [Skrub](https://skrub-data.org/stable/), trying to implemenent in the library some of what I learned during my postdoc. 
 
-Speaking of the postdoc, the objective of the postdoc was figuring out the "best practices" on what to do to integrate information coming from data lakes on tables of interest. It was a whole thing, and everything turned
+Speaking of the postdoc, the objective was figuring out the "best practices" on what to do to integrate information coming from data lakes on tables of interest. It was a whole thing, and everything turned
 out to be harder than we had expected at the beginning. 
 I split my time between  between the [SODA Team](https://team.inria.fr/soda/) at 
 [Inria Saclay](https://www.inria.fr/fr/centre-inria-de-saclay) and the R&D department of [Dataiku](https://www.dataiku.com).

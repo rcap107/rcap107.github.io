@@ -82,8 +82,8 @@ params:
         Content: Data Science, Machine Learning, Python
 
     socialIcons:
-        # - name: twitter
-        #   url: "https://twitter.com/"
+        - name: bluesky
+          url: "https://bsky.app/profile/riccardocappuzzo.com"
         # - name: stackoverflow
         #   url: "https://stackoverflow.com"
         - name: github
