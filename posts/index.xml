@@ -4,9 +4,23 @@
     <title>Post categories on Riccardo Cappuzzo</title>
     <link>https://www.riccardocappuzzo.com/posts/</link>
     <description>Recent content in Post categories on Riccardo Cappuzzo</description>
-    <generator>Hugo -- 0.135.0</generator>
+    <generator>Hugo -- 0.140.2</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 08 Oct 2024 22:06:34 +0200</lastBuildDate>
     <atom:link href="https://www.riccardocappuzzo.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My 2024 (so far) in academia</title>
+      <link>https://www.riccardocappuzzo.com/posts/academia_experience/</link>
+      <pubDate>Tue, 08 Oct 2024 22:06:34 +0200</pubDate>
+      <guid>https://www.riccardocappuzzo.com/posts/academia_experience/</guid>
+      <description>&lt;p&gt;Disclaimer: this post will mostly be a rant. The reasons for it should become
+sufficiently clear as I go over my experience in the past few months.&lt;/p&gt;
+&lt;p&gt;For context, I have been working on a paper for the past year or so. Said paper
+involved running a few thousands experimental configurations over different
+baselines, then reporting said experiments in a paper that was initially &lt;a href=&#34;https://www.riccardocappuzzo.com/posts/news/vldb_2024/&#34;&gt;submitted
+to VLDB2024&lt;/a&gt; (end of
+January this year). Said paper was rejected at VLDB 2024, submitted to SIGMOD2025,
+and was rejected again.&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

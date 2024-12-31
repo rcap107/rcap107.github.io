@@ -4,10 +4,22 @@
     <title>Personal News on Riccardo Cappuzzo</title>
     <link>https://www.riccardocappuzzo.com/posts/news/</link>
     <description>Recent content in Personal News on Riccardo Cappuzzo</description>
-    <generator>Hugo -- 0.135.0</generator>
+    <generator>Hugo -- 0.140.2</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 13 Sep 2024 00:07:21 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 30 Dec 2024 15:40:54 +0100</lastBuildDate>
     <atom:link href="https://www.riccardocappuzzo.com/posts/news/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2024 wrapped: ups, downs, and some changes</title>
+      <link>https://www.riccardocappuzzo.com/posts/news/end-of-2024/</link>
+      <pubDate>Mon, 30 Dec 2024 15:40:54 +0100</pubDate>
+      <guid>https://www.riccardocappuzzo.com/posts/news/end-of-2024/</guid>
+      <description>&lt;p&gt;It&amp;rsquo;s the end of the year, so I decided I had to do my semestral wrestling bout with
+Hugo to go over what happened in the past 12 months.&lt;/p&gt;
+&lt;p&gt;To start with, as I haven&amp;rsquo;t updated the website in months, I have been welcomed
+by an error message, which further complicates my relationship with this platform.
+Seriously though, every time I try to write something here I spend more time
+debugging Hugo than I do writing.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Moving up... or sideways?</title>
       <link>https://www.riccardocappuzzo.com/posts/news/moving-up/</link>
