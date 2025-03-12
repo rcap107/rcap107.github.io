@@ -1,0 +1,20 @@
+[
+  {
+    "listing": "/posts/posts.html",
+    "items": [
+      "/posts/news/end-of-2024.html",
+      "/posts/academia_experience.html",
+      "/posts/news/moving-up.html",
+      "/posts/news/medium-post.html",
+      "/posts/news/vldb_2024.html",
+      "/posts/news/wherehavibeen.html",
+      "/posts/raspberry/study-temperature.html",
+      "/posts/raspberry/coding-the-thermometer.html",
+      "/posts/raspberry/the_setup.html",
+      "/posts/embdi/intro-embdi.html",
+      "/posts/about-me/about.html",
+      "/posts/about-me/pubs.html",
+      "/posts/about-me/intro-blog.html"
+    ]
+  }
+]
