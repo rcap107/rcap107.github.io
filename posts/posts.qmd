@@ -1,0 +1,11 @@
+---
+title: "Posts"
+format: html
+listing: 
+    sort:
+        - "date desc"
+        - "title desc"
+    categories: true
+
+---
+

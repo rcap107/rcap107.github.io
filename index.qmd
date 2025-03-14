@@ -1,0 +1,18 @@
+---
+title: "Riccardo Cappuzzo"
+page-layout: full
+format: html
+about:
+  template: jolla
+  image: static/logo.png
+  links:
+    - icon: bluesky
+      text: bluesky
+      href: https://twitter.com
+    - icon: github
+      text: Github
+      href: https://github.com/rcap107/
+
+---
+
+# Data Science, Machine Learning, Python

@@ -1,0 +1,32 @@
+project:
+  type: website
+
+website:
+  title: "A blog by RC"
+  navbar:
+    background: primary
+    search: true
+    left:
+      - text: "Home"
+        href: index.qmd
+      - posts/posts.qmd
+      - text: "Publications"
+        href: posts/about-me/pubs.qmd
+      - about.qmd 
+
+    right:
+      - icon: github
+        href: https://github.com/rcap107/
+      - icon: bluesky
+        href: https://bsky.app/profile/riccardocappuzzo.com
+
+  page-footer: "Copyright 2025, Riccardo Cappuzzo" 
+format:
+  html:
+    theme:
+      light: flatly
+      dark: darkly
+    css: styles.css
+
+execute: 
+  freeze: auto
