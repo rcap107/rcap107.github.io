@@ -2,66 +2,66 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.riccardocappuzzo.com/about.html</loc>
-    <lastmod>2025-03-12T17:32:00.638Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.riccardocappuzzo.com/posts/academia_experience.html</loc>
-    <lastmod>2025-03-12T17:29:06.543Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.riccardocappuzzo.com/posts/news/medium-post.html</loc>
-    <lastmod>2025-03-12T17:28:40.025Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.riccardocappuzzo.com/posts/news/vldb_2024.html</loc>
-    <lastmod>2025-03-12T17:28:45.464Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.riccardocappuzzo.com/posts/news/wherehavibeen.html</loc>
-    <lastmod>2025-03-12T17:28:48.209Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.riccardocappuzzo.com/posts/about-me/pubs.html</loc>
-    <lastmod>2025-03-12T17:18:54.638Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.riccardocappuzzo.com/posts/raspberry/coding-the-thermometer.html</loc>
-    <lastmod>2025-03-12T17:28:54.691Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.riccardocappuzzo.com/posts/raspberry/study-temperature.html</loc>
-    <lastmod>2025-03-12T17:31:00.402Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.riccardocappuzzo.com/posts/embdi/intro-embdi.html</loc>
-    <lastmod>2025-03-12T17:28:32.107Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.riccardocappuzzo.com/posts/raspberry/the_setup.html</loc>
-    <lastmod>2025-03-12T17:29:00.474Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.riccardocappuzzo.com/posts/about-me/intro-blog.html</loc>
-    <lastmod>2025-03-12T17:28:12.133Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.riccardocappuzzo.com/posts/about-me/about.html</loc>
-    <lastmod>2025-03-12T17:28:08.605Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.riccardocappuzzo.com/posts/news/moving-up.html</loc>
-    <lastmod>2025-03-12T17:28:42.655Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.riccardocappuzzo.com/posts/news/end-of-2024.html</loc>
-    <lastmod>2025-03-12T17:28:37.347Z</lastmod>
+    <lastmod>2025-03-23T21:19:31.815Z</lastmod>
   </url>
   <url>
     <loc>https://www.riccardocappuzzo.com/posts/posts.html</loc>
     <lastmod>2025-03-12T17:27:05.207Z</lastmod>
   </url>
   <url>
+    <loc>https://www.riccardocappuzzo.com/posts/news/end-of-2024.html</loc>
+    <lastmod>2025-03-12T17:28:37.347Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.riccardocappuzzo.com/posts/news/moving-up.html</loc>
+    <lastmod>2025-03-12T17:28:42.655Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.riccardocappuzzo.com/posts/about-me/about.html</loc>
+    <lastmod>2025-03-12T17:28:08.605Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.riccardocappuzzo.com/posts/about-me/intro-blog.html</loc>
+    <lastmod>2025-03-12T17:28:12.133Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.riccardocappuzzo.com/posts/raspberry/the_setup.html</loc>
+    <lastmod>2025-03-12T17:29:00.474Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.riccardocappuzzo.com/posts/embdi/intro-embdi.html</loc>
+    <lastmod>2025-03-12T17:28:32.107Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.riccardocappuzzo.com/posts/raspberry/study-temperature.html</loc>
+    <lastmod>2025-03-12T17:31:00.402Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.riccardocappuzzo.com/posts/raspberry/coding-the-thermometer.html</loc>
+    <lastmod>2025-03-12T17:28:54.691Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.riccardocappuzzo.com/posts/about-me/pubs.html</loc>
+    <lastmod>2025-03-12T17:18:54.638Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.riccardocappuzzo.com/posts/news/wherehavibeen.html</loc>
+    <lastmod>2025-03-12T17:28:48.209Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.riccardocappuzzo.com/posts/news/vldb_2024.html</loc>
+    <lastmod>2025-03-12T17:28:45.464Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.riccardocappuzzo.com/posts/news/medium-post.html</loc>
+    <lastmod>2025-03-12T17:28:40.025Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.riccardocappuzzo.com/posts/academia_experience.html</loc>
+    <lastmod>2025-03-12T17:29:06.543Z</lastmod>
+  </url>
+  <url>
     <loc>https://www.riccardocappuzzo.com/index.html</loc>
-    <lastmod>2025-03-12T17:29:57.502Z</lastmod>
+    <lastmod>2025-03-23T21:53:53.374Z</lastmod>
   </url>
 </urlset>

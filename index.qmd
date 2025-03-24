@@ -6,13 +6,14 @@ about:
   template: jolla
   image: static/logo.png
   links:
-    - icon: bluesky
-      text: bluesky
-      href: https://twitter.com
-    - icon: github
-      text: Github
+    - text: Bluesky
+      href: https://bsky.app/profile/riccardocappuzzo.com
+    - text: LinkedIn
+      href: https://www.linkedin.com/in/riccardo-cappuzzo/
+    - text: Github
       href: https://github.com/rcap107/
-
+    - text: Google Scholar
+      href: https://scholar.google.com/citations?user=fzIMGkIAAAAJ&hl=en&oi=ao
 ---
 
 # Data Science, Machine Learning, Python

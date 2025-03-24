@@ -7,8 +7,6 @@ website:
     background: primary
     search: true
     left:
-      - text: "Home"
-        href: index.qmd
       - posts/posts.qmd
       - text: "Publications"
         href: posts/about-me/pubs.qmd
