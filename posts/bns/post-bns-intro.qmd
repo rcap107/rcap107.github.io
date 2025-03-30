@@ -1,5 +1,5 @@
 ---
-title: "Optimizing Blade and Soul with Python: introduction"
+title: "Theorycrafting for Blade and Soul: introduction and damage formula"
 format: html
 date: "2025/03/29"
 categories:
