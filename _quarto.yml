@@ -21,7 +21,7 @@ website:
   page-footer: "Copyright 2025, Riccardo Cappuzzo" 
 format:
   html:
-    theme:
+    theme: 
       light: flatly
       dark: darkly
     css: styles.css

@@ -1,26 +1,19 @@
 ---
-title: "Optimizing MMORPG stats with Python"
+title: "Learning optimization by minmaxing Blade and Soul soulshields"
 format: html
-date: "23/03/2025"
+date: "2025/04/08"
 categories:
     - code
+    - games
+    - "blade_and_soul"
 draft: true
+reading-time: true
 ---
-Videogames are my biggest passion, and trying to play games in the best way 
-possible is something I do whenever the occasion presents itself. For me, 
-[minmaxing](https://en.wikipedia.org/wiki/Glossary_of_video_game_terms#Min-Maxing) 
-is part of the fun.
 
-That's not to say that all games can be optimized in the same way, however. In 
-some cases, "playing better" means "looking up guides online", for others it may 
-be a matter of "training my aim". 
-
-In this blog post I will be talking about [Blade & Soul]() (BnS from now on), a 
-Korean MMORPG that has been re-released a few weeks ago, and that I have played 
-for about 4000 hours over the years. Without going into details, one of the main 
-ways to improve my performance in the game is by improving the statistics (stats) 
-of my character: "better statistics" translate directly into "bigger numbers", 
-and seeing "bigger numbers" is fun. 
+It belongs to the _Soulshield set_ 
+"Horror's Oath", along with 4 more other pieces; since I have equipped 5 pieces,
+I also gain the additional _Set effects_, which further increase the statistics. 
+In Blade and Soul, shields are always equipped as a set of 3, 5, or 8 pieces. 
 
 ## Soulshields and how stats are gained in BnS
 To help understanding the rest of the post, I need to explain how character stats
