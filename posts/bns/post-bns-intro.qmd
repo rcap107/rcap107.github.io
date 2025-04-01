@@ -150,7 +150,7 @@ Crit\% = \frac{Crit \times 96.98979}{Crit + 1124.069}
 $$
 where $Crit$ is the _Critical rate_ attribute.
 $$
-CDmg = \frac{CD \times 290.8}{CD \times 2102.36} + 125
+CDmg = \frac{CD \times 290.8}{CD + 2102.36} + 125
 $$
 where $CD$ is the _Critical damage_ attribute. 
 
