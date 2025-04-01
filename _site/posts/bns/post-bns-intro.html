@@ -258,7 +258,7 @@ Damage = 500 \times (0.55 \times 1.5 + (1 - 0.55)) = 687.5
 <p>However, what we see on a character’s profile is a raw number for <em>AP</em>, <em>Critical</em> <em>rate</em> and <em>Critical damage</em>. How can we turn those into the multipliers used above? Well, while there are no official numbers for this, the community managed to get an estimate of the formula (<a href="https://bossrespawn.com/calculator">source</a>), which is what I am using here: <span class="math display">\[
 Crit\% = \frac{Crit \times 96.98979}{Crit + 1124.069}
 \]</span> where <span class="math inline">\(Crit\)</span> is the <em>Critical rate</em> attribute. <span class="math display">\[
-CDmg = \frac{CD \times 290.8}{CD \times 2102.36} + 125
+CDmg = \frac{CD \times 290.8}{CD + 2102.36} + 125
 \]</span> where <span class="math inline">\(CD\)</span> is the <em>Critical damage</em> attribute.</p>
 <p>Usually, players strive to maximize <em>Attack Power</em>, <em>Critical rate</em> and <em>Critical damage</em>. The problem then becomes understanding how these statistics affect the final damage output, and selecting the equipment that leads to the best returns.</p>
 <p>In conclusion, now I have a (rough) estimation of how much damage my character deals given a certain amount of AP, Critical rate, and Critical damage. While it is not perfect, it’s still a good starting point to optimize for.</p>
