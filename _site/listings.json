@@ -2,6 +2,9 @@
   {
     "listing": "/posts/posts.html",
     "items": [
+      "/posts/news/blog-post-skrub-encoders.html",
+      "/posts/bns/post-bns-contour.html",
+      "/posts/bns/post-bns-shields.html",
       "/posts/bns/post-bns-intro.html",
       "/posts/news/end-of-2024.html",
       "/posts/academia_experience.html",
@@ -13,7 +16,6 @@
       "/posts/raspberry/coding-the-thermometer.html",
       "/posts/raspberry/the_setup.html",
       "/posts/embdi/intro-embdi.html",
-      "/posts/about-me/about.html",
       "/posts/about-me/pubs.html",
       "/posts/about-me/intro-blog.html"
     ]

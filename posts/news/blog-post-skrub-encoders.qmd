@@ -1,0 +1,17 @@
+---
+title: "New blog post: testing Skrub categorical encoders"
+format: html
+draft: false
+categories: 
+    - news
+    - skrub
+image: "/images/news/post-skrub-encoders.png"
+---
+I wrote a new blog post on the Skrub materials website! 
+
+This one is about finding out how to best encode categorical features using the 
+categorical encoders provided by skrub. 
+
+
+You can find the post [here](https://skrub-data.org/skrub-materials/notebooks/categorical-encoders/categorical-encoders.html).
+

@@ -4,58 +4,44 @@ image: /static/logo.png
 about:
   template: jolla
   links:
-    - icon: bluesky
-      text: Bluesky
+    - text: Bluesky
       href: https://bsky.app/profile/riccardocappuzzo.com
-    - icon: linkedin
-      text: LinkedIn
+    - text: LinkedIn
       href: https://www.linkedin.com/in/riccardo-cappuzzo/
-    - icon: github
-      text: Github
-      href: https://github.com/rcap107
+    - text: Github
+      href: https://github.com/rcap107/
+    - text: Google Scholar
+      href: https://scholar.google.com/citations?user=fzIMGkIAAAAJ&hl=en&oi=ao
 
 ---
-### About this website
-Hi! I'm Riccardo, and you're on my personal website. The main objective of this website is having a public page where I
-can share my contributions and what I have been up to. I am not planning to update this website very often.
 
-If you want to contact me directly, then write me at `firstname.lastname[at]proton.me`,
-and please do write where you got that email from, because I am very paranoid about it. 
+### About this website
+Hi! I'm Riccardo, and you're on my personal website. I will be using it to share 
+updates on what I am up to, as well as some blog posts on stuff I may find interesting. 
 
 ### About myself
-As of now, I am a research engineer employed by [P16](https://p16.inria.fr), a 
-project within Inria whose objective is developing promising scientific libraries 
-in Python. I am currently working on [Skrub](https://skrub-data.org/stable/), 
-trying to implemenent in the library some of what I learned during my postdoc. 
+I am a research engineer employed by [P16](https://p16.inria.fr), a project 
+within Inria whose objective is developing promising scientific libraries in Python. 
+I am one of the core devs of the [Skrub](https://skrub-data.org/stable/) library, 
+and among other things I am working on implementing in the library some of the 
+code I worked on during my postdoc. 
 
-Speaking of the postdoc, the objective was figuring out the "best practices" on 
-what to do to integrate information coming from data lakes on tables of interest. 
-It was a whole thing, and everything turned out to be way harder than we had 
-expected at the beginning. 
-During the postdoc I split my time between  between the 
-[SODA Team](https://team.inria.fr/soda/) at 
-[Inria Saclay](https://www.inria.fr/fr/centre-inria-de-saclay) and the R&D 
-department of [Dataiku](https://www.dataiku.com).
+Said postdoc involved figuring out the "best practices" to integrate information 
+coming from data lakes with tables of interest. I split my time between  between 
+the [SODA Team](https://team.inria.fr/soda/) at  
+[Inria Saclay](https://www.inria.fr/fr/centre-inria-de-saclay) and the R&D department 
+of [Dataiku](https://www.dataiku.com).
 
-I obtained a PhD in Data Science from [EURECOM](https://www.eurecom.fr), in 
-Sophia Antipolis (near Nice in the south of France).
-The subject of the PhD was automating methods to perform data integration and 
-missing values imputation. I published some of my findings at SIGMOD2020 and 
-EDBT2024. All my publications are available [here](/publications).
+Before that, I obtained a PhD in Computer Science from [EURECOM](https://www.eurecom.fr), 
+in Sophia Antipolis (near Nice in the south of France).
+The subject of the PhD was automating methods to integrate data and impute missing values.
+I published some of my findings at SIGMOD2020 and EDBT2024. 
 
-I got my Bachelor's degree in Computer Engineering, and a Master degree in 
-Communications and Computer Networks Engineering from 
-[Politecnico di Torino](https://www.polito.it). 
+All my publications are available [here](/publications).
 
-During my master, I spent a year and a half in France to complete a double degree 
-in Computer Security from EURECOM.
+On the personal side, I am a big fan of gaming, anime/manga, technology and history.
 
-I spent a semester as an intern at the SAP Labs in Mougins, where I worked on data anonymization for my master thesis, the results of which were presented as a 
-Student Research Abstract at SIGAPP 2018.
-
-On the personal side, I am a big fan of gaming, anime/manga, technology and history. 
-
-I have been living in France since 2016, and I have been shamefully avoiding to 
-write in French ever since.  
+I have been living in France since 2016, but for various reasons I am still not as 
+fluent in French as I would like.  
 
 My personal CV is available [here](/pubs/CV_cappuzzo.pdf).
