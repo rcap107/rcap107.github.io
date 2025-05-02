@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-03-30">
+<meta name="dcterms.date" content="2025-05-04">
 
-<title>New blog post: testing Skrub categorical encoders – A blog by RC</title>
+<title>Fetching and preparing Last.fm data for beautiful data visualizations – A blog by RC</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -127,10 +161,10 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">New blog post: testing Skrub categorical encoders</h1>
+      <h1 class="title">Fetching and preparing Last.fm data for beautiful data visualizations</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">news</div>
-                <div class="quarto-category">skrub</div>
+                <div class="quarto-category">code</div>
+                <div class="quarto-category">data visualization</div>
               </div>
                   </div>
   </div>
@@ -142,7 +176,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">March 30, 2025</p>
+        <p class="date">May 4, 2025</p>
       </div>
     </div>
     
@@ -161,11 +195,152 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>I wrote a new blog post on the Skrub materials website!</p>
-<p>This one is about finding out how to best encode categorical features using the categorical encoders provided by skrub.</p>
-<p>You can find the post <a href="https://skrub-data.org/skrub-materials/notebooks/categorical-encoders/categorical-encoders.html">here</a>.</p>
+<p>One of the things I enjoy the most about my job is having the opportunity of turning data into images, coming up with ways to tell myself and others a story.</p>
+<p>The story of this post (and a few more down the line) will revolve around the history of my musical taste: favorite artists, favorite tracks, artists loved then forgotten, and new discoveries that stuck around. It’s also a story about timeseries, which is a type of data I haven’t worked on a lot yet, so I took it as an opportunity to learn something new with it.</p>
+<section id="how-to-get-your-own-musical-history" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-get-your-own-musical-history">How to get your own musical history</h2>
+<p>How am I going to do this? To begin with, I need a lot of data, ideally spanning multiple years and tracking anything I might need to cook up some nice figures. In comes my <a href="https://www.last.fm/user/Th3Cap">Last.fm account</a>: the place where (most of) the tracks I’ve played over the past 10 years or so can be found.</p>
+<p>If you’re not familiar with <a href="https://www.last.fm/">Last.fm</a>, it’s a website that keeps track of the music you listen to on most streaming services (or music players): each track played is recorded as a <strong>scrobble</strong>, which is simply a record that includes when the track was being played, the track name, and some additional information about it (the artist, album etc.).</p>
+<p>Last.fm then uses that information to give cool stats about your listening habits, and to recommend artists or events that may interest you. I quite like to track my tracks (pun intended), but I’m not very interested in the recommendation. I found out about the service at the end of 2012, and I have been using it ever since, across many generations of devices and music players. As a result, as of the writing of this post I have I have about 124 thousand scrobbles, which is <strong>a lot</strong> of data to play with.</p>
+<p>So, at some point I got an idea: what if I get all that data out of the account, and I use it as a sandbox for preparing figures?</p>
+<p>Well, the first thing to figure out was getting that data out, which can usually be done by either requesting for my data (thanks GDPR), or by looking up the API. In this case, the API was freely available and quite easy to use.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Out of curiosity, I tried to get my Spotify data, which goes back about as long, but dumping it and sifting through it I couldn’t find anywhere as much information as I could with Last.fm, which is why I stuck with the latter instead.</p>
+</div>
+</div>
+<p>Luckily, I found an online <a href="https://lastfm.ghan.nl/export/">tool</a> made by Last.fm user <a href="https://last.fm/user/ghan64">ghan64</a>, that saved me the need to write my own script for dumping my data.</p>
+<p>The tool was <em>very</em> convenient, and I got all my listening history in a few minutes. A good starting point, but then I wondered: what if I need additional information? After all, the data I have contains only the timestamp, the names of the song, the artist and the album, and their respective <a href="https://musicbrainz.org">MusicBrainz ID</a> if avabilable (I won’t be going into the MBID in this post, but it may come into play later). No genres or user tags are available, for example, and there is a lot of missing data.</p>
+<p>To fill in that missing data, I decided to use the Last.fm API myself so that I could make use of all the information that is available on the website, and add it to my own collection of records.</p>
+</section>
+<section id="requesting-info-with-the-last.fm-api" class="level2">
+<h2 class="anchored" data-anchor-id="requesting-info-with-the-last.fm-api">Requesting info with the Last.fm API</h2>
+<p>For the time being, my requesting code is extremely simple: all it does is handling the request generation of the data by providing a handful of functions that send different requests to the API, and converting the resulting data to either json or Python dictionaries.</p>
+<p>My <code>requesting.py</code> starts by loading the API key for my account from a file I have on disk, then it sets the constants that are used to contatct the API entry point. If you want to follow along, you will have to prepare your own API key: it’s a very quick process and all it takes is having a Last.fm account.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pprint</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> requests</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> json</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> get_api_key():</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">with</span> <span class="bu">open</span>(<span class="st">"api-key.id"</span>, <span class="st">"r"</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>        api_key <span class="op">=</span> <span class="bu">file</span>.read().strip()</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> api_key</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>api_key <span class="op">=</span> get_api_key()</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>api_url <span class="op">=</span> <span class="st">"http://ws.audioscrobbler.com/2.0"</span> </span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>api_method <span class="op">=</span> <span class="st">"GET"</span>  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Then, I need a requesting function that can send a well-formed request to the API entry point. The parameters needed for the request are saved in <code>params</code>, and depend on the specific call.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> send_api_request(url, method<span class="op">=</span><span class="st">'GET'</span>, headers<span class="op">=</span><span class="va">None</span>, params<span class="op">=</span><span class="va">None</span>, data<span class="op">=</span><span class="va">None</span>):</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">try</span>:</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Send the request to the API</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>        response <span class="op">=</span> requests.request(method, url, headers<span class="op">=</span>headers, params<span class="op">=</span>params, json<span class="op">=</span>data)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Raise an exception if the request was unsuccessful</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>        response.raise_for_status()</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Parse the JSON response</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>        json_response <span class="op">=</span> response.json()</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> json_response</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">except</span> requests.exceptions.HTTPError <span class="im">as</span> http_err:</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"HTTP error occurred: </span><span class="sc">{</span>http_err<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">except</span> requests.exceptions.RequestException <span class="im">as</span> err:</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"Error occurred: </span><span class="sc">{</span>err<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">except</span> json.JSONDecodeError:</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Error decoding JSON response"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The <code>send_api_request</code> method is used by the other methods, whose only function is preparing the parameters for the request:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Fetch information about an artist given their name</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> get_artist_data(artist_name):</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    params <span class="op">=</span> {</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>        <span class="st">"artist"</span>: artist_name,</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>        <span class="st">"method"</span>: <span class="st">"artist.getinfo"</span>,</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>        <span class="st">"api_key"</span>: get_api_key(),</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>        <span class="st">"format"</span>: <span class="st">"json"</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    response <span class="op">=</span> send_api_request(api_url, method<span class="op">=</span>api_method, headers<span class="op">=</span><span class="va">None</span>, params<span class="op">=</span>params)</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> response</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Fetch information about a track given the name and the artist</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> get_track_data(track_name, artist_name):</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    params <span class="op">=</span> {</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>        <span class="st">"track"</span>: track_name,</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>        <span class="st">"artist"</span>: artist_name,</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>        <span class="st">"method"</span>: <span class="st">"track.getinfo"</span>,</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>        <span class="st">"api_key"</span>: get_api_key(),</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>        <span class="st">"format"</span>: <span class="st">"json"</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>    response <span class="op">=</span> send_api_request(api_url, method<span class="op">=</span>api_method, headers<span class="op">=</span><span class="va">None</span>, params<span class="op">=</span>params)</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> response</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Given a user, get information about all the top artists</span></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> get_user_top_artists(user_name):</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>    params <span class="op">=</span> {</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>        <span class="st">"user"</span>: user_name,</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>        <span class="st">"method"</span>: <span class="st">"user.gettopartists"</span>,</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>        <span class="st">"api_key"</span>: get_api_key(),</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>        <span class="st">"format"</span>: <span class="st">"json"</span></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>    response <span class="op">=</span> send_api_request(api_url, method<span class="op">=</span>api_method, headers<span class="op">=</span><span class="va">None</span>, params<span class="op">=</span>params)</span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> response</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>I do not want to flood the API entry point with requests, so I added a delay to the scripts to avoid hitting rate limits.</p>
+</div>
+</div>
+<p>The main use I’ve had so far consisted in fetching information about the artists: I am interested particularly in the <code>tags</code> fields, because I can use them to extract <em>genres</em>, which are not available in the main dump of scrobbles. That information will come into play in later posts.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> json</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> time</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> polars <span class="im">as</span> pl</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tqdm <span class="im">import</span> tqdm</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> src.requesting <span class="im">import</span> get_artist_data</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>df<span class="op">=</span> pl.read_csv(<span class="st">"recent-tracks.csv"</span>)</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>all_artists <span class="op">=</span> df[<span class="st">"artist"</span>].unique().to_list()</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>artist_data <span class="op">=</span> []</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> idx, a <span class="kw">in</span> tqdm(<span class="bu">enumerate</span>(all_artists), total<span class="op">=</span><span class="bu">len</span>(all_artists), desc<span class="op">=</span><span class="st">"Fetching artist data"</span>):</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Adding a delay to avoid hitting the API rate limit</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> idx <span class="op">%</span> <span class="dv">50</span> <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>        tqdm.write(<span class="ss">f"Sleeping for 1 second to avoid hitting the API rate limit..."</span>)</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>        time.sleep(<span class="dv">1</span>)</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">try</span>:</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>        _data <span class="op">=</span> get_artist_data(a)</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>        artist_data.append(_data)</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>    <span class="cf">except</span> <span class="pp">Exception</span> <span class="im">as</span> e:</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"Error fetching data for </span><span class="sc">{</span>a<span class="sc">}</span><span class="ss">: </span><span class="sc">{</span>e<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"artist_data.json"</span>, <span class="st">"w"</span>) <span class="im">as</span> f:</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>    json.dump(artist_data, f)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Putting all this code together, I now have a barebones set of methods that allow to fetch additional info from the API in case I need it. If I need to, I can add more methods to access more API functions.</p>
+</section>
+<section id="to-conclude" class="level2">
+<h2 class="anchored" data-anchor-id="to-conclude">To conclude…</h2>
+<p>This post was an introduction to my Last.fm plotting project. I figured some context would be needed before moving on to actually using the data, which is what I will be talking about in the next post in this series.</p>
+<p>To summarize:</p>
+<ul>
+<li>I want to explore the 13 years worth of data stored in my Last.fm account through plotting and timeseries.</li>
+<li>To do this, I downloaded all my data using a user script, and now I have access to the list of all my scrobbles (i.e., the tracks I played over time).</li>
+<li>Finally, I wrote a set of functions that will help me fetching additional information from the Last.fm API if I need it.</li>
+</ul>
+<p>That’s it for this post! Thanks for reading along.</p>
+<p>In the next post, I will study and plot my top artists, and I’ll explore a bunch of techniques I’ve seen in other people’s visualizations.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

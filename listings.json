@@ -2,6 +2,7 @@
   {
     "listing": "/posts/posts.html",
     "items": [
+      "/posts/data_preparation/fetch-lastfm.html",
       "/posts/news/blog-post-skrub-encoders.html",
       "/posts/bns/post-bns-intro.html",
       "/posts/news/end-of-2024.html",
