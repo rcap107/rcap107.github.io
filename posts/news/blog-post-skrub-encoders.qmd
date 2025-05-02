@@ -6,6 +6,7 @@ categories:
     - news
     - skrub
 image: "/images/news/post-skrub-encoders.png"
+date: 2025-03-30
 ---
 I wrote a new blog post on the Skrub materials website! 
 

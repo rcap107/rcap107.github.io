@@ -1,0 +1,214 @@
+---
+title: "Fetching and preparing Last.fm data for beautiful data visualizations"
+format: html
+date: "2025/05/04"
+categories:
+    - code
+    - "data visualization"
+draft: false
+reading-time: true
+---
+One of the things I enjoy the most about my job is having the opportunity of 
+turning data into images, coming up with ways to tell myself and others a story.
+
+The story of this post (and a few more down the line) will revolve around the 
+history of my musical taste: favorite artists, favorite tracks, artists loved
+then forgotten, and new discoveries that stuck around. 
+It's also a story about timeseries, which is a type of data I haven't worked on a 
+lot yet, so I took it as an opportunity to learn something new with it. 
+
+## How to get your own musical history
+How am I going to do this? To begin with, I need a lot of data, ideally 
+spanning multiple years and tracking anything I might need to cook up some nice
+figures. In comes my [Last.fm account](https://www.last.fm/user/Th3Cap): the 
+place where (most of) the tracks I've played over the past 10 years or so can 
+be found. 
+
+If you're not familiar with [Last.fm](https://www.last.fm/), it's a website that 
+keeps track of the music you listen to on most streaming services (or music 
+players): each track played is recorded as a **scrobble**, 
+which is simply a record that includes when the track was being played, the track 
+name, and some additional information about it (the artist, album etc.). 
+
+Last.fm then uses that information to give cool stats about your listening habits, 
+and to recommend artists or events that may interest you. I quite like to track 
+my tracks (pun intended), but I'm not very interested in the recommendation. 
+I found out about the service at the end of 2012, and I have been using it ever 
+since, across many generations of devices and music players. As a result, as of 
+the writing of this post I have I have about 124 thousand scrobbles, which is 
+**a lot** of data to play with. 
+
+So, at some point I got an idea: what if I get all that data out of the account, 
+and I use it as a sandbox for preparing figures? 
+
+Well, the first thing to figure out was getting that data out, which can usually
+be done by either requesting for my data (thanks GDPR), or by looking up the API. 
+In this case, the API was freely available and quite easy to use. 
+
+::: {.callout-tip}
+Out of curiosity, I tried to get my Spotify data, which goes back about as long, 
+but dumping it and sifting through it I couldn't find anywhere as much information
+as I could with Last.fm, which is why I stuck with the latter instead. 
+:::
+
+Luckily, I found an online 
+[tool](https://lastfm.ghan.nl/export/) made by Last.fm user 
+[ghan64](https://last.fm/user/ghan64), that saved me the need to write my own 
+script for dumping my data. 
+
+The tool was _very_ convenient, and I got all my listening history in a few minutes. 
+A good starting point, but then I wondered: what if I need additional information? 
+After all, the data I have contains only the timestamp, the names of the song, 
+the artist and the album, and their respective [MusicBrainz ID](https://musicbrainz.org)
+if avabilable (I won't be going into the MBID in this post, but it may come
+into play later). No genres or user tags are available, for example, and 
+there is a lot of missing data. 
+
+To fill in that missing data, I decided to use the Last.fm API myself so that I 
+could make use of all the information that is available on the website, and add 
+it to my own collection of records. 
+
+## Requesting info with the Last.fm API
+For the time being, my requesting code is extremely simple: all it does is 
+handling the request generation of the data by providing a handful of functions 
+that send different requests to the API, and converting the resulting data to either 
+json or Python dictionaries. 
+
+My `requesting.py` starts by loading the API key for my account from a file I have
+on disk, then it sets the constants that are used to contatct the API entry point. 
+If you want to follow along, you will have to prepare your own API key: it's a 
+very quick process and all it takes is having a Last.fm account. 
+
+```python
+import pprint
+import requests
+import json
+
+def get_api_key():
+    with open("api-key.id", "r") as file:
+        api_key = file.read().strip()
+    return api_key
+api_key = get_api_key()
+api_url = "http://ws.audioscrobbler.com/2.0" 
+api_method = "GET"  
+```
+
+Then, I need a requesting function that can send a well-formed request to the 
+API entry point. The parameters needed for the request are saved in `params`, and
+depend on the specific call. 
+
+```python
+def send_api_request(url, method='GET', headers=None, params=None, data=None):
+    try:
+        # Send the request to the API
+        response = requests.request(method, url, headers=headers, params=params, json=data)
+        # Raise an exception if the request was unsuccessful
+        response.raise_for_status()
+        # Parse the JSON response
+        json_response = response.json()
+        return json_response
+
+    except requests.exceptions.HTTPError as http_err:
+        print(f"HTTP error occurred: {http_err}")
+    except requests.exceptions.RequestException as err:
+        print(f"Error occurred: {err}")
+    except json.JSONDecodeError:
+        print("Error decoding JSON response")
+```
+
+The `send_api_request` method is used by the other methods, whose only function
+is preparing the parameters for the request: 
+```python
+# Fetch information about an artist given their name
+def get_artist_data(artist_name):
+    params = {
+        "artist": artist_name,
+        "method": "artist.getinfo",
+        "api_key": get_api_key(),
+        "format": "json"
+    }
+    response = send_api_request(api_url, method=api_method, headers=None, params=params)
+    return response
+# Fetch information about a track given the name and the artist
+def get_track_data(track_name, artist_name):
+    params = {
+        "track": track_name,
+        "artist": artist_name,
+        "method": "track.getinfo",
+        "api_key": get_api_key(),
+        "format": "json"
+    }
+    response = send_api_request(api_url, method=api_method, headers=None, params=params)
+    return response
+
+# Given a user, get information about all the top artists
+def get_user_top_artists(user_name):
+    params = {
+        "user": user_name,
+        "method": "user.gettopartists",
+        "api_key": get_api_key(),
+        "format": "json"
+    }
+    response = send_api_request(api_url, method=api_method, headers=None, params=params)
+    return response
+```
+::: {.callout-important}
+I do not want to flood the API entry point with requests, so I added a delay to 
+the scripts to avoid hitting rate limits. 
+:::
+
+The main use I've had so far consisted in fetching information about the artists:
+I am interested particularly in the `tags` fields, because I can use them to 
+extract _genres_, which are not available in the main dump of scrobbles. That 
+information will come into play in later posts. 
+
+```python
+import json
+import time
+
+import polars as pl
+from tqdm import tqdm
+
+from src.requesting import get_artist_data
+
+df= pl.read_csv("recent-tracks.csv")
+all_artists = df["artist"].unique().to_list()
+
+artist_data = []
+for idx, a in tqdm(enumerate(all_artists), total=len(all_artists), desc="Fetching artist data"):
+    # Adding a delay to avoid hitting the API rate limit
+    if idx % 50 == 0:
+        tqdm.write(f"Sleeping for 1 second to avoid hitting the API rate limit...")
+        time.sleep(1)
+    try:
+        _data = get_artist_data(a)
+        artist_data.append(_data)
+    except Exception as e:
+        print(f"Error fetching data for {a}: {e}")
+
+with open("artist_data.json", "w") as f:
+    json.dump(artist_data, f)
+```
+
+Putting all this code together, I now have a barebones set of methods that allow
+to fetch additional info from the API in case I need it. If I need to, I can 
+add more methods to access more API functions. 
+
+## To conclude...
+This post was an introduction to my Last.fm plotting project. I figured some context
+would be needed before moving on to actually using the data, which is what I will
+be talking about in the next post in this series. 
+
+To summarize: 
+
+- I want to explore the 13 years worth of data stored in my Last.fm account through
+plotting and timeseries. 
+- To do this, I downloaded all my data using a user script, and now I have access to 
+the list of all my scrobbles (i.e., the tracks I played over time). 
+- Finally, I wrote a set of functions that will help me fetching additional 
+information from the Last.fm API if I need it. 
+
+That's it for this post! Thanks for reading along. 
+
+In the next post, I will study and plot my top artists, and I'll explore a bunch
+of techniques I've seen in other people's visualizations. 
