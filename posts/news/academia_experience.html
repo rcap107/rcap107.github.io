@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2022-04-08">
+<meta name="dcterms.date" content="2024-10-08">
 
-<title>Something about myself – A blog by RC</title>
+<title>My 2024 (so far) in academia – A blog by RC</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -127,11 +127,8 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Something about myself</h1>
-                                <div class="quarto-categories">
-                <div class="quarto-category">about</div>
-              </div>
-                  </div>
+      <h1 class="title">My 2024 (so far) in academia</h1>
+                      </div>
   </div>
     
   
@@ -141,7 +138,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">April 8, 2022</p>
+        <p class="date">October 8, 2024</p>
       </div>
     </div>
     
@@ -160,20 +157,19 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="about-this-website" class="level3">
-<h3 class="anchored" data-anchor-id="about-this-website">About this website</h3>
-<p>Hi! I’m Riccardo, and you’re on my personal website. I will be using it to share updates on what I am up to, as well as some blog posts on stuff I may find interesting.</p>
-</section>
-<section id="about-myself" class="level3">
-<h3 class="anchored" data-anchor-id="about-myself">About myself</h3>
-<p>I am a research engineer employed by <a href="https://p16.inria.fr">P16</a>, a project within Inria whose objective is developing promising scientific libraries in Python. I am one of the core devs of the <a href="https://skrub-data.org/stable/">Skrub</a> library, and among other things I am working on implementing in the library some of the code I worked on during my postdoc.</p>
-<p>Said postdoc involved figuring out the “best practices” to integrate information coming from data lakes with tables of interest. I split my time between between the <a href="https://team.inria.fr/soda/">SODA Team</a> at<br>
-<a href="https://www.inria.fr/fr/centre-inria-de-saclay">Inria Saclay</a> and the R&amp;D department of <a href="https://www.dataiku.com">Dataiku</a>.</p>
-<p>Before that, I obtained a PhD in Computer Science from <a href="https://www.eurecom.fr">EURECOM</a>, in Sophia Antipolis (near Nice in the south of France). The subject of the PhD was automating methods to integrate data and impute missing values. I published some of my findings at SIGMOD2020 and EDBT2024.</p>
-<p>All my publications are available <a href="../../publications">here</a>.</p>
-<p>On the personal side, I am a big fan of gaming, anime/manga, technology and history.</p>
-<p>I have been living in France since 2016, but for various reasons I am still not as fluent in French as I would like.</p>
-<p>My personal CV is available <a href="../../pubs/CV_cappuzzo.pdf">here</a>.</p>
+<p>Disclaimer: this post will mostly be a rant. The reasons for it should become sufficiently clear as I go over my experience in the past few months.</p>
+<p>For context, I have been working on a paper for the past year or so. Said paper involved running a few thousands experimental configurations over different baselines, then reporting said experiments in a paper that was initially <a href="[relref []{.quarto-shortcode__-param data-is-shortcode=&quot;1&quot; data-value=&quot;posts/news/vldb_2024.md&quot; data-raw=&quot;&quot;posts/news/vldb_2024.md&quot;&quot;} ]{.quarto-shortcode__ data-is-shortcode=&quot;1&quot; data-raw=&quot;{{< relref &quot;posts/news/vldb_2024.md&quot; >}}&quot;}">submitted to VLDB2024</a> (end of January this year). Said paper was rejected at VLDB 2024, submitted to SIGMOD2025, and was rejected again.</p>
+<p>Over the course of only a few months, I had the privilege of experiencing (very courteous) academic blackmailing, extremely negative reviews, burnout, overtime, and possibly the most bullshit rejection I have heard of.</p>
+<p>Let’s start from top, with the academic blackmail. So, VLDB is a single blind conference, which means that the authors are not aware of who the reviewers are, while the reviewers can instead see the names and affiliations of the authors.</p>
+<p>This is less annoying to manage than double blind (which instead involve anonymizing everything), but has the fun side effect of receiving emails from the reviewers, who might <em>nicely</em> ask to <em>please</em> add their recent papers to yours in a <em>completely non-threatening way</em> by <em>reaching out in private to one of the authors</em>. Bonus points for asking to add references to papers whose code is not available to run and test.</p>
+<p>This leads me directly into the rejection. I have my fair share of rejected papers – though by this point, most of my rejections are from this singular paper –, and I am keenly aware of how much of an impact “rolling the right reviewers” has on the final outcome. This rejection was especially fun, however, because it came <em>only after</em> a revision period during which I had to re-run most of the experiments (hence the burnout). But as a man once said, “I’m not done yet”: the reasoning for the rejection was that “we did not test a specific baseline, and said baseline works on my machine” (paraphrased). The kicker? <em>The code for the baseline was not available online, and the reviewer did not provide it to us so that we could test it</em>. As a result, the area chair agreed with it, and the paper was rejected after the revision step.</p>
+<p>What was even more of a kick in the nether regions was that we even managed to change the mind of the one reviewer that had marked his review as “weak reject, and I am not going to change my mind”. Unfortunately, we also managed to change the mind of one of the “weak accept” reviews to “reject”, and that somehow stuck.</p>
+<p>Something interesting to note is that, soon after the paper was rejected, the arXiv version received a new citation. This citation was by one of the authors of the baseline. While I am not one to engage in conspirationsm, the coincidence was a bit too perfect for me to ignore.</p>
+<p>While I only briefly mentioned the burnout, it was <em>bad</em>. I got sick after every deadline, and I think I developed some degree of PTSD from looking at terminal screens waiting for experimental runs to end. Not the best, especially considering it did not result in success (yet, at least). That’s not good for morale either.</p>
+<section id="lessons-learned" class="level3">
+<h3 class="anchored" data-anchor-id="lessons-learned">Lessons learned</h3>
+<p>What is the summary of these experiences? 1) The current reviewing system is broken (which is something literally anyone in the field will confirm); 2) academia is rife with politics just like everything else; 3) effort is not likely to be rewarded, and your fate lies less in your hands and in your results, than in the ethereal roll of the dice that will assign a reviewer rather than another in any given round of paper submission.</p>
+<p>The result? I will be looking for my next position in industry, rather than academia. Stay tuned for when I will write the equivalent post on my industry misgivings once I have enough experience in that.</p>
 
 
 </section>
