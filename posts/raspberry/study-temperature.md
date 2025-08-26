@@ -7,12 +7,10 @@ date: 2022-07-17T00:06:04+02:00
 # aliases: ["/first"]
 categories: ["raspberry", "IoT"]
 draft: false
+format: 
+  html: 
+    allow-html: true
 ---
-
-### Notes on plots and dataframes
-Before we begin, a couple of notes on plots dataframes: this post has been prepared by converting a jupyter notebook into a markdown file using `nbconvert`. As it turns out, the default output format used by `nbconvert` to display dataframes isn't rendered correctly by the Hugo backend I'm using for the blog. I was not able to find a "clean" solution for it, so for this post (and until I'll find the actual fix) all tables are represented in raw html, rather than in a more decent format. I also need to figure out a better way of saving the plots, which allow to specify a `facecolor`, so that figures have a white background both in light and dark mode. For the time being, it's possible to switch to light mode to fix that particular problem. 
-
-The `nbconvert`-generated version of this post is also available [here](/posts/raspberry/study-temperature-auto).
 
 # Plotting temperature and humidity sensor readings with matplotlib
 
@@ -140,8 +138,6 @@ df_pivot=df_resampled.pivot(index='time', columns='date')
 df_pivot.head(10)
 ```
 
-
-{{< rawhtml >}}
 
 <div>
 <style scoped>
@@ -306,7 +302,6 @@ df_pivot.head(10)
 </table>
 </div>
 
-{{< /rawhtml >}}
 
 
 Here I'm plotting the values of temperature and humidity recorded on each day. 
@@ -467,7 +462,6 @@ df_pivot.head(10)
 ```
 
 
-{{< rawhtml >}}
 
 <div>
 <style scoped>
@@ -608,7 +602,6 @@ df_pivot.head(10)
 </table>
 </div>
 
-{{< /rawhtml >}}
 
 
 
@@ -624,7 +617,6 @@ df_concat
 ```
 
 
-{{< rawhtml >}}
 
 
 <div>
@@ -693,7 +685,6 @@ df_concat
 </table>
 </div>
 
-{{< /rawhtml >}}
 
 
 
@@ -719,7 +710,6 @@ df_new
 ```
 
 
-{{< rawhtml >}}
 
 
 <div>
@@ -788,7 +778,6 @@ df_new
 </table>
 </div>
 
-{{< /rawhtml >}}
 
 
 
@@ -895,7 +884,6 @@ display(df_melted)
 # df_melted = df_melted.sort_values(['date', 'time'])
 ```
 
-{{< rawhtml >}}
 
 
 <div>
@@ -1005,7 +993,6 @@ display(df_melted)
 <p>152 rows × 4 columns</p>
 </div>
 
-{{< /rawhtml >}}
 
 
 A "melted" dataframe can be plotted fairly easily using a command such as the one below. Besides the x- and y-axes, it is possible to distinguish the lines by hue (in this case, different colors for different dates) and by style (different line style for different variables). Here, it does not make a lot of sense to plot humidity and temperature in the same plot, but it is useful for the sake of the example. 
@@ -1039,7 +1026,6 @@ ax = sns.lineplot(data = df_melted, x='datetime', y='value')
 ax.tick_params(rotation=90)
 ```
 
-{{< rawhtml >}}
 
 
 <div>
@@ -1137,7 +1123,6 @@ ax.tick_params(rotation=90)
 <p>152 rows × 3 columns</p>
 </div>
 
-{{< /rawhtml >}}
 
 
     
@@ -1215,7 +1200,6 @@ Let's start by taking a look at `df_pivot` again:
 display(df_pivot.head())
 ```
 
-{{< rawhtml >}}
 
 
 <div>
@@ -1326,7 +1310,6 @@ display(df_pivot.head())
 </table>
 </div>
 
-{{< /rawhtml >}}
 
 
 This dataframe has a two-level header, with one half of the column covering the temperature on different days, and the other half recording humidity in the same periods of time. The index is a timeseries (not a datetime anymore, since the date is recorded in the columns).
@@ -1346,7 +1329,6 @@ df_concat
 ```
 
 
-{{< rawhtml >}}
 
 
 <div>
@@ -1422,7 +1404,6 @@ df_concat
 </table>
 </div>
 
-{{< /rawhtml >}}
 
 
 The result above kind of works, but is not very understandable: on the left, we have the *time at which the extreme was measured* and on the right we have the actual measured value.
@@ -1475,7 +1456,6 @@ df_new
 ```
 
 
-{{< rawhtml >}}
 
 
 <div>
@@ -1551,7 +1531,6 @@ df_new
 </table>
 </div>
 
-{{< /rawhtml >}}
 
 
 

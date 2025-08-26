@@ -2,12 +2,13 @@
   {
     "listing": "/posts/posts.html",
     "items": [
+      "/posts/news/soda-kickoff.html",
+      "/posts/news/retrieve-merge-predict-short.html",
+      "/posts/data_preparation/fetch-lastfm.html",
       "/posts/news/blog-post-skrub-encoders.html",
-      "/posts/bns/post-bns-contour.html",
-      "/posts/bns/post-bns-shields.html",
       "/posts/bns/post-bns-intro.html",
       "/posts/news/end-of-2024.html",
-      "/posts/academia_experience.html",
+      "/posts/news/academia_experience.html",
       "/posts/news/moving-up.html",
       "/posts/news/medium-post.html",
       "/posts/news/vldb_2024.html",

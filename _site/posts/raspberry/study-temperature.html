@@ -284,7 +284,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>df_pivot<span class="op">=</span>df_resampled.pivot(index<span class="op">=</span><span class="st">'time'</span>, columns<span class="op">=</span><span class="st">'date'</span>)</span>
 <span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Displaying only the first 10 rows</span></span>
 <span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>df_pivot.head(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-{{&lt; rawhtml &gt;}}
 <div>
 
 <table class="dataframe table table-sm table-striped small">
@@ -644,7 +643,6 @@ NaN
 </tbody>
 </table>
 </div>
-{{&lt; /rawhtml &gt;}}
 <p>Here I’m plotting the values of temperature and humidity recorded on each day.</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>time_range <span class="op">=</span> pd.timedelta_range(start<span class="op">=</span><span class="st">'1 day'</span>, end<span class="op">=</span><span class="st">'2 days'</span>, freq<span class="op">=</span><span class="st">'3H'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>fig, axs <span class="op">=</span> plt.subplots(<span class="dv">2</span>,<span class="dv">1</span>, sharex<span class="op">=</span><span class="va">True</span>, figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">8</span>))</span>
@@ -762,7 +760,6 @@ Min     humidity = 38.9  % at 00:30:00</code></pre>
 <span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>df_pivot<span class="op">=</span>df_resampled.pivot(index<span class="op">=</span><span class="st">'time'</span>, columns<span class="op">=</span><span class="st">'date'</span>)</span>
 <span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Displaying only the first 10 rows</span></span>
 <span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>df_pivot.head(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-{{&lt; rawhtml &gt;}}
 <div>
 
 <table class="dataframe table table-sm table-striped small">
@@ -1052,12 +1049,10 @@ NaN
 </tbody>
 </table>
 </div>
-{{&lt; /rawhtml &gt;}}
 <div class="sourceCode" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>val_idxmax<span class="op">=</span>df_pivot[[<span class="st">'temperature'</span>, <span class="st">'humidity'</span>]].<span class="bu">apply</span>(pd.Series.idxmax)</span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>val_max<span class="op">=</span>df_pivot[[<span class="st">'temperature'</span>, <span class="st">'humidity'</span>]].<span class="bu">apply</span>(pd.Series.<span class="bu">max</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="sourceCode" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>df_concat <span class="op">=</span> pd.concat([val_idxmax, val_max],  axis<span class="op">=</span><span class="dv">1</span>).reset_index().pivot(index<span class="op">=</span><span class="st">'date'</span>, columns<span class="op">=</span><span class="st">'level_0'</span>)</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>df_concat</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-{{&lt; rawhtml &gt;}}
 <div>
 
 <table class="dataframe table table-sm table-striped small">
@@ -1158,7 +1153,6 @@ date
 </tbody>
 </table>
 </div>
-{{&lt; /rawhtml &gt;}}
 <div class="sourceCode" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>mi <span class="op">=</span> pd.MultiIndex.from_product([[<span class="st">'humidity'</span>, <span class="st">'temperature'</span>], [<span class="st">'timeat'</span>, <span class="st">'value'</span>]])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="sourceCode" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>rows<span class="op">=</span>[]</span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> idx, row <span class="kw">in</span> df_concat.iterrows():</span>
@@ -1169,7 +1163,6 @@ date
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>df_new.index.rename(<span class="st">'date'</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
 <span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>df_new.columns <span class="op">=</span> mi</span>
 <span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>df_new</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-{{&lt; rawhtml &gt;}}
 <div>
 
 <table class="dataframe table table-sm table-striped small">
@@ -1269,7 +1262,6 @@ date
 </tbody>
 </table>
 </div>
-{{&lt; /rawhtml &gt;}}
 <div class="sourceCode" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>time_range <span class="op">=</span> pd.timedelta_range(start<span class="op">=</span><span class="st">'1 day'</span>, end<span class="op">=</span><span class="st">'2 days'</span>, freq<span class="op">=</span><span class="st">'3H'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="sourceCode" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>fig, axs <span class="op">=</span> plt.subplots(<span class="dv">2</span>,<span class="dv">1</span>, sharex<span class="op">=</span><span class="va">True</span>, figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">8</span>))</span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>df_pivot<span class="op">=</span>df_resampled.pivot(index<span class="op">=</span><span class="st">'time'</span>, columns<span class="op">=</span><span class="st">'date'</span>)</span>
@@ -1349,7 +1341,6 @@ Min     humidity = 60.2  % at 00:00:00</code></pre>
 <span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>display(df_melted)</span>
 <span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a><span class="co"># df_melted = df_melted.sort_values(['date', 'time'])</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-{{&lt; rawhtml &gt;}}
 <div>
 
 <table class="dataframe table table-sm table-striped small">
@@ -1565,7 +1556,6 @@ temperature
 152 rows × 4 columns
 </p>
 </div>
-{{&lt; /rawhtml &gt;}}
 <p>A “melted” dataframe can be plotted fairly easily using a command such as the one below. Besides the x- and y-axes, it is possible to distinguish the lines by hue (in this case, different colors for different dates) and by style (different line style for different variables). Here, it does not make a lot of sense to plot humidity and temperature in the same plot, but it is useful for the sake of the example.</p>
 <p>Something else to note in the plot below is that the x-axis starts at 14:30, then continues for 24 hours until 14:00 the next day: this is due to the fact that the data captured by the log is incomplete for the day of 2022-07-13. After searching around for a while, I wasn’t able to reset the ticks on the x-axis to make them work properly, so I had to look for some workarounds.</p>
 <p>Indeed, the current plot shows a pretty major inconsistency at 0:00, which is when the date shifts from July 13th to July 14th, which is also why the orange line “jumps” below and seems to be a continuation of the blue line: this is exactly what that is!</p>
@@ -1585,7 +1575,6 @@ temperature
 <span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="dv">12</span>,<span class="dv">4</span>))</span>
 <span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> sns.lineplot(data <span class="op">=</span> df_melted, x<span class="op">=</span><span class="st">'datetime'</span>, y<span class="op">=</span><span class="st">'value'</span>)</span>
 <span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>ax.tick_params(rotation<span class="op">=</span><span class="dv">90</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-{{&lt; rawhtml &gt;}}
 <div>
 
 <table class="dataframe table table-sm table-striped small">
@@ -1765,7 +1754,6 @@ temperature
 152 rows × 3 columns
 </p>
 </div>
-{{&lt; /rawhtml &gt;}}
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../../images/study-temperature_files/study-temperature_55_1.png" class="img-fluid figure-img"></p>
@@ -1815,7 +1803,6 @@ temperature
 <p>After splitting the readings on a day-by-day basis using <code>pivot</code>, I looked for a way of getting the extremes using the same table. Turns out, this was far more complex than I thought, especially for printing them in an easy-to-read way.</p>
 <p>Let’s start by taking a look at <code>df_pivot</code> again:</p>
 <div class="sourceCode" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>display(df_pivot.head())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-{{&lt; rawhtml &gt;}}
 <div>
 
 <table class="dataframe table table-sm table-striped small">
@@ -2030,7 +2017,6 @@ NaN
 </tbody>
 </table>
 </div>
-{{&lt; /rawhtml &gt;}}
 <p>This dataframe has a two-level header, with one half of the column covering the temperature on different days, and the other half recording humidity in the same periods of time. The index is a timeseries (not a datetime anymore, since the date is recorded in the columns).</p>
 <div class="sourceCode" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Extracting the extremes and saving them in dataframes</span></span>
 <span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>val_idxmax<span class="op">=</span>df_pivot[[<span class="st">'temperature'</span>, <span class="st">'humidity'</span>]].<span class="bu">apply</span>(pd.Series.idxmax)</span>
@@ -2038,7 +2024,6 @@ NaN
 <div class="sourceCode" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Concatenating dataframes</span></span>
 <span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>df_concat <span class="op">=</span> pd.concat([val_idxmax, val_max],  axis<span class="op">=</span><span class="dv">1</span>).reset_index().pivot(index<span class="op">=</span><span class="st">'date'</span>, columns<span class="op">=</span><span class="st">'level_0'</span>)</span>
 <span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>df_concat</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-{{&lt; rawhtml &gt;}}
 <div>
 
 <table class="dataframe table table-sm table-striped small">
@@ -2156,7 +2141,6 @@ date
 </tbody>
 </table>
 </div>
-{{&lt; /rawhtml &gt;}}
 <p>The result above kind of works, but is not very understandable: on the left, we have the <em>time at which the extreme was measured</em> and on the right we have the actual measured value.</p>
 <p>It would be nicer to have a format similar to the original <code>df_pivot</code>, with temperature and humidity on top and the two variables <code>timeat</code> and <code>measured value</code> below. This can be done using a <code>MultiIndex</code>, which in this case I am building with the function <code>.from_product</code>. This function executes the cartesian product of the iterables passed as inputs and produces a MultiIndex object where each iterable represents a level in the multiindex.</p>
 <div class="sourceCode" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>mi <span class="op">=</span> pd.MultiIndex.from_product([[<span class="st">'humidity'</span>, <span class="st">'temperature'</span>], [<span class="st">'timeat'</span>, <span class="st">'value'</span>]])</span>
@@ -2180,7 +2164,6 @@ date
 <span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>df_new.index.rename(<span class="st">'date'</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
 <span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a>df_new.columns <span class="op">=</span> mi</span>
 <span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a>df_new</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-{{&lt; rawhtml &gt;}}
 <div>
 
 <table class="dataframe table table-sm table-striped small">
@@ -2297,7 +2280,6 @@ date
 </tbody>
 </table>
 </div>
-{{&lt; /rawhtml &gt;}}
 <div class="sourceCode" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
@@ -2540,7 +2522,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/www\.riccardocappuzzo\.com");
+      var filterRegex = new RegExp('/' + window.location.host + '/');
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

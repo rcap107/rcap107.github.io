@@ -1,5 +1,5 @@
 ---
-title: "The setup"
+title: "Preparing a Raspberry-based thermometer setup"
 date: 2022-07-11T00:54:30+02:00
 categories: ["raspberry", "arduino"]
 description: "The device, and the accessories."
