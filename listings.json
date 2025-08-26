@@ -2,6 +2,7 @@
   {
     "listing": "/posts/posts.html",
     "items": [
+      "/posts/news/euroscipy-2025.html",
       "/posts/news/soda-kickoff.html",
       "/posts/news/retrieve-merge-predict-short.html",
       "/posts/data_preparation/fetch-lastfm.html",
