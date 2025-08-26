@@ -1,4 +1,4 @@
-.vscode
+.vscode/
 public/
 resources/_gen/
 
@@ -12,3 +12,5 @@ dist
 tmp
 
 /.quarto/
+_site/
+
