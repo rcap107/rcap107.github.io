@@ -195,11 +195,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<section id="notes-on-plots-and-dataframes" class="level3">
-<h3 class="anchored" data-anchor-id="notes-on-plots-and-dataframes">Notes on plots and dataframes</h3>
-<p>Before we begin, a couple of notes on plots dataframes: this post has been prepared by converting a jupyter notebook into a markdown file using <code>nbconvert</code>. As it turns out, the default output format used by <code>nbconvert</code> to display dataframes isn’t rendered correctly by the Hugo backend I’m using for the blog. I was not able to find a “clean” solution for it, so for this post (and until I’ll find the actual fix) all tables are represented in raw html, rather than in a more decent format. I also need to figure out a better way of saving the plots, which allow to specify a <code>facecolor</code>, so that figures have a white background both in light and dark mode. For the time being, it’s possible to switch to light mode to fix that particular problem.</p>
-<p>The <code>nbconvert</code>-generated version of this post is also available <a href="../../posts/raspberry/study-temperature-auto">here</a>.</p>
-</section>
 <section id="plotting-temperature-and-humidity-sensor-readings-with-matplotlib" class="level1">
 <h1>Plotting temperature and humidity sensor readings with matplotlib</h1>
 <p>In this notebook, I will take a look at the readings from a DHT22 temperature-humidity sensor that I have left for a few days in a couple of locations in my house. As I’m writing this, we’re in the middle of the summer and there’s a heatwave going on, so the average temperatures will be <em>pretty high</em>.</p>
