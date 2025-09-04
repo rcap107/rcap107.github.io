@@ -1,7 +1,6 @@
 ---
 title: "EuroSciPy 2025: thinking back on the event and my tutorial"
 date: 2025-09-26
-author: Riccardo Cappuzzo
 tags: [EuroSciPy, conference, Python, OSS]
 ---
 
