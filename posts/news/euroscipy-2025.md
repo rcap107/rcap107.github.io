@@ -1,6 +1,6 @@
 ---
 title: "EuroSciPy 2025: thinking back on the event and my tutorial"
-date: 2025-09-26
+date: 2025-08-26
 tags: [EuroSciPy, conference, Python, OSS]
 ---
 
