@@ -17,4 +17,4 @@ _site/
 */data/*
 data
 /.quarto/
-/_site/
+_site
