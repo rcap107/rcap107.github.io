@@ -11,6 +11,8 @@ node_modules
 dist
 tmp
 
-/.quarto/
+.quarto/
 _site/
 
+*/data/*
+data
