@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2025-09-04">
 
 <title>Experiments plotting my top Last.fm artists – A blog by RC</title>
 <style>
@@ -337,6 +338,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="quarto-title-meta">
 
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">September 4, 2025</p>
+      </div>
+    </div>
     
       
     </div>
@@ -354,7 +361,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<p>Following from my previous post on fetching my Last.fm scrobbles (check it out here if you want to see how I did it), I now have more than ten years’ worth of data and no idea what to do with it.</p>
+<p>Following from my <a href="../../posts/data_preparation/fetch-lastfm.html">previous post</a> on fetching my Last.fm scrobbles (check it out here if you want to see how I did it), I now have more than ten years’ worth of data and no idea what to do with it.</p>
 <p>My first thought was to visualize my top artists, so I decided to experiment a bit with how I could do that. I recently found a very nice website (aptly) named <a href="https://python-graph-gallery.com">The Python Graph Gallery</a>, which has a lot of interesting examples of how to visualize data using Python.</p>
 <p>Out of all the examples, there were a couple I found particularly interesting, so I decided to apply them to my own data. However, before getting to that point, I had to do a lot of data wrangling to get my data into the proper format.</p>
 <p>This was all done using Python and the Polars library, so if you’re not interested in the plots but are curious to see some funky Polars code, do keep reading.</p>
@@ -11871,7 +11878,7 @@ No columns match the selected filter: <strong data-manager="ColumnFilterName"></
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>colors <span class="op">=</span> cmap(np.linspace(<span class="fl">0.1</span>, <span class="fl">0.9</span>, <span class="bu">len</span>(order)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Now I can use the matplotlib <code>stackplot</code> function to finally draw my data. Some labels to make the data pretty, but nothing particularly fancy to add here.</p>
-<div id="82d6254f" class="cell" data-execution_count="43">
+<div id="82d6254f" class="cell">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">6</span>))</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>ax.stackplot(</span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    x,</span>
@@ -11886,9 +11893,7 @@ No columns match the selected filter: <strong data-manager="ColumnFilterName"></
 <span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"Date"</span>, fontsize<span class="op">=</span><span class="dv">14</span>)</span>
 <span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">"Percentage of total plays"</span>, fontsize<span class="op">=</span><span class="dv">14</span>)</span>
-<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="ss">f"My Top </span><span class="sc">{</span>top_k<span class="sc">}</span><span class="ss"> artists over 10 years of Last.fm scrobbles"</span>, fontsize<span class="op">=</span><span class="dv">16</span>)</span>
-<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a>fig.savefig(<span class="st">"top_artists_stackplot.png"</span>, dpi<span class="op">=</span><span class="dv">300</span>, bbox_inches<span class="op">=</span><span class="st">"tight"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="ss">f"My Top </span><span class="sc">{</span>top_k<span class="sc">}</span><span class="ss"> artists over 10 years of Last.fm scrobbles"</span>, fontsize<span class="op">=</span><span class="dv">16</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -11906,7 +11911,7 @@ No columns match the selected filter: <strong data-manager="ColumnFilterName"></
 <p>The second plot was heavily inspired by <a href="https://python-graph-gallery.com/web-small-multiple-with-highlights/">this plot</a> from the gallery.</p>
 <p>I really like that plot: it’s informative and shows the information in an interesting way. Moreover, I have never played around with facecolors and fonts, and that plot inspired me to try something different from the usual “default font on white background”.</p>
 <p>For this plot, I’m only interested in the actual artists, no need to have “Everyone else” in the way.</p>
-<div id="71e9a9e8" class="cell" data-execution_count="49">
+<div id="71e9a9e8" class="cell">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># del dict_abs["Everyone else"]</span></span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Defining a new colormap</span></span>
@@ -11988,9 +11993,7 @@ No columns match the selected filter: <strong data-manager="ColumnFilterName"></
 <span id="cb17-79"><a href="#cb17-79" aria-hidden="true" tabindex="-1"></a>    fontsize<span class="op">=</span><span class="dv">8</span>,</span>
 <span id="cb17-80"><a href="#cb17-80" aria-hidden="true" tabindex="-1"></a>    color<span class="op">=</span><span class="st">"white"</span>,</span>
 <span id="cb17-81"><a href="#cb17-81" aria-hidden="true" tabindex="-1"></a>    fontname<span class="op">=</span><span class="st">"Futura"</span>,</span>
-<span id="cb17-82"><a href="#cb17-82" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb17-83"><a href="#cb17-83" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-84"><a href="#cb17-84" aria-hidden="true" tabindex="-1"></a>fig.savefig(<span class="st">"top_artists_scrobbles.png"</span>, dpi<span class="op">=</span><span class="dv">300</span>, bbox_inches<span class="op">=</span><span class="st">"tight"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb17-82"><a href="#cb17-82" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
