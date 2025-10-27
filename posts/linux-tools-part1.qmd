@@ -1,0 +1,207 @@
+---
+title: "Becoming a power user - Episode 1: A dream and Vim"
+format: html
+date: 2025-09-05
+draft: true
+tags: ["linux", "zsh", "tmux", "vim", "vscode"]
+image: "https://imgs.xkcd.com/comics/is_it_worth_the_time.png"
+---
+
+
+There is something very satisfying about watching someone being very good at something
+([Mike Trapp](https://youtu.be/ppPX9F0kEys?si=Ova1YWMvmqM6IaV7&t=904), 2020). 
+That's exactly what I was thinking every time I'd look over the shoulder of one 
+of my former colleagues only to see him spawn all sorts of terminals, interpreters,
+scripts and more without ever so much as touching the mouse. 
+
+That's when I got an idea of what can be done with some proper muscle memory and 
+proper configuration of your work station, and I got inspired to try to do something
+along the same lines. After all, optimizing in games is something I always do, and
+terminals are kinda like games, ... right? 
+
+Anyway. In this post I'll explain a bit of what I have been setting up over the 
+past few months, and in the next couple of posts I will go into more detail regarding
+my `zsh` setup, my `tmux` setup, and how both come into play for my job as a 
+developer. 
+
+However, the first thing I should talk about is where it all started. 
+
+## Vim, or, the entrance to the rabbit hole's
+
+<blockquote style="font-style: italic; color: gray;">
+  Using vim keybinds may save you some time that you then will waste on vim 
+  configurations that should "save time".
+  <br>— Jérôme (paraphrased)
+</blockquote>
+
+Unfortunately, I forgot the exact words that were spoken that day, but I think
+I captured the gist of what he was warning me of. 
+
+On the other hand, we have my borderline obsessive interest in optimizing everything
+I do for the fun of it, and learning how to do it at the same time, and this 
+_relevant XKCD_ (because of course there would be one):
+![](https://imgs.xkcd.com/comics/is_it_worth_the_time.png){fig-align="center"}
+
+As I was saying, it's Jérôme's fault if I'm doing all this, and for that I say 
+"thanks Jérôme, I'm having so much fun now". All that I needed was a good excuse
+to install the [VSCode VIM extension](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim)
+to finally have to deal with the keybinds, the various modes, and everything that 
+they entail. 
+
+They opened a brand new world: no longer I would be limited to CTRL+arrow keys
+to delete one word at a time. I now had a whole keyboard worth of keybinds to 
+yank, paste, select, delete, move, and everything that comes with it. 
+
+I'm still learning how to navigate properly, and I am nowhere near being a black 
+belt in anything Vim related, but I can say that getting used to the combination
+of selection + movement is extremely satisfying. 
+
+Of course, there was some friction involved in the switch, with some overlapping
+keybinds I had to deal with. Specifically, I had to remove some of the Vim commands
+because they conflicted with functions of VSCode that I used frequently, like 
+Ctrl+P (to open files), and Ctrl+B (open and close the left pane). 
+
+Some other configuration changes I needed had to do with the clipboard, and some
+additions to the leader key that have been more or less useful over time. 
+Thankfully, all it took was some editing of the `settings.json` file in Code and
+I was able to get the editor to do (mostly) what I want. 
+
+## Configuring Vim on VSCode
+The first thing I changed was enabling the system clipboard: this let me copy and
+paste seamlessly from Code to anything else, and vice versa. Immediately, this
+reduced friction because I did not have to remember the proper Vim chords to do that.
+I still don't remember them. 
+
+```json
+    "vim.useSystemClipboard": true,
+```
+Another setting I changed is: 
+```json
+    "vim.highlightedyank.enable": true,
+```
+This setting colors the yanked area in yellow for a short time after copying, which
+I find quite useful to double check that I copied the right thing. 
+
+I also changed the default `<leader>` key, which can be used as starting chord 
+for additional commands (some of which I also edited). By default, the `<leader>`
+key is `\`. I have seen various people suggest changing it to the spacebar, which
+is exactly what I did: 
+
+```json
+    "vim.leader": "<space>",
+```
+I have some additional cosmetic changes which may or may not be useful: 
+```json
+    "vim.showMarksInGutter": true,
+    "vim.cursorStylePerMode.visual": "block-outline",
+    "vim.statusBarColorControl": true,
+```
+
+Then, I tried to set up easymotion, a plugin that should help with navigating 
+through the document. I can't say I am using it that much, but it might be a 
+matter of habit. 
+```json
+    "vim.easymotion": true,  
+```
+Finally, I have a bunch of extra commands that rely on the `<leader>` key and that
+I set in the `vim.normalModeKeyBindingsNonRecursive` field. 
+
+I can rename objects:
+```json
+{
+    "before": [
+        "<leader>",
+        "r",
+        "r"
+    ],
+    "commands": [
+        "editor.action.rename"
+    ]
+},
+```
+Show the hover menu on the current object, giving me some additional
+info about it:    
+```json
+{
+    "before": [
+        "K"
+    ],
+    "commands": [
+        "editor.action.showHover"
+    ]
+},
+```
+
+Show the definition of the object under the cursor: 
+```json
+{
+    "before": [
+        "<leader>",
+        "d",
+    ],
+    "commands": [
+        "editor.action.revealDefinition"
+    ]
+},
+```
+I have a keybind for closing the current editor. This is not particularly relevant
+when I am using a Mac, because like in many other cases there is no overlap. On
+Linux (and I assume on Windows), this is not the case, and some concessions must
+be made.
+
+```json
+{
+    "before": [
+        "<leader>",
+        "<leader>",
+        "t"
+    ],
+    "commands": [
+        "jupyter.execSelectionInteractive"
+    ]
+},
+```
+The final commands I set up _should_ help with executing cells of code in the 
+interactive window when I am developing using that and Python scripts with the 
+`# %%` cell marker. However, for some reason this does not always work, and I 
+still haven't figured out the reason (I suspect the laptop I am using has something
+to do with it). 
+One executes the current cell, and the other refocuses the interactive window. 
+Given they depend on where the cursor is, however, they're not especially reliable. 
+
+
+```json
+{
+    "before": [
+        "<leader>",
+        "<leader>",
+        "t"
+    ],
+    "commands": [
+        "jupyter.execSelectionInteractive"
+    ]
+},
+{
+    "before": [
+        "<leader>",
+        "f",
+        "i"
+    ],
+    "commands": [
+        "interactive.input.focus"
+    ]
+}
+```
+
+## Conclusions
+In this post I half-mused about how I went from "hey that terminal stuff is cool"
+to "hey I want to do that", and half explained the process of changing from default
+keybinds in VSCode to using Vim keybinds, with the custom configuration that comes
+from that. 
+
+I hope that at least the second part of the post was of some interest. In any case,
+in the next post in this series I will be going over my switch from the good old
+bash to `zsh`, with all the cursory shell customization that entailed. 
+
+Stick around, if you will, for the next episode of "becoming a power user", or 
+"becoming a wizard". 

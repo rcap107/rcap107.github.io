@@ -1,0 +1,150 @@
+---
+title: "TIL: Categorical, String, and Object in Pandas"
+date: 2025-10-27
+categories: [Python, Pandas]
+image: "/images/posts/pandas-string-object-categorical.png"
+format:
+    html:
+        toc: true
+        code-fold: false
+---
+
+In the process of adding support for Pandas 3.0 (specifically, the object-to-str
+migration) to skrub, I have been exposed to 
+more *fun and quirky* ™ features of Pandas than I'd like. One in particular,
+however, _really threw me for a loop_. 
+
+> You can read more about the migration in the official post 
+> [here](https://pandas.pydata.org/docs/user_guide/migration-3-strings.html). 
+
+In Pandas, "object" columns are columns that can contain pretty much anything: 
+strings, lists, or whatever else. Still, very often these columns
+are used for simple strings. Additionally,
+Pandas includes String and Categorical dtypes, each with its own uses. 
+
+Until I learned what I'll explain in this post, my superficial understanding
+of these dtypes was that Categorical was a special case of String, and String
+was a special case of Object.
+
+![](/images/posts/pandas-what-i-thought.png)
+
+As it turns out, that isn't how things actually work under the hood.  
+
+## How did I get here?
+In skrub, we need to support both Pandas and Polars, and so we have 
+a full set of private functions that implement the same functionality 
+using methods from each respective library. 
+
+What matters for this post is the function `is_string` in  
+`skrub/_dataframe/_common.py`. The function should tell me whether a column is a
+string column (it contains only strings), but does not have a categorical dtype,
+as those dtypes are more informative and should be treated differently from strings. 
+
+This is what the Polars function looks like:
+```python
+@is_string.specialize("polars", argument_type="Column")
+def _is_string_polars(col):
+    return col.dtype == pl.String
+```
+
+While this is the Pandas variant:
+```python
+@is_string.specialize("pandas", argument_type="Column")
+def _is_string_pandas(col):
+    if col.dtype == pd.StringDtype():
+        return True
+    if not pd.api.types.is_object_dtype(col):
+        return False
+    if parse_version(pd.__version__) < parse_version("2.0.0"):
+        # on old pandas versions
+        # `pd.api.types.is_string_dtype(pd.Series([1, ""]))` is True
+        return col.convert_dtypes().dtype == pd.StringDtype()
+    return pandas.api.types.is_string_dtype(col[~col.isna()])
+```
+
+Why the huge difference in complexity? To say nothing of the Pandas 
+3.0-compatible version, which is about 50% longer. Well, Pandas has to deal with 
+a few more cases due to the fact that "Object" columns can be pretty much anything. 
+
+## A practical example
+What does this mean in practice, when we want to check for a datatype? Well, 
+let's try out a few combinations and see what comes out. 
+
+```{python}
+# | echo: true
+import pandas as pd
+
+df = pd.DataFrame(
+    {
+        "cat-str":pd.Series(["a", "b"], dtype="category"),
+        "cat-obj": pd.Series(["a", 1], dtype="category"),
+        "obj-obj": pd.Series(["a", 1]),
+        "str-obj": pd.Series(["a", "b"]),
+        "str": pd.Series(["a", "b"], dtype="string"),
+    }
+)
+print(df.dtypes)
+```
+
+So, on the surface, categorical columns are categorical, object columns are objects,
+and the column defined as a string is a string. This does make sense. 
+
+However, relying exclusively on the string representation can encounder all sorts
+of shenanigans, so a more reliable way of checking types is by using functions
+in `pd.api.types`. 
+
+Specifically, in the function above we want to make sure that the return value is
+`True` only when all the values in the series are strings, but still return 
+`False` if the string is categorical. The problem is that a series can have 
+multiple types at the same time. 
+
+We can check this with the following function, which tells us whether a column 
+is considered object, categorical, or string based on `pd.api.types`: 
+
+```{python}
+# | echo: true
+# | warning: false
+def print_types(df, col_name):
+    col = df[col_name]
+    print(f"Column {col_name} has dtype StringDtype: ", col.dtype == pd.StringDtype())
+    print(f"Column {col_name} is string dtype: ", pd.api.types.is_string_dtype(col))
+    print(f"Column {col_name} is object dtype:", pd.api.types.is_object_dtype(col))
+    print(f"Column {col_name} is categorical dtype:", pd.api.types.is_categorical_dtype(col))
+
+for col in df:
+    print_types(df, col)
+    print("####")
+```
+
+As it turns out, each column is different! I made this neat Venn diagram to summarize
+all the combinations:
+
+![](/images/posts/pandas-string-object-categorical.png)
+
+In short: 
+
+- A categorical column is never an object, but it may also be string if it contains 
+only strings.
+- A string column may be categorical, or object, or just string. 
+- An object column can also be string, if it is initialized without the `string`
+dtype. 
+
+So, what happens in the `is_string` function is:
+
+1. String-typed columns are considered as strings (function returns `True`)
+2. Categorical columns _are not objects_ so the function returns `False`
+3. If the column is `Object`, then check that it only contains strings with 
+`pd.api.types.is_string_dtype()`.
+
+If the check for `pd.api.types.is_string_dtype()` had been placed at the start of
+the function, then *categorical columns with only strings would be considered
+as string columns*. 
+
+I won't be going into the details of why this is the case, but the gist of it is that Pandas relies on Numpy for the 
+underlying data representation of dataframes, and this leads to various 
+complications, of which this particular datatype weirdness is only one example. 
+Incidentally, this is why the migration to the string datatype is being done. 
+
+So this is something I learned recently and that confused me enough to write a 
+post about it. At least, now I have a better understanding of what's going on 
+under the hood. 
