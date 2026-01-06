@@ -14,5 +14,5 @@ This one is about finding out how to best encode categorical features using the
 categorical encoders provided by skrub. 
 
 
-You can find the post [here](https://skrub-data.org/skrub-materials/notebooks/categorical-encoders/categorical-encoders.html).
+You can find the post [here](https://skrub-data.org/skrub-materials/pages/notebooks/categorical-encoders/categorical-encoders.html).
 
