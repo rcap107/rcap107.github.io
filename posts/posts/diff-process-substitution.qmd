@@ -1,0 +1,37 @@
+---
+title: "Diff between files with process substitution"
+description: "A cool trick for comparing code using process substitution"
+date: 2026-01-07
+tags: [process substitution, bash, shell scripting, linux]
+draft: false
+format:
+    html:
+        toc: true
+        code-fold: true
+---
+
+Yesterday I found out about [process substitution](https://www.gnu.org/software/bash/manual/html_node/Process-Substitution.html) in bash through a YouTube [video](https://www.youtube.com/watch?v=2A4bs40scSo) that ended in my feed. To be fair, I did not really understand much of the point that was being made, but it only took a day to find a cool way of using it for my daily job. 
+
+## The problem I was trying to solve
+There is a [PR]() in skrub whose objective is moving a class from a file to another, refactoring the code where needed. Other than changing imports, no actual changes to the class that is being moved should be done. To review this, I wanted to double check that the actual code of the function did not change. 
+
+To do this I need to compare the lines in the new file with those in the old file. However, plain comparison with `diff` would just show all lines as "modified" since they have been moved. Moreover, since the code has been moved from one location to the other, the old code was not available locally: I would have to check it out from `upstream/main`. 
+
+So, I needed a way to compare the checked out file (the old version) with the new file I had access to locally, and I needed to do so only in those lines of the old file that have been touched by the refactoring.  
+
+## The solution
+
+Enter **process substitution**. In short, process substitution allows to refer to the output of a process using a filename. Then, a second process (`diff` in this case) is going to read from that "filename" and work on it. 
+
+So, this is the full command that I used: 
+```shell
+diff <(git show refs/remotes/upstream/main:skrub/_apply_to_cols.py | sed -n '13,217p' ) <(cat skrub/_single_column_transformer.py)
+```
+
+What I'm doing here is checking out the `skrub/_apply_to_cols.py` file from upstream, piping it to `sed` to select only the lines I am interested in (from 13 to 217), and then comparing that section of the file to the entirety of `skrub/_single_column_transformer.py`, which is available locally and is the refactored version of the file. 
+
+`sed -n '13,217p'` prints only the matched lines, rather than all lines (`-n`). 
+
+The result of using `diff` on these two temporary files is that I can indeed see if any lines were changed in the specified range.
+
+I'm quite happy I found out about this, as it may be quite useful in the future. 
