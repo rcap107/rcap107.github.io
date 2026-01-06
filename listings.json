@@ -2,6 +2,7 @@
   {
     "listing": "/posts/posts.html",
     "items": [
+      "/posts/posts/diff-process-substitution.html",
       "/posts/news/timeline-2025.html",
       "/posts/news/end-of-2025.html",
       "/posts/posts/pandas-categorical-object.html",
