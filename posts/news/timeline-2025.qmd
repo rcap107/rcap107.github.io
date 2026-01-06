@@ -1,0 +1,158 @@
+---
+title: "My 2025: full timeline"
+date: 2026-01-06
+categories: [news]
+format: html
+draft: false
+---
+
+See [this post](end-of-2025.qmd) for a much shorter review of 2025, with my highlights for the year and a theme for 2026.
+
+Here I'll be doing a more thorough review of the year, going month by month and looking into what I spent most of my time on, both professionally and for my random side projects.
+
+## Tools and sources
+I've used my work calendar and the notes I have in my [Obsidian](https://obsidian.md) vault to try and remember everything that happened since the beginning of the year. I'll also use the [skrub materials](https://skrub-data.org/skrub-materials/) website to link the material I used for the various talks and presentations I gave.
+
+### January
+The year started with a bang, with the skrub workshop organized by P16. It was a full day spent presenting the features of skrub to various companies at the Campus Cyber in La Defense.
+
+I wasn't particularly happy with the event's organization or the location. There were a few issues that complicated everything, with the main problem being that (at the time) skrub included far fewer features than it does now, and this reflected on the material presented on the day.
+
+Overall, however, the day went well, and -- best of all -- people seemed to enjoy
+the event overall. 
+
+I think it's interesting to look back at the material we presented back then and compare it with what is now available in skrub. Feel free to explore them yourself:
+
+- [Introducing skrub](https://skrub-data.org/skrub-materials/pages/slides/skrub-intro/skrub-intro.html)
+- [A skrub use case in academia](https://skrub-data.org/skrub-materials/pages/slides/skrub-retrieve-merge-predict/skrub-retrieve-merge-predict.html)
+- [Skrub expressions](https://skrub-data.org/skrub-materials/pages/slides/expressions/expressions.html)
+    - These are the pre-release Data Ops!
+- [The discover object](https://skrub-data.org/skrub-materials/pages/slides/discover/discover.html)
+
+Adding to the substantial amount of stress I was already under because of the workshop: the "Retrieve, Merge, Predict" paper was still being worked on and was submitted to TMLR only on the 21st of January.
+
+Cue...
+
+### February
+It's TMLR time! The first review came out on the 10th, the third and final one came out on the 18th, and then the rebuttal period started. Most of the discussion occurred in the first few weeks starting on the 18th, then all we could do was wait.
+
+The saga is not over yet.
+
+Meanwhile, on the skrub front...
+
+Nothing much happened, actually. Between working on the rebuttal and learning how to work on the library, I wasn't very productive there.
+
+Another highlight of this month was earning my scikit-learn professional practitioner certification from Probabl. I almost messed up (mostly due to technical issues on my part...), but in the end, I managed to pass the certification exam and obtain the piece of paper. The certification lasts for two years, so I might have to do it again in 2027.
+
+Aside from that, I am not too keen on looking back at the TMLR discussions, so let's move on to...
+
+### March
+March was still spent (to some extent) working on the TMLR submission, to try and address the final comments from the reviewers and deal with the very long wait between responses.
+
+I filled my time working on skrub, and this month I managed to finally get something merged into the main branch: the addition of periodic encoders to the `DatetimeEncoder`! In retrospect, I'm not sure it was a particularly useful addition, but it was still a cool feature to introduce.
+
+I did my first release (again with Jerome). I find releasing the package to be quite the hassle because it's a long sequence of varied and small tasks that can break in all sorts of ways. It's something I still don't feel comfortable doing.
+
+The final innovation I brought to skrub in March was the idea of having scheduled posts on LinkedIn and Bluesky, where we'd present the various features of skrub and try to advertise the library. As it turns out, that was a very good idea: the number of followers on the platforms increased a lot, and I think that helped quite a bit with the adoption numbers. The only problem so far has been coming up with material for new posts, and I have been less than consistent about posting something every week, or even every month. That's definitely something to work on in 2026.
+
+That said, time to move on to...
+
+### April
+April featured the first skrub sprint of the year. It was at Saclay, in the usual Probabl offices. It was quite successful in the end, and we got quite a bit of new contributions thanks to that. Little did I know I'd be hosting plenty more sprints through the course of the year.
+
+April 12th was also the day we finally received confirmation that the *Retrieve, Merge, Predict* paper had been accepted in TMLR. I could finally lay that part of my life to rest and focus entirely on skrub. Except there was still some work to be done on the camera-ready version of the paper.
+
+Thankfully, that was uploaded by the end of the month, so that I could actually
+be done with it fr fr no cap. You can find it here: https://arxiv.org/abs/2402.06282
+
+I also wrote a full post about the entire experience [here](retrieve-merge-predict-retrospective.md), if you'd like to find out more about how much of a pain it was.
+
+On skrub's side, together with Jerome (mostly Jerome), we also merged the first version of the `Cleaner`, which felt like a pretty small addition at the time, but that I have grown to like a lot over the following months. In fact, it's one of the features I find most useful and easier to pitch to new users.
+
+Sneaking in at the very end of the month, we also merged `DropUninformative`, a neat transformer that removes columns that do not bring in enough information for ML models.
+
+Done with the very eventful month, it's time to continue in...
+
+### May
+May tends to be a fairly slow month, partially due to the sheer number of holidays that land in the month. This year I decided to take some vacations halfway through. I may or may not do that again in 2026.
+
+Something I did do in May was starting my forever forgotten study on Last.fm songs which you can find [here](data_preparation/fetch-lastfm.html). That's a series of plots I quite enjoyed making, and something I will definitely revisit in the future. Maybe even in the next few weeks (no promises).
+
+May is also when the dark ages begun, with Jerome leaving Inria to go work at Neuralk-AI, the very startup I was contacted by last November. Losing Jerome was a big blow, but I will forever be thankful to him for all the time he still put in the library, despite being super busy because of his actual job.
+
+This is also around the time when we finally settled on calling the expressions "Data Ops", which is what most people know them by. That also involved a whole lot of refactoring, which stretched across multiple weeks.
+
+Still no release though, the Data Ops were not ready for prime time yet, so they would need to wait for at least a couple more months.
+
+Speaking of new months...
+
+### June
+June was another very full month, mostly spent on polishing the documentation and addressing some more issues with the Data Ops.
+
+We had the SODA team kick off, during which I presented skrub to the participants, many of whom had never heard of the library.
+
+This month we _finally_ released the skrub Data Ops, a huge feature that had been in the works for about a year until that point. Ever since then (and since way earlier) I've been struggling to find a way to explain them to general audiences. It's a very powerful feature, but I'm still not sure how to showcase it properly.
+
+It's also when I found out that Vincent (the other person in Probabl who helped with skrub) would be leaving at the end of August to move elsewhere. That was another big blow, because it left me as the one and only full time skrub maintainer. A few interesting months were about to begin...
+
+Side note, at the end of the month I also got to go to ADO's concert in Bercy. She's one of my favorite singers, and it was _great_. I hope she'll come back at some point.
+
+### July
+July began with another sprint, this time in Probabl's offices in Montparnasse Tower. Great view, a lot of PRs done, and my first time hosting a sprint on my own since Jerome's departure.
+
+The same week I got to watch a full masterclass on timeseries that was also featuring skrub, done by Olivier Grisel and Guillaume Lemaitre of scikit-learn (and probabl) fame. It was a very interesting lesson, though it was all in French so I had to focus really hard to understand and it gave me a raging headache in the end. Part of the same masterclass was also used for our Euroscipy tutorial.
+
+This is also when I started interviewing candidates for the position of skrub developer. In the end, it became a much longer process than I had expected.
+
+It's also vacation time! So time to move on to the next month, of...
+
+### August
+Besides my usual vacations, August was notable because I had to travel to Cracow directly from Italy to present at Euroscipy. I wrote about that experience at length in a [separate post](euroscipy-2025.md). In brief, it was a very intense and interesting experience, where I met a lot of cool people that are involved in the development and maintenance of various open source projects. I also presented a skrub tutorial based on the Probabl timeseries masterclass, though I was not very satisfied with the result.
+
+Back in Paris after the conference, I had to interview a few more candidates for the developer position, though the interviews did not go particularly well.
+
+I also spent a lot of time preparing for the next big thing, aka PyData Paris at the end of the next month.
+
+### September
+Most of September started with me grappling with the fact that I really was the last surviving full time skrub dev, which carried a lot of extra weight and slowed down the development of new features to a crawl.
+
+This was because I had to deal with everything involved in the development, fix bugs, prepare material for talks and sprints, deal with contributors, and still somehow work on some needed features. It was quite a stressful period, that would last for a few more months after.
+
+I also had the first of various meetings about working on a skrub course for Inria Academy which, by now, is available and will be held again in February 2026. See more info [here](https://www.inria-academy.fr/formation/skrub-like-a-pro-clean-prepare-and-transform-your-data-faster/).
+
+A lot of time was also spent refining the talk that I would end up giving at PyData Paris, which started the very last day of the month.
+
+My talk, however, would be in...
+
+### October
+First day of the month, and it started with a bang: I had to do my skrub talk in front of a pretty large audience. Overall, it went very well: most of the audience seemed very interested, jokes seem to have landed, and I had a lot of interesting questions at the end and through the conference. Slides are [here](https://skrub-data.org/skrub-materials/pages/slides/pydata-2025/slides.html), while the recording of the talk is [here](https://www.youtube.com/watch?v=k9MNMDpgdAk).
+
+Unfortunately, the talk recording was not done properly, so I had to dub over myself, which turned out to be one of the most infuriating things I've ever had to do for work.
+
+The very next day we had another skrub sprint, which was another big success as we had a bunch of new contributors, some of whom eventually came back to contribute in further events.
+
+I also started talking with Probabl about preparing material for a skrub MOOC to be hosted on their platform.
+
+Then, there was the P16 day, which was held in La Defense (same place where we did the skrub workshop about 10 months prior, actually), and where I had to present skrub in front of the audience. I even got a few questions about it in the end.
+
+The next day, it was a "hackathon" (I do hate that term with a passion), during which we tried to get all the P16 engineers in a room to work on interplay between libraries and good maintenance procedures. It was held at Inria Paris, a baffling building where I got lost multiple times.
+
+More skrub interviews, and this time we found a good candidate: Eloi. Remember the name, he'll come back later.
+
+To wrap up a very full month I had to host another sprint at Probabl, this time organized by Marie Sacksick (who also works at Probabl) for her Women in Machine Learning and Data Science group. It was another successful sprint, and this time around I prepared a set of slides with all the issues that could be tackled, which I think ended up being pretty useful. I will definitely do it again for the next sprints.
+
+About halfway through the month I decided that I would not be giving any more talk or organizing any sprint until the end of my Christmas vacations, as I was very much on the burnout track, and I had to take it easy for some time.
+
+### November
+Speaking of talks, this month featured a talk at Framatome, which I think went quite well overall. You can find the slides [here](https://skrub-data.org/skrub-materials/pages/slides/talk-framatome/slides.html).
+
+Something very interesting happened at the end of the month: we got visitors form TU Berlin. A post-doc and two PhD students came to Paris to talk with me about how they use skrub -- and specifically skrub Data Ops -- in their research. This was extremely interesting, because it's the first time I get to talk with someone that is using the more advanced skrub features, rather than the usual basic transformers. I look forwards to collaborating more about this in the future.
+
+### December
+December started with another talk, this time at PEPR IA. This one, did not go well. Only 6 people tuned in to follow the presentation, and in general I don't think the participants were interested in the material.
+
+Importantly, december 1st is also when the new skrub developer -- Eloi -- started, marking the first time I'd have a full time colleague since May. Such a welcome change! What's interesting now is that I'm the one that's supposed to teach him the ropes, rather than being the one that is being instructed.
+
+Speaking of instruction, halfway through the month I also had to do the beta test of the Inria Academy skrub course, and I'm so glad we did that, because it did not go particularly well. As it turns out, I tend to speak WAAAAAY too fast whenever I am under pressure (such as, when I am presenting), and this made it difficult for people to follow along. I need to find a way of slowing myself down so that I don't lose people along the way. I was so worried about fininshing in time that I ended up finishing half an hour in advance. Not good.
+
+

@@ -1,0 +1,98 @@
+---
+title: "Looking back at 2025"
+format: html
+date: 2026-01-02
+categories: [news]
+---
+
+2025 is over, and it's been quite an eventful year, more so than 2024. I thought 
+I'd do another "year in review" like I did in 2024, but since it ended up way
+longer than I thought, I decided to split it in two posts. This is a "shorter"
+summary, while a longer retrospective will come later.
+
+## Highlights of 2025
+
+- The Retrieve, Merge, Predict paper was finally published on TMLR in April. What
+a momentous occasion. 
+- Skrub monthly downloads hit ~120k by the end of the year. 
+- I presented the library at both Pydata Paris 
+([video](https://www.youtube.com/watch?v=k9MNMDpgdAk)) and Euroscipy in Cracow 
+([video](https://www.youtube.com/watch?v=hbmfiBX5zZc)). 
+- I hosted so many skrub sprints.
+- I prepared the material for teaching skrub as part of the Inria Academy program, 
+so that in 2026 I should be able to teach that.  
+- I obtained a certification as "Scikit-learn professional practitioner". 
+
+## 2024 to 2025
+First off, let's re-visit what I talked about last year. 
+
+> Seriously though, every time I try to write something here I spend more time 
+> debugging Hugo than I do writing. 
+
+As it turns out, I ditched Hugo completely and switched to using Quarto to render
+the website instead. That was a very good idea, because now I can just 
+`quarto publish` and be sure that the page is being rendered properly. Much saner
+syntax as well. 
+
+> Overall, most of the year was devoted to "the paper", that one article I have 
+> been working on for the past two years.
+
+Some of the year was _still_ devoted to the paper, but at least this time it got
+accepted, so that part is done and buried. 
+
+> I should start looking for a new position soon enough, but first I'd like to get
+> the paper done with. 
+
+In the end, I decided to stay and keep working on skrub until 2027 at least. I 
+found the experience to be very rewarding (far more than working in academia...) 
+and extremely instructive, as I learned so much on how to program, host events, 
+tool up, and all sorts of things that I am sure will be useful in the future. I 
+also really like the people I work with, so that's another huge plus. 
+
+> I would say that the year has been _very_ stressful, with burnout waiting for me
+> after pretty much every paper deadline, and some extremely disappointing experience
+> in Academia.
+
+The year was far less stressful, although I did experience some burn out towards
+the end. 
+
+> If I have to come up with a theme
+> for 2025, I think it will be something along the lines of "read more sources". 
+
+Nothing of the sort happened. Almost all the sources I stored went forgotten, and
+my switch from academia to development was almost entirely complete the moment
+I stopped reading papers.
+
+It's interesting how I forgot almost everything that I wrote a year ago. I wonder
+what will happen next year, then. 
+
+## 2025 to 2026
+My theme for next year: **writing and language**. 
+That means: more effort in learning French, and more effort in writing my diary 
+every day. It was a useful habit I picked up, and then gave up on it completely
+halfway through the year. Let's see if I'll be more rigorous in 2026. 
+
+I'll also add "reading more books" to the list, which is something I used to do, 
+and don't do enough lately. 
+
+## Concluding: 2025 in short
+Overall, I think 2025 went far better 2024. My current position
+feels more rewarding and I am very grateful to my superiors for shielding me from
+most of the bullshit politics that happen above my station, though that may
+change in the future. We will see.
+
+I learned so much through the year, from how to program, to how to use tools to 
+make writing programs easier and faster. I got to travel to Poland for Euroscipy, 
+which was a fun adventure, and presented skrub at PyData Paris. 
+
+I went from having three colleagues working on skrub, to being alone, to maybe
+having three colleagues again. What a rollercoaster. 
+
+I started a French course to try and patch my patchy knowledge of the language, 
+but I still hate French. 
+
+Lots of changes, lots of lessons, some nice achievements, overall a positive 
+balance for 2025. Here's to an even better 2026! 
+
+Happy new year, and see you in twelve months for the 2026 retrospective. Or, in
+the next post, where I'll go through 2025 month by month.
