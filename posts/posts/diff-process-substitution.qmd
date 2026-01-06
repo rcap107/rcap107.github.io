@@ -13,7 +13,7 @@ format:
 Yesterday I found out about [process substitution](https://www.gnu.org/software/bash/manual/html_node/Process-Substitution.html) in bash through a YouTube [video](https://www.youtube.com/watch?v=2A4bs40scSo) that ended in my feed. To be fair, I did not really understand much of the point that was being made, but it only took a day to find a cool way of using it for my daily job. 
 
 ## The problem I was trying to solve
-There is a [PR]() in skrub whose objective is moving a class from a file to another, refactoring the code where needed. Other than changing imports, no actual changes to the class that is being moved should be done. To review this, I wanted to double check that the actual code of the function did not change. 
+There is a [PR](https://github.com/skrub-data/skrub/pull/1820) in skrub whose objective is moving a class from a file to another, refactoring the code where needed. Other than changing imports, no actual changes to the class that is being moved should be done. To review this, I wanted to double check that the actual code of the function did not change. 
 
 To do this I need to compare the lines in the new file with those in the old file. However, plain comparison with `diff` would just show all lines as "modified" since they have been moved. Moreover, since the code has been moved from one location to the other, the old code was not available locally: I would have to check it out from `upstream/main`. 
 
