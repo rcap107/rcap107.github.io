@@ -2,6 +2,8 @@
   {
     "listing": "/posts/posts.html",
     "items": [
+      "/posts/news/timeline-2025.html",
+      "/posts/news/end-of-2025.html",
       "/posts/posts/pandas-categorical-object.html",
       "/posts/data_preparation/study_recent_tracks.html",
       "/posts/news/euroscipy-2025.html",
