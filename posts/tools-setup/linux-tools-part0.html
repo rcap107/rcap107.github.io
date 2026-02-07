@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2023-02-05">
+<meta name="dcterms.date" content="2026-02-06">
 
-<title>Some updates – A blog by RC</title>
+<title>Becoming a power user - Episode 0: why this even – A blog by RC</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -293,9 +293,9 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Some updates</h1>
+      <h1 class="title">Becoming a power user - Episode 0: why this even</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">news</div>
+                <div class="quarto-category">Blog</div>
               </div>
                   </div>
   </div>
@@ -307,7 +307,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">February 5, 2023</p>
+        <p class="date">February 6, 2026</p>
       </div>
     </div>
     
@@ -327,16 +327,26 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>It’s been a while, hasn’t it? According the newly added <a href="../../posts/archives">archives</a> page, the latest post in this blog goes back all the way to July 2022… Well, it does not seem like I kept my promise of posting with some frequency.</p>
-<p>No matter! Something did happen a few months ago (last October), and I have been quite busy because of it. I have moved to Paris! For the next two years (starting last October), I have been/will be working as a Postdoctoral Researcher for Inria Saclay in the <a href="https://team.inria.fr/soda/">SODA Team</a> and at <a href="https://www.dataiku.com">Dataiku</a> in their research department.</p>
-<p>This is pretty cool! I get to be a part of a strong research group which includes the guys that maintain <a href="https://scikit-learn.org/stable/">scikit-learn</a>, and I have contributed with some minor additions to <a href="https://github.com/dirty-cat/dirty_cat">dirtycat</a>: this will definitely be a great learning experience as collaborative programming is something I have very little experience with.</p>
-<p>On the other side, I get to work in a pretty cool company where everyone looks bright and prepared. That side of the experience will be useful to get an idea of how things work in an enterprise setting, and the kind of problems that enterprise people actually face. And, we get free breakfast every day!</p>
-<p>Thus, I am currently splitting the time between these two realities and acting as the connecting thread between the two.</p>
-<p>So, what is the subject of this research project? Well, we’re still trying to figure that part out. While we started by working on the creation of embeddings of tabular data, now we are moving on to the subject of testing the performance of systems for performing join suggestion. This will be quite the task, given my scarce experience on the subject. We will start from benchmarking a number of different methods, and just figuring that part out will be an adventure.</p>
-<p>I think that’s all for now.</p>
-<p>Cheers!</p>
+<p>There is something very satisfying about watching someone be really good at something (<a href="https://youtu.be/ppPX9F0kEys?si=Ova1YWMvmqM6IaV7&amp;t=904">Mike Trapp</a>, 2020). That’s exactly what I was thinking every time I’d look over the shoulder of one of my former colleagues and see them spawn all sorts of terminals, interpreters, scripts and more without ever so much as touching the mouse.</p>
+<p>That’s when I got an idea of what could be done with some proper muscle memory and proper configuration of your workstation, and I was inspired to try something similar. After all, optimizing in games is something I always do, and terminals are kinda like games… right?</p>
+<p>Anyway. In this series of posts I’ll explain how I set up my development environment and tools so that I can do my job as a developer more efficiently. In the first post I’ll cover how I configured VSCode to use Vim-style keybindings, while in later posts I’ll cover my shell setup with <code>zsh</code> and <code>tmux</code>.</p>
+<p>Before starting, I thought I’d write a post to explain where it all started, and how you might end up in the same predicament I did. You can skip to the next post on Vim if you’re not interested.</p>
+<section id="how-it-all-started" class="level2">
+<h2 class="anchored" data-anchor-id="how-it-all-started">How it all started</h2>
+<blockquote style="font-style: italic; color: gray;" class="blockquote">
+Using vim keybinds may save you some time that you then will waste on vim configurations that should “save time”. <br>— Jérôme (paraphrased)
+</blockquote>
+<p>Unfortunately, I forgot the exact words that were spoken that day, but I think I captured the gist of what he was warning me about.</p>
+<p>On the other hand, there’s my borderline obsessive interest in optimizing everything I do for fun and learning how to do it at the same time. Also, this <em>relevant XKCD</em> (because of course there would be one): <img src="https://imgs.xkcd.com/comics/is_it_worth_the_time.png" class="img-fluid quarto-figure quarto-figure-center"></p>
+<p>As I was saying, it’s Jérôme’s fault if I’m doing all this, and for that I say “thanks Jérôme, I’m having so much fun now”. All that I needed was a good excuse to install the <a href="https://marketplace.visualstudio.com/items?itemName=vscodevim.vim">VSCode Vim extension</a> to finally have to deal with the keybinds, the various modes, and everything that they entail.</p>
+<p>They opened a brand new world: I would no longer be limited to Ctrl+arrow keys to delete one word at a time. I now had a whole keyboard’s worth of keybindings to yank, paste, select, delete, move, and everything that comes with it.</p>
+<p>“This is pretty cool,” I thought, as I was now free to edit, search, replace, and jump from one place to another with a well-executed sequence of keystrokes.</p>
+<p>Shame I’d need to learn which keystrokes to press to do what. That took some time. I’d recommend bookmarking a good Vim cheat sheet, and possibly asking an LLM how to do certain operations – LeChat was surprisingly helpful with that.</p>
+<p>So now I had a way to move around my IDE that reduced my reliance on the mouse. Could I do more than just this? Yes! All it takes is a good shell configuration and quite a bit of free time.</p>
+<p>Yes, if it wasn’t clear: setting up everything was not a quick process. It was, however, absolutely worth the effort – if only because now I almost feel like a real developer. That’s why I decided to write these posts: my hope is that they’ll inspire someone else to take the plunge, or maybe help someone set up their workstation in a way that suits them best.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

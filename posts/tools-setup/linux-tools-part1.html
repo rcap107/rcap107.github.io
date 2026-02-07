@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2023-02-05">
+<meta name="dcterms.date" content="2026-02-07">
 
-<title>Some updates – A blog by RC</title>
+<title>Becoming a power user - Episode 1: A dream and Vim – A blog by RC</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -293,11 +328,8 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Some updates</h1>
-                                <div class="quarto-categories">
-                <div class="quarto-category">news</div>
-              </div>
-                  </div>
+      <h1 class="title">Becoming a power user - Episode 1: A dream and Vim</h1>
+                      </div>
   </div>
     
   
@@ -307,7 +339,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">February 5, 2023</p>
+        <p class="date">February 7, 2026</p>
       </div>
     </div>
     
@@ -327,16 +359,68 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>It’s been a while, hasn’t it? According the newly added <a href="../../posts/archives">archives</a> page, the latest post in this blog goes back all the way to July 2022… Well, it does not seem like I kept my promise of posting with some frequency.</p>
-<p>No matter! Something did happen a few months ago (last October), and I have been quite busy because of it. I have moved to Paris! For the next two years (starting last October), I have been/will be working as a Postdoctoral Researcher for Inria Saclay in the <a href="https://team.inria.fr/soda/">SODA Team</a> and at <a href="https://www.dataiku.com">Dataiku</a> in their research department.</p>
-<p>This is pretty cool! I get to be a part of a strong research group which includes the guys that maintain <a href="https://scikit-learn.org/stable/">scikit-learn</a>, and I have contributed with some minor additions to <a href="https://github.com/dirty-cat/dirty_cat">dirtycat</a>: this will definitely be a great learning experience as collaborative programming is something I have very little experience with.</p>
-<p>On the other side, I get to work in a pretty cool company where everyone looks bright and prepared. That side of the experience will be useful to get an idea of how things work in an enterprise setting, and the kind of problems that enterprise people actually face. And, we get free breakfast every day!</p>
-<p>Thus, I am currently splitting the time between these two realities and acting as the connecting thread between the two.</p>
-<p>So, what is the subject of this research project? Well, we’re still trying to figure that part out. While we started by working on the creation of embeddings of tabular data, now we are moving on to the subject of testing the performance of systems for performing join suggestion. This will be quite the task, given my scarce experience on the subject. We will start from benchmarking a number of different methods, and just figuring that part out will be an adventure.</p>
-<p>I think that’s all for now.</p>
-<p>Cheers!</p>
+<p>As I mentioned in the previous post in this series, the first step toward full customization of my workstation was installing the <a href="https://marketplace.visualstudio.com/items?itemName=vscodevim.vim">VSCode Vim extension</a></p>
+<p>While simple in theory, switching from the “typical” keybindings to Vim shortcuts takes some getting used to. Surprisingly, though, it wasn’t as bad as I thought it’d be.</p>
+<p>Before we begin the configuration proper: a small disclaimer – I’m still learning how to navigate, and I’m nowhere near being a black belt in anything Vim-related. Even then, getting used to the combination of selection + movement is extremely satisfying, and convenient enough for editing to be worth learning.</p>
+<section id="replacing-vim-commands-with-vs-code-functions" class="level2">
+<h2 class="anchored" data-anchor-id="replacing-vim-commands-with-vs-code-functions">Replacing Vim commands with VS Code functions</h2>
+<p>Of course, there was some friction involved in the switch, with some overlapping keybindings I had to deal with. Specifically, I had to remove some Vim commands because they conflicted with VS Code functions I used frequently, like Ctrl+P (open files) and Ctrl+B (toggle the left pane).</p>
+<p>Some other changes involved the clipboard and additions to the leader key that have been more or less useful over time. Thankfully, all it took was editing the <code>settings.json</code> file in VS Code and I was able to get the editor to do (mostly) what I want.</p>
+</section>
+<section id="configuring-vim-on-vscode" class="level2">
+<h2 class="anchored" data-anchor-id="configuring-vim-on-vscode">Configuring Vim on VSCode</h2>
+<p>The next thing I changed was enabling the system clipboard. This let me copy and paste seamlessly between VS Code and other apps, which immediately reduced friction – I didn’t have to remember the Vim chords for copy/paste (I still don’t).</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="er">"vim.useSystemClipboard":</span> <span class="er">true</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Another setting I changed is:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="er">"vim.highlightedyank.enable":</span> <span class="er">true</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This setting colors the yanked area in yellow for a short time after copying, which I find useful to double-check that I copied the right thing.</p>
+<p>I also changed the default <code>&lt;leader&gt;</code> key, which can be used as starting chord for additional commands (some of which I also edited). By default, the <code>&lt;leader&gt;</code> key is <code>\</code>. I have seen various people suggest changing it to the spacebar, which is exactly what I did:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="er">"vim.leader":</span> <span class="er">"&lt;space&gt;"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>I have some additional cosmetic changes which may or may not be useful:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="er">"vim.showMarksInGutter":</span> <span class="er">true,</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="er">"vim.cursorStylePerMode.visual":</span> <span class="er">"block-outline",</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="er">"vim.statusBarColorControl":</span> <span class="er">true</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Then, I tried to set up easymotion, a plugin that should help with navigating through the document. I can’t say I am using it that much, but it might be a matter of habit.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="er">"vim.easymotion":</span> <span class="er">true</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Finally, I have a bunch of extra commands that rely on the <code>&lt;leader&gt;</code> key and that I set in the <code>vim.normalModeKeyBindingsNonRecursive</code> field.</p>
+<p>I can rename objects:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"before"</span><span class="fu">:</span> <span class="ot">[</span><span class="st">"&lt;leader&gt;"</span><span class="ot">,</span> <span class="st">"r"</span><span class="ot">,</span> <span class="st">"r"</span><span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"commands"</span><span class="fu">:</span> <span class="ot">[</span><span class="st">"editor.action.rename"</span><span class="ot">]</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<pre><code>Show the hover menu on the current object, giving me some additional
+info about it:
+```json
+{
+  "before": ["K"],
+  "commands": ["editor.action.showHover"]
+}</code></pre>
+<pre><code>
+Show the definition of the object under the cursor:
+```json
+{
+  "before": ["&lt;leader&gt;", "d"],
+  "commands": ["editor.action.revealDefinition"]
+}</code></pre>
+<pre><code>I have a keybind for closing the current editor. This is not particularly relevant
+when I am using a Mac, because like in many other cases there is no overlap. On
+Linux (and I assume on Windows), this is not the case, and some concessions must
+be made.
+
+```json
+{
+  "before": ["&lt;leader&gt;", "&lt;leader&gt;", "t"],
+  "commands": ["jupyter.execSelectionInteractive"]
+}</code></pre>
+</section>
+<section id="conclusions" class="level2">
+<h2 class="anchored" data-anchor-id="conclusions">Conclusions</h2>
+<p>In this post I went over how I set up my VSCode configuration so that I could use the VIM keybinds, and then how I tweaked it to simplify some of the tasks that I am more used to doing.</p>
+<p>In the next post in this series I’ll go over my switch from good old bash to <code>zsh</code>, with all the cursory shell customization that entailed.</p>
+<p>Stick around for the next episode of “becoming a power user” – or “becoming a wizard.”</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

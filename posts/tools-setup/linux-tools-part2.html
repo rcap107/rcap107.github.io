@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2023-02-05">
+<meta name="dcterms.date" content="2025-02-09">
 
-<title>Some updates – A blog by RC</title>
+<title>Becoming a power user - Episode 2: zee my shell – A blog by RC</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -46,6 +81,8 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/bootstrap/bootstrap-17d01b5babc88cbee53e37b4dd766b3a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/bootstrap/bootstrap-dark-7f54657f98cfd61baa5fc740dde4b5a5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="../../site_libs/bootstrap/bootstrap-17d01b5babc88cbee53e37b4dd766b3a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/videojs/video.min.js"></script>
+<link href="../../site_libs/quarto-contrib/videojs/video-js.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -293,11 +330,8 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Some updates</h1>
-                                <div class="quarto-categories">
-                <div class="quarto-category">news</div>
-              </div>
-                  </div>
+      <h1 class="title">Becoming a power user - Episode 2: zee my shell</h1>
+                      </div>
   </div>
     
   
@@ -307,7 +341,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">February 5, 2023</p>
+        <p class="date">February 9, 2025</p>
       </div>
     </div>
     
@@ -327,16 +361,67 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>It’s been a while, hasn’t it? According the newly added <a href="../../posts/archives">archives</a> page, the latest post in this blog goes back all the way to July 2022… Well, it does not seem like I kept my promise of posting with some frequency.</p>
-<p>No matter! Something did happen a few months ago (last October), and I have been quite busy because of it. I have moved to Paris! For the next two years (starting last October), I have been/will be working as a Postdoctoral Researcher for Inria Saclay in the <a href="https://team.inria.fr/soda/">SODA Team</a> and at <a href="https://www.dataiku.com">Dataiku</a> in their research department.</p>
-<p>This is pretty cool! I get to be a part of a strong research group which includes the guys that maintain <a href="https://scikit-learn.org/stable/">scikit-learn</a>, and I have contributed with some minor additions to <a href="https://github.com/dirty-cat/dirty_cat">dirtycat</a>: this will definitely be a great learning experience as collaborative programming is something I have very little experience with.</p>
-<p>On the other side, I get to work in a pretty cool company where everyone looks bright and prepared. That side of the experience will be useful to get an idea of how things work in an enterprise setting, and the kind of problems that enterprise people actually face. And, we get free breakfast every day!</p>
-<p>Thus, I am currently splitting the time between these two realities and acting as the connecting thread between the two.</p>
-<p>So, what is the subject of this research project? Well, we’re still trying to figure that part out. While we started by working on the creation of embeddings of tabular data, now we are moving on to the subject of testing the performance of systems for performing join suggestion. This will be quite the task, given my scarce experience on the subject. We will start from benchmarking a number of different methods, and just figuring that part out will be an adventure.</p>
-<p>I think that’s all for now.</p>
-<p>Cheers!</p>
+<p>In this second instalment of the “Becoming a power user” series, I’ll cover my switch from being a casual terminal (bash) user to a slightly less casual user of <code>zsh</code>, Oh My Zsh, and the plugins that come with both.</p>
+<section id="setting-the-stage-my-history-with-the-command-line" class="level2">
+<h2 class="anchored" data-anchor-id="setting-the-stage-my-history-with-the-command-line">Setting the stage: my history with the command line</h2>
+<p>I’ve been working with the Linux command line for quite a few years now, starting during my bachelor’s mostly out of curiosity and to feel like I was a haxor.</p>
+<p></p><div class="quarto-video"><video id="video_shortcode_videojs_video1" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title="hackerman me during my bachelor's"><source src="../../static/haxor.mp4"></video></div> &gt; Pictured: hackerman me during my bachelor’s, or what I thought I’d become by &gt; using Linux.<p></p>
+<p>Overall, I’ve always preferred Linux to Windows: the syntax feels “saner”, and I’ve had fewer issues getting development environments to work on Linux than on Windows. This does not mean, however, that I used the command line beyond the incidental <code>cp</code>, or <code>ls</code>. When I was feeling brave, I’d update my packages with <code>sudo apt-get update</code>.</p>
+<p>I started getting in the weeds a bit more during my PhD, when I had to set up my laptop to run code remotely. Some shenanigans ensued, but still not a lot of interest on my part to “get better” at it.</p>
+<p>In the end, it took starting a postdoc at Inria for me to <em>finally</em> deal with Linux in any meaningful way. I spent most of my time developing on the computing cluster, accessing it remotely through SSH. This also involved managing my home folder, a lot of <code>du</code>, and juggling environments between the (slow) shared disk and the (fast, but small) home folder.</p>
+<p>Besides reminiscing once again on what has been, I’m going to discuss how I switched from bash to zsh, and why you might want to do that.</p>
+</section>
+<section id="why-zsh" class="level2">
+<h2 class="anchored" data-anchor-id="why-zsh">Why zsh?</h2>
+<p>To be completely honest, I’m not sure. I was somewhat curious to try out a different shell, and I probably spotted a post on LinkedIn that inspired me to try an alternative.</p>
+<p>I must admit that “plain zsh” doesn’t feel much different from bash — though I can’t say I spent much time with it, since installing Oh My Zsh coincided with when I started using the shell for real.</p>
+</section>
+<section id="why-oh-my-zsh" class="level2">
+<h2 class="anchored" data-anchor-id="why-oh-my-zsh">Why Oh my zsh?</h2>
+<p>First off, <em>what is Oh my zsh?</em></p>
+<p>Shamelessly pasting from the GitHub <a href="https://github.com/ohmyzsh/ohmyzsh/?tab=readme-ov-file">repo</a>: &gt; Oh My Zsh is an open source, community-driven framework for managing your zsh configuration. &gt; Sounds boring. Let’s try again. &gt; Oh My Zsh will not make you a 10x developer…but you may feel like one. &gt; Once installed, your terminal shell will become the talk of the town or your money back! With each keystroke in your command prompt, you’ll take advantage of the hundreds of powerful plugins and beautiful themes. Strangers will come up to you in cafés and ask you, “that is amazing! are you some sort of genius?”</p>
+<p>Yeah, I really wanted to live that hackerman fantasy from my bachelor’s.</p>
+<p>I’ll let you check the <a href="https://github.com/ohmyzsh/ohmyzsh/?tab=readme-ov-file#basic-installation">installation instructions</a> in the repository. Whatever command you use, the result will be a new <code>.zshrc</code> configuration file that includes goodies prepared by the zsh community (your old <code>.zshrc</code> will be saved as <code>.zsh.pre-oh-my-zsh</code>, so custom commands won’t get lost).</p>
+<p>Then it’s time to edit the <code>.zshrc</code> file, which can be done with <code>vim .zshrc</code>. (Of course I’m using Vim now – see the previous episode: <a href="../../posts/tools-setup/linux-tools-part1.html">linux-tools-part1.qmd</a>.)</p>
+</section>
+<section id="my-.zshrc-config" class="level2">
+<h2 class="anchored" data-anchor-id="my-.zshrc-config">My .zshrc config</h2>
+<p>First off: my theme. I’m using <code>powerlevel10k</code> (<a href="https://github.com/romkatv/powerlevel10k">repo</a>). Installing the theme runs a wizard that lets you customize options like having the prompt on a new line rather than on the same line as the cwd. I like that because it gives a full row of space even when the folder path is very long.</p>
+<p>Additionally, the theme tells me which python environment I’m in and the status of the git repo in the folder, including the current folder: as you can imagine, that’s particularly useful when I’m working on some kind of repo.</p>
+<p>On the note of tracking files with VCS, one setting I changed from the default was this:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="va">DISABLE_UNTRACKED_FILES_DIRTY</span><span class="op">=</span><span class="st">"true"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Doing this ignores tracking dirty files, which was helpful for some repositories.</p>
+</section>
+<section id="zsh-plugins" class="level2">
+<h2 class="anchored" data-anchor-id="zsh-plugins">zsh plugins</h2>
+<p>Plugins are community-made improvements that add functionality to the zsh configuration. There are hundreds to choose from, but I’d recommend keeping the number relatively low – too many plugins can noticeably slow startup time.</p>
+<p>These are the plugins I am using, some more, some less:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="va">plugins</span><span class="op">=</span><span class="va">(</span>git virtualenv colored-man-pages python zsh-navigation-tools zsh-syntax-highlighting zsh-autosuggestions<span class="va">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><code>zsh-navigation-tools</code> significantly improves backward search, which I use a lot: many commands I run are small variations of previous ones. Being able to navigate history quickly saves time and keystrokes, and those savings pile up.</p>
+<p><code>zsh-autosuggestions</code> is similar in the sense that it saves keystrokes, but does so by suggesting directly commands that I am likely to use.</p>
+<p>The <code>virtualenv</code> plugin lets me know which python environment I am using in the current shell. This is quite useful for me because I tend to switch between environments frequently to test different things.</p>
+<p>The <code>git</code> plugin adds many git-related commands, most of which I barely use.</p>
+</section>
+<section id="aliases-so-many-aliases" class="level2">
+<h2 class="anchored" data-anchor-id="aliases-so-many-aliases">Aliases, so many aliases</h2>
+<p>Speaking of aliases, I’ve set up quite a few that save keystrokes for my most used commands.</p>
+<p>Some are simple shortcuts that let me navigate to my most-visited folders, like the main skrub repository.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> cds=<span class="st">"cd ~/Projects/work/skrub"</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> cdp=<span class="st">"cd ~/Projects/"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Others replace more complex commands:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> dc=<span class="st">"pixi run -e dev build-doc-quick"</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> pd=<span class="st">"pixi shell -e dev"</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> scratch=<span class="st">"source ~/activate_scratch.sh"</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> ta=<span class="st">"~/activate_tmux.sh"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><code>dc</code> and <code>pd</code> are pixi commands I type frequently when working in the main skrub directory (<code>cds</code>). <code>scratch</code> activates my <code>scratch</code> environment, which I use to test code in a “clean” scenario. Finally, <code>ta</code> calls a script that activates my tmux session with a specific configuration (that’s for the next episode).</p>
+</section>
+<section id="conclusions" class="level2">
+<h2 class="anchored" data-anchor-id="conclusions">Conclusions</h2>
+<p>Switching to zsh was another pretty big leap in efficiency at work and at home. While some of the omz plugins may be hit or miss, navigation with zsh is so much better than what I had access to with bash that it’s enough for me to justify the switch.</p>
+<p>In later posts, I’ll go over my tmux setup, and some other tools I have been using for developing, both at work and for my personal projects.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -766,6 +851,7 @@ ul.task-list li input[type="checkbox"] {
     </div>
   </div>
 </footer>
+<script>videojs(video_shortcode_videojs_video1);</script>
 
 
 
