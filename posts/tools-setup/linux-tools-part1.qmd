@@ -1,0 +1,119 @@
+---
+title: "Becoming a power user - Episode 1: A dream and Vim"
+format: html
+date: 2026-02-07
+draft: false
+tags: ["linux", "zsh", "tmux", "vim", "vscode"]
+---
+As I mentioned in the previous post in this series, the first step toward full
+customization of my workstation was installing the
+[VSCode Vim extension](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim)
+
+While simple in theory, switching from the "typical" keybindings to
+Vim shortcuts takes some getting used to. Surprisingly, though, it wasn't as
+bad as I thought it'd be.
+
+Before we begin the configuration proper: a small disclaimer -- I'm still
+learning how to navigate, and I'm nowhere near being a black belt in anything
+Vim-related. Even then, getting used to the combination of selection + movement
+is extremely satisfying, and convenient enough for editing to be worth learning.
+
+## Replacing Vim commands with VS Code functions
+Of course, there was some friction involved in the switch, with some overlapping
+keybindings I had to deal with. Specifically, I had to remove some Vim commands
+because they conflicted with VS Code functions I used frequently, like
+Ctrl+P (open files) and Ctrl+B (toggle the left pane).
+
+Some other changes involved the clipboard and additions to the leader key that
+have been more or less useful over time. Thankfully, all it took was editing the
+`settings.json` file in VS Code and I was able to get the editor to do (mostly)
+what I want.
+
+## Configuring Vim on VSCode
+The next thing I changed was enabling the system clipboard. This let me copy and
+paste seamlessly between VS Code and other apps, which immediately reduced
+friction -- I didn't have to remember the Vim chords for copy/paste (I still
+don't).
+
+```json
+"vim.useSystemClipboard": true
+```
+Another setting I changed is:
+```json
+"vim.highlightedyank.enable": true
+```
+This setting colors the yanked area in yellow for a short time after copying, which
+I find useful to double-check that I copied the right thing.
+
+I also changed the default `<leader>` key, which can be used as starting chord 
+for additional commands (some of which I also edited). By default, the `<leader>`
+key is `\`. I have seen various people suggest changing it to the spacebar, which
+is exactly what I did:
+
+```json
+"vim.leader": "<space>"
+```
+I have some additional cosmetic changes which may or may not be useful:
+```json
+"vim.showMarksInGutter": true,
+"vim.cursorStylePerMode.visual": "block-outline",
+"vim.statusBarColorControl": true
+```
+
+Then, I tried to set up easymotion, a plugin that should help with navigating 
+through the document. I can't say I am using it that much, but it might be a 
+matter of habit. 
+```json
+"vim.easymotion": true
+```
+Finally, I have a bunch of extra commands that rely on the `<leader>` key and that
+I set in the `vim.normalModeKeyBindingsNonRecursive` field. 
+
+I can rename objects:
+```json
+{
+  "before": ["<leader>", "r", "r"],
+  "commands": ["editor.action.rename"]
+}
+```
+```
+Show the hover menu on the current object, giving me some additional
+info about it:
+```json
+{
+  "before": ["K"],
+  "commands": ["editor.action.showHover"]
+}
+```
+```
+
+Show the definition of the object under the cursor:
+```json
+{
+  "before": ["<leader>", "d"],
+  "commands": ["editor.action.revealDefinition"]
+}
+```
+```
+I have a keybind for closing the current editor. This is not particularly relevant
+when I am using a Mac, because like in many other cases there is no overlap. On
+Linux (and I assume on Windows), this is not the case, and some concessions must
+be made.
+
+```json
+{
+  "before": ["<leader>", "<leader>", "t"],
+  "commands": ["jupyter.execSelectionInteractive"]
+}
+```
+
+## Conclusions
+In this post I went over how I set up my VSCode configuration so that I could use
+the VIM keybinds, and then how I tweaked it to simplify some of the tasks that I 
+am more used to doing.
+
+In the next post in this series I'll go over my switch from good old bash to
+`zsh`, with all the cursory shell customization that entailed.
+
+Stick around for the next episode of "becoming a power user" -- or
+"becoming a wizard."
