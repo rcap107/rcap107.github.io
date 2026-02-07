@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-10-25">
 
-<title>TIL: Categorical, String, and Object in Pandas – A blog by RC</title>
+<title>Talks and Publications – A blog by RC</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,66 +20,31 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-4d9afe2b8d18ee9fa5d0d57b5ed4214d.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-17d01b5babc88cbee53e37b4dd766b3a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-7f54657f98cfd61baa5fc740dde4b5a5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-17d01b5babc88cbee53e37b4dd766b3a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-4d9afe2b8d18ee9fa5d0d57b5ed4214d.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-17d01b5babc88cbee53e37b4dd766b3a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-7f54657f98cfd61baa5fc740dde4b5a5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-17d01b5babc88cbee53e37b4dd766b3a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -110,10 +74,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 
 
-<link rel="stylesheet" href="../../styles.css">
+<link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -278,11 +242,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </script>
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+  <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">A blog by RC</span>
     </a>
   </div>
@@ -293,15 +257,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../posts/posts.html"> 
+    <a class="nav-link" href="./posts/posts.html"> 
 <span class="menu-text">Posts</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../publications.html"> 
+    <a class="nav-link active" href="./publications.html" aria-current="page"> 
 <span class="menu-text">Talks and articles</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html"> 
+    <a class="nav-link" href="./about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -325,169 +289,62 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
-      <h1 class="title">TIL: Categorical, String, and Object in Pandas</h1>
-                                <div class="quarto-categories">
-                <div class="quarto-category">Python</div>
-                <div class="quarto-category">Pandas</div>
-              </div>
-                  </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta">
-
-      
-      <div>
-      <div class="quarto-title-meta-heading">Published</div>
-      <div class="quarto-title-meta-contents">
-        <p class="date">October 25, 2025</p>
-      </div>
-    </div>
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#how-did-i-get-here" id="toc-how-did-i-get-here" class="nav-link active" data-scroll-target="#how-did-i-get-here">How did I get here?</a></li>
-  <li><a href="#a-practical-example" id="toc-a-practical-example" class="nav-link" data-scroll-target="#a-practical-example">A practical example</a></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 
-
-
-
-
-<p>In the process of adding support for Pandas 3.0 (specifically, the object-to-str migration) to skrub, I have been exposed to more <em>fun and quirky</em> ™ features of Pandas than I’d like. One in particular, however, <em>really threw me for a loop</em>.</p>
-<blockquote class="blockquote">
-<p>You can read more about the migration in the official post <a href="https://pandas.pydata.org/docs/user_guide/migration-3-strings.html">here</a>.</p>
-</blockquote>
-<p>In Pandas, “object” columns are columns that can contain pretty much anything: strings, lists, or whatever else. Still, very often these columns are used for simple strings. Additionally, Pandas includes String and Categorical dtypes, each with its own uses.</p>
-<p>Until I learned what I’ll explain in this post, my superficial understanding of these dtypes was that Categorical was a special case of String, and String was a special case of Object.</p>
-<p><img src="../../images/posts/pandas-what-i-thought.png" class="img-fluid"></p>
-<p>As it turns out, that isn’t how things actually work under the hood.</p>
-<section id="how-did-i-get-here" class="level2">
-<h2 class="anchored" data-anchor-id="how-did-i-get-here">How did I get here?</h2>
-<p>In skrub, we need to support both Pandas and Polars, and so we have a full set of private functions that implement the same functionality using methods from each respective library.</p>
-<p>What matters for this post is the function <code>is_string</code> in<br>
-<code>skrub/_dataframe/_common.py</code>. The function should tell me whether a column is a string column (it contains only strings), but does not have a categorical dtype, as those dtypes are more informative and should be treated differently from strings.</p>
-<p>This is what the Polars function looks like:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="at">@is_string.specialize</span>(<span class="st">"polars"</span>, argument_type<span class="op">=</span><span class="st">"Column"</span>)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> _is_string_polars(col):</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> col.dtype <span class="op">==</span> pl.String</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>While this is the Pandas variant:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="at">@is_string.specialize</span>(<span class="st">"pandas"</span>, argument_type<span class="op">=</span><span class="st">"Column"</span>)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> _is_string_pandas(col):</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> col.dtype <span class="op">==</span> pd.StringDtype():</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">True</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">not</span> pd.api.types.is_object_dtype(col):</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">False</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> parse_version(pd.__version__) <span class="op">&lt;</span> parse_version(<span class="st">"2.0.0"</span>):</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>        <span class="co"># on old pandas versions</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>        <span class="co"># `pd.api.types.is_string_dtype(pd.Series([1, ""]))` is True</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> col.convert_dtypes().dtype <span class="op">==</span> pd.StringDtype()</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> pandas.api.types.is_string_dtype(col[<span class="op">~</span>col.isna()])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Why the huge difference in complexity? To say nothing of the Pandas 3.0-compatible version, which is about 50% longer. Well, Pandas has to deal with a few more cases due to the fact that “Object” columns can be pretty much anything.</p>
-</section>
-<section id="a-practical-example" class="level2">
-<h2 class="anchored" data-anchor-id="a-practical-example">A practical example</h2>
-<p>What does this mean in practice, when we want to check for a datatype? Well, let’s try out a few combinations and see what comes out.</p>
-<div id="07f733b6" class="cell" data-execution_count="1">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame(</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    {</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>        <span class="st">"cat-str"</span>:pd.Series([<span class="st">"a"</span>, <span class="st">"b"</span>], dtype<span class="op">=</span><span class="st">"category"</span>),</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>        <span class="st">"cat-obj"</span>: pd.Series([<span class="st">"a"</span>, <span class="dv">1</span>], dtype<span class="op">=</span><span class="st">"category"</span>),</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>        <span class="st">"obj-obj"</span>: pd.Series([<span class="st">"a"</span>, <span class="dv">1</span>]),</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>        <span class="st">"str-obj"</span>: pd.Series([<span class="st">"a"</span>, <span class="st">"b"</span>]),</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>        <span class="st">"str"</span>: pd.Series([<span class="st">"a"</span>, <span class="st">"b"</span>], dtype<span class="op">=</span><span class="st">"string"</span>),</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df.dtypes)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>cat-str          category
-cat-obj          category
-obj-obj            object
-str-obj            object
-str        string[python]
-dtype: object</code></pre>
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Talks and Publications</h1>
 </div>
-</div>
-<p>So, on the surface, categorical columns are categorical, object columns are objects, and the column defined as a string is a string. This does make sense.</p>
-<p>However, relying exclusively on the string representation can encounder all sorts of shenanigans, so a more reliable way of checking types is by using functions in <code>pd.api.types</code>.</p>
-<p>Specifically, in the function above we want to make sure that the return value is <code>True</code> only when all the values in the series are strings, but still return <code>False</code> if the string is categorical. The problem is that a series can have multiple types at the same time.</p>
-<p>We can check this with the following function, which tells us whether a column is considered object, categorical, or string based on <code>pd.api.types</code>:</p>
-<div id="3e9d5c1d" class="cell" data-execution_count="2">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> print_types(df, col_name):</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    col <span class="op">=</span> df[col_name]</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Column </span><span class="sc">{</span>col_name<span class="sc">}</span><span class="ss"> has dtype StringDtype: "</span>, col.dtype <span class="op">==</span> pd.StringDtype())</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Column </span><span class="sc">{</span>col_name<span class="sc">}</span><span class="ss"> is string dtype: "</span>, pd.api.types.is_string_dtype(col))</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Column </span><span class="sc">{</span>col_name<span class="sc">}</span><span class="ss"> is object dtype:"</span>, pd.api.types.is_object_dtype(col))</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Column </span><span class="sc">{</span>col_name<span class="sc">}</span><span class="ss"> is categorical dtype:"</span>, pd.api.types.is_categorical_dtype(col))</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> col <span class="kw">in</span> df:</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    print_types(df, col)</span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"####"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Column cat-str has dtype StringDtype:  False
-Column cat-str is string dtype:  True
-Column cat-str is object dtype: False
-Column cat-str is categorical dtype: True
-####
-Column cat-obj has dtype StringDtype:  False
-Column cat-obj is string dtype:  False
-Column cat-obj is object dtype: False
-Column cat-obj is categorical dtype: True
-####
-Column obj-obj has dtype StringDtype:  False
-Column obj-obj is string dtype:  False
-Column obj-obj is object dtype: True
-Column obj-obj is categorical dtype: False
-####
-Column str-obj has dtype StringDtype:  False
-Column str-obj is string dtype:  True
-Column str-obj is object dtype: True
-Column str-obj is categorical dtype: False
-####
-Column str has dtype StringDtype:  True
-Column str is string dtype:  True
-Column str is object dtype: False
-Column str is categorical dtype: False
-####</code></pre>
-</div>
-</div>
-<p>As it turns out, each column is different! I made this neat Venn diagram to summarize all the combinations:</p>
-<p><img src="../../images/posts/pandas-string-object-categorical.png" class="img-fluid"></p>
-<p>In short:</p>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="talks" class="level2">
+<h2 class="anchored" data-anchor-id="talks">Talks</h2>
 <ul>
-<li>A categorical column is never an object, but it may also be string if it contains only strings.</li>
-<li>A string column may be categorical, or object, or just string.</li>
-<li>An object column can also be string, if it is initialized without the <code>string</code> dtype.</li>
+<li><strong>Timeseries forecasting with skrub Data Ops</strong>: EuroScipy 2025, with Guillaume Lemaitre
+<ul>
+<li><a href="https://skrub-data.org/EuroSciPy2025/intro.html">Website</a></li>
+<li><a href="https://www.youtube.com/watch?v=hbmfiBX5zZc">Video recording</a></li>
+</ul></li>
+<li><strong>Skrub – Machine learning with dataframes</strong>: PyData Paris 2025
+<ul>
+<li><a href="https://skrub-data.org/skrub-materials/pages/slides/pydata-2025/slides.html">Slides</a></li>
+<li><a href="https://www.youtube.com/watch?v=k9MNMDpgdAk">Video recording</a></li>
+</ul></li>
+<li><strong>Skrub tutorials material</strong>: To be presented
+<ul>
+<li><a href="https://skrub-data.org/skrub-tutorials/">Website</a></li>
+</ul></li>
 </ul>
-<p>So, what happens in the <code>is_string</code> function is:</p>
-<ol type="1">
-<li>String-typed columns are considered as strings (function returns <code>True</code>)</li>
-<li>Categorical columns <em>are not objects</em> so the function returns <code>False</code></li>
-<li>If the column is <code>Object</code>, then check that it only contains strings with <code>pd.api.types.is_string_dtype()</code>.</li>
-</ol>
-<p>If the check for <code>pd.api.types.is_string_dtype()</code> had been placed at the start of the function, then <em>categorical columns with only strings would be considered as string columns</em>.</p>
-<p>I won’t be going into the details of why this is the case (also because I did not look into it), but the gist of it is that Pandas relies on Numpy for the underlying data representation of dataframes, and this leads to various complications, of which this particular datatype weirdness is only one example. Incidentally, this is why the migration to the string datatype is being done.</p>
-<p>So this is something I learned recently and that confused me enough to write a post about it. At least, now I have a better understanding of what’s going on under the hood.</p>
+</section>
+<section id="publications" class="level2">
+<h2 class="anchored" data-anchor-id="publications">Publications</h2>
+<ul>
+<li><p>Riccardo Cappuzzo, Gael Varoquaux, Aimee Coelho, Paolo Papotti: <strong>Retrieve, Merge, Predict: Augmenting Tables with Data Lakes</strong> TMLR2025, <a href="./static/pubs/arxiv-retrieve_merge_predict.pdf">PDF</a></p></li>
+<li><p>Riccardo Cappuzzo, Paolo Papotti, and Saravanan Thirumuruganathan: <strong>Relational Data Imputation with Graph Neural Networks</strong> EDBT2024, <a href="./static/pubs/hal-grimp-edbt.pdf">PDF</a></p></li>
+<li><p>Riccardo Cappuzzo, Paolo Papotti, and Saravanan Thirumuruganathan: <strong>Creating Embeddings of Heterogeneous Relational Datasets for Data Integration Tasks.</strong> SIGMOD 2020, <a href="./static/pubs/sigmod-2020-embdi.pdf">PDF</a></p></li>
+<li><p>Riccardo Cappuzzo, Paolo Papotti, Saravanan Thirumuruganathan: <strong>EmbDI: Generating Embeddings for Relational Data Integration (Discussion Paper).</strong> SEBD 2021 <a href="./static/pubs/embdi-sebd-2021.pdf">PDF</a></p></li>
+<li><p>Riccardo Cappuzzo, under the supervision of Paolo Papotti, Elena Baralis: <strong>Clustering of Categorical Data for Anonymization and Anomaly Detection</strong>. Master Thesis at Politecnico di Torino <a href="./static/pubs/master-thesis-polito.pdf">PDF</a></p></li>
+<li><p>Riccardo Cappuzzo, under the supervision of Paolo Papotti: <strong>Deep Learning Models for Tabular Data Curation</strong>. PhD Thesis at EURECOM/Sorbonne University <a href="./static/pubs/phd-thesis-cappuzzo.pdf">PDF</a></p></li>
+</ul>
 
 
 </section>
