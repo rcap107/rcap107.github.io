@@ -36,7 +36,7 @@ embeddings themselves.
 
 The code has been *thoroughly* tested to produce results for a paper that
 made it to SIGMOD 2020, which can be
-found [here](/pubs/sigmod-2020-embdi.pdf).
+found [here](/static/pubs/sigmod-2020-embdi.pdf).
 The slides used for the SIGMOD 2020 presentation are also available
 [here](https://docs.google.com/presentation/d/e/2PACX-1vRqWYodB5N6J68WxohcnmxIIWMaac98TwNsM4K8fh15u5wKNQxUtlIpIa7_nebVEeedD8ZhJXgoizPf/pub?start=true&loop=true&delayms=3000).
 

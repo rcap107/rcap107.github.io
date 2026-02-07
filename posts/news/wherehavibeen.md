@@ -3,7 +3,7 @@ title: "Some updates"
 date: 2023-02-05T20:17:56+01:00
 categories: ["news"]
 ---
-It's been a while, hasn't it? According the newly added [archives](/posts/archives) page, the latest post in this blog
+It's been a while, hasn't it? According the newly added [archives](/posts/posts.qmd) page, the latest post in this blog
 goes back all the way to July 2022... Well, it does not seem like I kept my promise of posting with some frequency. 
 
 No matter! Something did happen a few months ago (last October), and I have been quite busy because of it. 

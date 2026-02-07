@@ -80,7 +80,7 @@ Done with the very eventful month, it's time to continue in...
 ### May
 May tends to be a fairly slow month, partially due to the sheer number of holidays that land in the month. This year I decided to take some vacations halfway through. I may or may not do that again in 2026.
 
-Something I did do in May was starting my forever forgotten study on Last.fm songs which you can find [here](data_preparation/fetch-lastfm.html). That's a series of plots I quite enjoyed making, and something I will definitely revisit in the future. Maybe even in the next few weeks (no promises).
+Something I did do in May was starting my forever forgotten study on Last.fm songs which you can find [here](/posts/data_preparation/fetch-lastfm.html). That's a series of plots I quite enjoyed making, and something I will definitely revisit in the future. Maybe even in the next few weeks (no promises).
 
 May is also when the dark ages begun, with Jerome leaving Inria to go work at Neuralk-AI, the very startup I was contacted by last November. Losing Jerome was a big blow, but I will forever be thankful to him for all the time he still put in the library, despite being super busy because of his actual job.
 

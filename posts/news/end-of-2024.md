@@ -17,7 +17,7 @@ been working on for the past two years. Said paper has been rejected three times
 (so far), and we are still working on it. Supposedly, we should be done with it
 this January, but who knows what the future actually holds. 
 
-What else? Well, my contract as a post-doc [ended]({{< relref "/posts/news/moving-up.md" >}}), 
+What else? Well, my contract as a post-doc [ended](/posts/news/moving-up.md), 
 and now I am working as a 
 research engineer at Inria, working on Skrub. Overall, I am interacting with a 
 lot of the same people while working on a library that I find interesting and 

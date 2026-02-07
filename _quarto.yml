@@ -20,7 +20,7 @@ website:
 
   page-footer: |
     <div class="site-footer">
-      Copyright 2026, Riccardo Cappuzzo — <a href="/disclaimer.qmd`a">Disclaimer</a>
+      Copyright 2026, Riccardo Cappuzzo — <a href="/disclaimer.qmd">Disclaimer</a>
     </div>
 format:
   html:

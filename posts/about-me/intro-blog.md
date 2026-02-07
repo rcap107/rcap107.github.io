@@ -25,4 +25,4 @@ to write a post about. Depending on how it goes, this may take months, weeks, da
 or just never happen again. 
 
 # Tell me about yourself
-Check the [About](/posts/about-me) page for a brief story of my recent life.
+Check the [About](/about.qmd) page for a brief story of my recent life.

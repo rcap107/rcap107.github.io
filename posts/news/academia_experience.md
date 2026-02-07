@@ -9,7 +9,7 @@ sufficiently clear as I go over my experience in the past few months.
 For context, I have been working on a paper for the past year or so. Said paper 
 involved running a few thousands experimental configurations over different 
 baselines, then reporting said experiments in a paper that was initially [submitted
-to VLDB2024]({{< relref "posts/news/vldb_2024.md" >}}) (end of 
+to VLDB2024](/posts/news/vldb_2024.md) (end of 
 January this year). Said paper was rejected at VLDB 2024, submitted to SIGMOD2025, 
 and was rejected again.
 
