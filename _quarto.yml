@@ -18,13 +18,15 @@ website:
       - icon: bluesky
         href: https://bsky.app/profile/riccardocappuzzo.com
 
-  page-footer: "Copyright 2026, Riccardo Cappuzzo" 
+  page-footer: |
+    <div class="site-footer">
+      Copyright 2026, Riccardo Cappuzzo — <a href="/disclaimer.qmd`a">Disclaimer</a>
+    </div>
 format:
   html:
     theme: 
       light: flatly
       dark: darkly
     css: styles.css
-
 execute: 
   freeze: auto

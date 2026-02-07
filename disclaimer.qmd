@@ -1,0 +1,21 @@
+---
+title: "Disclaimer"
+url: "/disclaimer/"
+summary: A short disclaimer about the content of this site.
+layout: page
+canonicalURL: "https://www.riccardocappuzzo.com/disclaimer"
+---
+
+The content on this website is provided for informational and educational purposes only. The opinions expressed are my own and do not constitute legal, financial, medical, or professional advice.
+
+While I strive for accuracy, I make no warranties or representations about the completeness, reliability, or suitability of the information. You should verify any information before relying on it.
+
+This site may contain links to external websites; I am not responsible for the content or practices of those sites.
+
+I may also refer to products, software, or services in my posts. References are provided for information purposes and do not represent an endorsement.
+
+If you have questions about any content here, please contact me on social media, or using the email listed in the [About](about.qmd) page.
+
+## AI-generated content
+While I write all my posts, I still make use of AI tools to review and improve my content. Additionally, some of the code I share in my posts is AI-generated; when this is the case, it will be clearly marked as such.
+
