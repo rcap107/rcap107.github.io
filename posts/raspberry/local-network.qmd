@@ -5,7 +5,7 @@ categories: [Raspberry Pi, Networking, DIY]
 tags: [raspberry-pi, local-network, tutorial, home-lab]
 description: "Set up a private local network from public Wi‑Fi using a travel router and a Raspberry Pi -- includes Jellyfin media server, Samba shares, Home Assistant, and monitoring."
 image: images/raspberry-pi-network.jpg
-draft: true
+draft: false
 ---
 
 Because of *reasons* I am living in a residence that provides internet through an
