@@ -1,28 +1,38 @@
 ---
-title: "Building a Local Network from a hotel with Raspberry Pi"
-date: 2026-01-17
+title: "Raspberry Pi: Private Network, Media Server and Home Automation (Hotel-friendly)"
+date: 2026-02-08
 categories: [Raspberry Pi, Networking, DIY]
 tags: [raspberry-pi, local-network, tutorial, home-lab]
-description: "A step-by-step guide to setting up a local network using Raspberry Pi devices."
+description: "Set up a private local network from public Wi‑Fi using a travel router and a Raspberry Pi -- includes Jellyfin media server, Samba shares, Home Assistant, and monitoring."
 image: images/raspberry-pi-network.jpg
 draft: true
 ---
 
-In this post I will cover how I set up a local network using a hotel wifi connection
-to ensure my privacy, while keeping access to the internet. In addition to that,
-I also decided to use this as an excuse to build a local media center by using 
-a Raspberry Pi and a couple of extra hard drives that I found laying around. 
+Because of *reasons* I am living in a residence that provides internet through an
+external provider. I tend to be particularly wary of any kind of service that 
+provides internet services, so I decided to set up a local network that would 
+let me access the internet, while keeping some privacy. 
 
-The result? Now I have a set up that lets me back up my data from my laptop to 
-the HDDs that are connected to the Pi, and at the same time I can stream the videos
-that I have stored on the same HDDs to all the devices I have connected to the 
-local network. 
+I also used this as an excuse to put my Raspberry Pi to work: a media center and
+centralized storage for my data. In this post I'll go over the local network
+setup and the configuration steps I used to get the Pi working.
 
-If you're interested in finding out how I put everything together, read on! 
+The result? Now I can back up my laptop to the HDDs attached to the Pi, and stream
+the videos stored on those same drives to any device on the local network.
+
+If you're interested in how I put everything together, read on!
+
+::: {.callout-warning}
+### AI-generated content
+I used various coding agents to write most of the configuration in this post, 
+but I also had to do a lot of debugging of those same configurations myself. 
+The result is the combination of the output of the agents, and my debugging efforts. 
+:::
+
 
 ## Requirements
-While I'll be talking about my own set up, you may be able to make do with less
-than I used depending on what you need. At the very least, you should have: 
+While I'll describe my own setup, you may need less depending on your goals. At
+the very least you should have:
 
 - A travel router.
 - A Raspberry Pi.
@@ -32,74 +42,75 @@ than I used depending on what you need. At the very least, you should have:
 
 ### My setup
 - A GL-SFT1200 travel router (chosen because it was cheap)
-- A Raspberry Pi 5.
-- A Macbook Air as my laptop. 
-- Two different 3.5" external HDDs. One of the HDDs has two separate partitions. 
-- An official 5A/5V charger for the Raspberry Pi. 
-- An ethernet cable to connect the Pi to the router. 
+- A Raspberry Pi 5
+- A MacBook Air as my laptop
+- Two 3.5" external HDDs (one has two partitions)
+- An official 5V/5A charger for the Raspberry Pi -- phone chargers often can't
+  provide enough power
+- An ethernet cable to connect the Pi to the router
+- Additional devices (phones, etc.) will connect to Wi‑Fi once it's set up
+
 
 ## Building a local network from inside a hotel network
 Note that this section can be skipped if you're already on a private network. 
 
-The idea for this step is to make use of a travel router's repeater feature to 
-connect to the public wifi, set up a private wifi network and allow other devices
-to connect "from behind a screen". 
+The idea here is to use a travel router's repeater feature to connect to the
+public Wi‑Fi, create a private Wi‑Fi network, and let other devices connect
+"from behind a screen." 
 
-To set up my local network I followed the instructions on the website of the router's
-manufacturer. 
-I had a few issues with the set up because I needed to deal with 
-some particularities of my provider, but eventually I was able to get full internet
-access on the router. 
+I followed the manufacturer's instructions for the router. I ran into a few
+snags due to quirks from my provider, but eventually got full internet access
+on the router.
 
 Once that was done, I was able to connect to the new private network from my various
 devices. 
 
-An advantage of this approach is that I can bypass the limit that is put on the 
-unique number of devices that are connected to my account. That's good for me 
-because I have 10+ separate devices that need to be connected to a wifi every so
-often: the public network is only ever going to see a single device (the router),
-while the other devices enjoy free access to the internet. 
+An advantage is that I bypass the limit on the number of devices on my account.
+The public network sees only the router, while my multiple devices get full
+access behind it.
 
-Unfortunately, I can't go in more detail on how I set up the network because it 
-depends entirely on whatever the set up of the hotel is (and for my own privacy
-I am not going to share what is the name of my provider). However, it was not such
-a complicated affair. If you're reading this, I have no doubt you'll manage. 
+I can't go into detail because the exact steps depend on the hotel's setup, but
+it wasn't complicated -- you should manage fine.
 
 ::: {callout-important}
 ## Change your passwords! 
 
-The router had a default password that allowed accessing the admin panel. I made
-sure to change both the password of the admin panel, and that of the wifi. I am
-not keen to have someone snoop in my private network because I forgot to change
-the password. 
+The router had a default admin password -- change it. Also change the Wi‑Fi
+password; don't give someone access because you didn't bother updating defaults.
 :::
 
 ## Setting up the Raspberry Pi
-This was the more complicated part, and it involved a lot of querying LLMs to 
-get the proper configurations. While for the most part I could use directly what 
-was generated by the models (I used both ChatGPT and Mistral's LeChat), I still 
-had to tinker with some of the setup myself. 
+This part was the trickiest and involved a lot of querying LLMs for
+configuration snippets. I used outputs from ChatGPT and Mistral's LeChat, but I
+still had to tinker and debug things myself.
 
 ### Step 0: Prepare the Raspberry Pi
-Before doing anything else, I installed the regular Raspberry Pi OS using the 
-[official image](https://www.raspberrypi.com/software/). The plan is to use the
-Pi for multiple services, so I avoided installing specialized OS's. 
+Before doing anything else, I installed Raspberry Pi OS from the
+[official image](https://www.raspberrypi.com/software/). I wanted a general
+purpose Pi, so I avoided specialized images.
 
-The usual recommendation when setting up the Pi is doing so directly from the 
-board by plugging in a monitor, keyboard and mouse. This is exactly what I did,
-and I'll repeat the recommendation: I've already had to figure out the IP of a
-Pi by sniffing a network just so I could ssh in, and it wasn't a fun experience. 
+The usual recommendation is to set up the Pi with a monitor, keyboard, and
+mouse. I did that -- years ago I had to sniff a network to find a Pi's IP so I
+could SSH in, and it wasn't fun.
 
-Other than the regular OS set up, the only other thing I had to do was enabling 
-the ssh server on the Pi, which is disabled by default. The instructions can be
-found [here](https://www.raspberrypi.com/documentation/computers/remote-access.html#ssh).
+Besides the OS setup, I enabled the SSH server (it's disabled by default). See
+the official docs: https://www.raspberrypi.com/documentation/computers/remote-access.html#ssh
+
+Since I'll mostly access the Pi from my Mac, I added the Pi's IP to `/etc/hosts`,
+for example:
+
+```shell
+raspberrypi 1.1.1.1
+```
+where `1.1.1.1` is the Pi's address. This lets me just `ssh raspberrypi` instead
+of the full IP -- very convenient.
+
 
 ### Step 1: Installing Docker compose
-Following some AI-provided advice, I decided to set up the various services using 
-Docker containers, so I had to download and install Docker compose to be able 
-to spin up the containers I needed. 
+Following some AI-provided advice, I used Docker containers for the services,
+so I installed Docker Compose to manage them.
 
-I followed the [instructions](https://docs.docker.com/engine/install/raspberry-pi-os/#install-using-the-repository) on the Docker website, then I added my user to the
+I followed the [official instructions](https://docs.docker.com/engine/install/raspberry-pi-os/#install-using-the-repository) and added my user to the
 `docker` group:
 
 ```shell
@@ -107,43 +118,41 @@ sudo usermod -aG docker $USER
 ```
 Finally, I logged out and back in to apply the changes. 
 
-I also created a folder that would contain all my containers:
+I also created a folder for my containers:
 ```shell
 mkdir ~/containers
 cd ~/containers
 ```
 
 ### Step 2: Preparing the HDDs 
-Normally, connecting an external hard drive to the Pi would result on the drive
-being mounted in an increasing pattern like `/sda`, `/sdb` etc. For my use case,
-I needed to ensure the HDDs would get mounted always in the same location so that 
-the various services (mainly Samba and Jellyfin) would always find the data. 
+Normally an external drive gets a device like `/dev/sda`, `/dev/sdb`, etc. I
+wanted stable mount points so services (Samba, Jellyfin) always find the data.
 
-One of the two hard disks was split in an exFAT partition, and a NTFS partition:
-this means that I'd have to create two separate mounting points, one per partition.
+One disk had an exFAT partition and an NTFS partition, so I created separate
+mount points for each partition.
 
-Why two partitions? The reason is that I have both a Mac and a Windows laptop,
-so I wanted to be able to move data to and from each laptop. I can't edit data
-from my Mac on the NTFS partition, so I decided to add the exFAT partition to have
-a "free port" for data that should be shared. 
+Why two partitions? I have both a Mac and a Windows laptop. macOS can't write to
+NTFS without extra software, so I made an exFAT partition for files I want to
+share easily between machines.
 
 In any case, I created three mounting points:
 
 ```shell
-sudo mkdir -p /mnt/storage # for the NTFS partition
-sudo mkdir -p /mnt/storage2 # for the exFAT partitioon
-sudo mkdir -p /mnt/storage3 # for the second disk
+sudo mkdir -p /mnt/storage   # NTFS partition
+sudo mkdir -p /mnt/storage2  # exFAT partition
+sudo mkdir -p /mnt/storage3  # second disk
 ```
 Then, I needed to find the UUID of each partition: 
+
 ```shell
 sudo blkid
 ```
-I then modifed the `/etc/fstab` file by adding these lines:
+I then modified `/etc/fstab` with entries like:
 
 ```
-UUID="xxxxxxxxx" /mnt/storage exfat defaults,auto,users,rw,uid=1000,gid=1000,nofail 0 0
-UUID="xxxxxxxxxxxxxxxx" /mnt/storage2 ntfs defaults,auto,users,rw,uid=1000,gid=1000,nofail 0 0
-UUID="xxxxxxxxxxxxxxxx" /mnt/storage3 ntfs defaults,auto,users,rw,uid=1000,gid=1000,nofail 0 0
+UUID="xxxxxxxxx"  /mnt/storage  ntfs  defaults,auto,users,rw,uid=1000,gid=1000,nofail 0 0
+UUID="xxxxxxxxx"  /mnt/storage2 exfat defaults,auto,users,rw,uid=1000,gid=1000,nofail 0 0
+UUID="xxxxxxxxx"  /mnt/storage3 ntfs  defaults,auto,users,rw,uid=1000,gid=1000,nofail 0 0
 ```
 
 **Explanation of the options**:
@@ -156,13 +165,19 @@ UUID="xxxxxxxxxxxxxxxx" /mnt/storage3 ntfs defaults,auto,users,rw,uid=1000,gid=1
 **0 0**: Disables filesystem checks (`fsck`) and backup by `dump`.
 
 ::: {.callout-tip}
-The partitions are in exFAT and NTFS. To make sure the file systems are supported, the exfat-fuse and nfts-3g packages should be installed.
+The partitions are exFAT and NTFS. Make sure you have support for them -- on
+modern Debian/Raspbian you can use `exfat-fuse` or `exfatprogs` for exFAT and
+`ntfs-3g` for NTFS.
 
-In my case they were, and this can be checked using sudo apt install exfat-fuse and sudo apt install nfts-3g.
+For example:
+```
+sudo apt install exfat-fuse ntfs-3g
+```
 :::
 
 ### Step 3: Setting up Jellyfin
-I am using [Jellyfin](https://jellyfin.org/) as media server. 
+I use [Jellyfin](https://jellyfin.org/) as a media server. It's open source and
+lets you stream media from the local network -- perfect for this setup.
 
 The set up was quite simple. First, I created the directory for the container:
 ```shell
@@ -196,14 +211,213 @@ Then, I started the Jellyfin container in detached mode (`-d`):
 docker compose up -d
 ```
 
-Jellyfin is now availble at `raspberrypi:8096`, where `raspberrypi` is the IP of 
-the Pi. 
+Jellyfin is now available at `raspberrypi:8096` (where `raspberrypi` is the Pi's
+hostname or IP as set in `/etc/hosts`).
 
 ::: {.callout-tip}
 In order to access the Raspberry Pi from both Firefox and Vivaldi (the two web browsers I use) on my Mac I had to change the privacy settings for both so that they'd be allowed to find devices on the local network. This is in `System Settings` -> `Privacy & Security` -> `Local Network`.
 :::
 
+A big advantage of using Jellyfin is that now I can access my media files from 
+any device that is connected to the local network, either by using the browser 
+or by using one of the mobile apps for Jellyfin. 
+
 ### Step 4: Setting up Samba
+Setting up Samba was a bigger headache. I could access the Pi's data from my
+Android phone and my Mac, but not from my Windows laptop -- annoying, and I need
+to revisit it later.
 
-## In summary
+I also had trouble with authentication and permissions; part of the issue was
+using exFAT, which doesn't support symlinks (that broke some of my plans).
 
+Below is the `docker-compose.yml` I settled on after the permission shenanigans.
+
+```yaml
+services:
+  samba:
+    image: dperson/samba
+    container_name: samba
+    restart: unless-stopped
+    ports:
+      - "139:139"
+      - "445:445"
+    volumes:
+      - /mnt/storage:/shared
+      - /mnt/storage2:/shared-2
+      - /mnt/storage3:/shared-3
+    environment:
+      - USERID=1000
+      - GROUPID=1000
+      - USERNAME=${SAMBA_USERNAME}  
+      - PASSWORD=${SAMBA_PASSWORD}
+      - PERMISSIONS=0755 
+    command: >
+      -u "${SAMBA_USERNAME};${SAMBA_PASSWORD}"
+      -s "shared;/shared;yes;yes;no;all;none;${SAMBA_USERNAME};0775;0664"
+      -s "shared-2;/shared-2;yes;yes;no;all;none;${SAMBA_USERNAME};0775;0664"
+      -s "shared-3;/shared-3;yes;yes;no;all;none;${SAMBA_USERNAME};0775;0664"
+```
+
+In the end, I decided to block any access to the drives behind authentication, 
+with the `SAMBA_USERNAME` and `SAMBA_PASSWORD` variables containing the username
+and password I'd need to use in order to connect from my other devices. 
+
+Note: `SAMBA_USERNAME` and `SAMBA_PASSWORD` can be provided via a `.env` file
+next to the `docker-compose.yml`:
+
+```shell
+SAMBA_PASSWORD=mypassword
+SAMBA_USERNAME=myusername
+```
+
+**Explanation of the docker-compose command**
+```yaml
+command: >
+  -u "${SAMBA_USERNAME};${SAMBA_PASSWORD}"
+  -s "shared;/shared;yes;yes;no;all;none;${SAMBA_USERNAME};0775;0664"
+  -s "shared-2;/shared-2;yes;yes;no;all;none;${SAMBA_USERNAME};0775;0664"
+  -s "shared-3;/shared-3;yes;yes;no;all;none;${SAMBA_USERNAME};0775;0664"
+```
+
+`-u` flag (User definition)
+```bash
+-u "${SAMBA_USERNAME};${SAMBA_PASSWORD}"
+```
+Creates a Samba user with the specified username and password. 
+ 
+ `-s` flag (Share definition)
+Each `-s` parameter defines a network share. The syntax is:
+```
+-s "name;path;browseable;readonly;guest;users;admins;writelist;create_mask;directory_mask"
+```
+
+In this example:
+```bash
+-s "shared;/shared;yes;yes;no;all;none;${SAMBA_USERNAME};0775;0664"
+```
+Where:
+
+1. **`shared`** - Share name
+   - What users see on the network (e.g., `\\raspberry-pi\shared`)
+
+2. **`/shared`** - Path inside the container
+   - The actual directory being shared (maps to `/mnt/storage` here)
+
+3. **`yes`** - Browseable
+   - `yes` = Share appears in network browser listings
+   - `no` = Share is hidden (but still accessible if you know the name)
+
+4. **`yes`** - Read-only
+  - Set the drive to be read-only. The authenticated user can still write.
+
+5. **`no`** - Guest access
+   - `no` = Requires authentication (username/password)
+   - `yes` = Anyone can access without credentials
+
+6. **`all`** - Valid users
+   - `all` = All authenticated users can access
+   - Or specify usernames: `user1,user2`
+
+7. **`none`** - Admin users
+   - `none` = No admin privileges
+   - Or specify usernames who get full control
+
+8. **`${SAMBA_USERNAME}`** - Write list
+   - Users allowed to write (important when read-only=yes is overridden)
+   - In this case, my Samba user gets write permissions
+
+9. **`0775`** - Directory mask (create mask for directories)
+   - `0775` = Owner: rwx, Group: rwx, Others: r-x
+   - New directories created with these permissions
+
+10. **`0664`** - File mask (create mask for files)
+    - `0664` = Owner: rw-, Group: rw-, Others: r--
+    - New files created with these permissions
+
+These masks ensure that:
+- I (owner) can read/write/delete
+- My group members can read/write
+- Others can only read
+- Directories are executable (required to enter them)
+
+[Step 5: Setting up Home Assistant]
+[Home Assistant](https://www.home-assistant.io) is an open-source platform for
+home automation. It lets you connect IoT devices and monitor metrics via
+sensors.
+
+I've been looking into ways to track the temperature and humidity of my house 
+for a long time, and in one earlier attempt I tried to set up Home Assistant with
+a standalone sensor. It was very complicated, did not work well, and I gave up 
+after a while. 
+
+For this set up I decided to make my life a bit easier by purchasing a connected
+temperature/humidity sensor and a Zigbee antenna to connect it with. 
+
+Still, I first had to boot the Home Assistant software, and as before I used a 
+Docker container with this `docker-compose.yml` file:
+
+```yaml
+services:
+  homeassistant:
+    container_name: homeassistant
+    image: ghcr.io/home-assistant/home-assistant:stable
+    volumes:
+      - ./config:/config
+    environment:
+      - TZ=Europe/Paris
+    network_mode: host
+    restart: unless-stopped
+    devices:
+      - "/dev/ttyUSB0:/dev/ttyUSB0"
+```
+
+Everything is pretty much default, except for the device passthrough below:
+```yaml
+devices:
+  - "/dev/ttyUSB0:/dev/ttyUSB0"
+```
+
+These lines are needed to let the Home Assistant container communicate with the 
+antenna, which is `/dev/ttyUSB0`. Depending on the device, the serial code may 
+be different: you should be able to find it with the command 
+
+```shell
+ls /dev/tty*
+```
+
+At this point, all I did was following the instructions shown by Home Assistant. 
+
+The only thing I need to mention is that I had some issues connecting the sensor
+to the antenna, and the solution for that particular problem was turning it off 
+and back on by taking out the battery. Once it rebooted, I was able to connect
+it just fine. 
+
+Finally, I was able to access the Home Assistant dashboard by connecting to 
+`http://raspberrypi:8123`. 
+
+### Step 5: Monitoring with Cockpit
+The final step (for this post, at any rate) consisted in finding a way to monitor
+the Raspberry from the Mac, to check that it was not melting itself down, and in
+general keep an eye on the setup. 
+
+To do so, I installed `cockpit`, a monitoring software that monitors the resource
+usage of the board, as well as its temperature. For this, no container: apt was
+sufficient.
+
+```shell
+sudo apt install cockpit
+sudo systemctl enable --now cockpit.socket
+```
+
+After this, `cockpit` became accessible at the address `http://raspberrypi:9090`.
+
+## Wrapping up
+In this very long post I covered how I set up a full private network, a local 
+file sharing service with samba, a media center with Jellyfin, a IoT dashboard with
+Home Assistant and a monitoring service with cockpit. 
+
+That was a long process! And I'm not done with it yet either. There are a few 
+more additions I'd like to make, like Photoprism and pi.hole, but I'm not sure 
+yet when I'll get around doing that.
+
+I hope this very long write up was useful. See you in the next posts!
