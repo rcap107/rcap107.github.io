@@ -1,11 +1,12 @@
 ---
 title: "Posts"
 format: html
-listing: 
+listing:
     sort:
         - "date desc"
         - "title desc"
     categories: true
+    # No explicit excludes
 
 ---
 

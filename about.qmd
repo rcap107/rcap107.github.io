@@ -37,11 +37,7 @@ in Sophia Antipolis (near Nice in the south of France).
 The subject of the PhD was automating methods to integrate data and impute missing values.
 I published some of my findings at SIGMOD2020 and EDBT2024. 
 
-All my publications are available [here](/publications).
+All my publications, talks and other material are available [here](/publications.qmd).
 
 On the personal side, I am a big fan of gaming, anime/manga, technology and history.
-
-I have been living in France since 2016, but for various reasons I am still not as 
-fluent in French as I would like.  
-
-My personal CV is available [here](/pubs/CV_cappuzzo.pdf).
+You will find some of that in my posts. 

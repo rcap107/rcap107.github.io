@@ -1,6 +1,6 @@
 ---
 title: "Talks and Publications"
-draft: true
+draft: false
 layout: "post"
 url: "/publications/"
 canonicalURL: "https://www.riccardocappuzzo.com/publications"

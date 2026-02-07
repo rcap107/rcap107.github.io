@@ -8,8 +8,8 @@ website:
     search: true
     left:
       - posts/posts.qmd
-      - text: "Publications"
-        href: posts/about-me/pubs.qmd
+      - text: "Talks and articles"
+        href: publications.qmd
       - about.qmd 
 
     right:
