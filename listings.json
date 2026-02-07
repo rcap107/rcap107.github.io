@@ -2,6 +2,7 @@
   {
     "listing": "/posts/posts.html",
     "items": [
+      "/posts/raspberry/local-network.html",
       "/posts/tools-setup/linux-tools-part1.html",
       "/posts/tools-setup/linux-tools-part0.html",
       "/posts/posts/diff-process-substitution.html",
