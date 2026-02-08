@@ -1,5 +1,7 @@
 project:
   type: website
+  resources:
+    - static/
 
 website:
   title: "A blog by RC"
@@ -25,8 +27,11 @@ website:
 format:
   html:
     theme: 
-      light: flatly
-      dark: darkly
+      light: cosmo
+      dark: cyborg
     css: styles.css
+    include-in-header: _includes/head.html
+    toc: true
+    toc-expand: true
 execute: 
   freeze: auto

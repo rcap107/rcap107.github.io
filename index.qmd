@@ -1,7 +1,9 @@
 ---
 title: "Riccardo Cappuzzo"
 page-layout: full
-format: html
+format: 
+  html:
+    toc: false
 about:
   template: jolla
   image: static/logo.png

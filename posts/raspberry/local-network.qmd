@@ -4,9 +4,15 @@ date: 2026-02-08
 categories: [Raspberry Pi, Networking, DIY]
 tags: [raspberry-pi, local-network, tutorial, home-lab]
 description: "Set up a private local network from public Wi‑Fi using a travel router and a Raspberry Pi -- includes Jellyfin media server, Samba shares, Home Assistant, and monitoring."
-image: images/raspberry-pi-network.jpg
+# image: 
+format:
+  html:
+    toc: true
+    toc-expand: true
 draft: false
 ---
+
+
 
 Because of *reasons* I am living in a residence that provides internet through an
 external provider. I tend to be particularly wary of any kind of service that 
@@ -84,7 +90,7 @@ This part was the trickiest and involved a lot of querying LLMs for
 configuration snippets. I used outputs from ChatGPT and Mistral's LeChat, but I
 still had to tinker and debug things myself.
 
-### Step 0: Prepare the Raspberry Pi
+### Step 0: Preparing the Pi
 Before doing anything else, I installed Raspberry Pi OS from the
 [official image](https://www.raspberrypi.com/software/). I wanted a general
 purpose Pi, so I avoided specialized images.
@@ -99,12 +105,13 @@ the official docs: https://www.raspberrypi.com/documentation/computers/remote-ac
 Since I'll mostly access the Pi from my Mac, I added the Pi's IP to `/etc/hosts`,
 for example:
 
-```shell
+```sh
 raspberrypi 1.1.1.1
 ```
 where `1.1.1.1` is the Pi's address. This lets me just `ssh raspberrypi` instead
 of the full IP -- very convenient.
 
+---
 
 ### Step 1: Installing Docker compose
 Following some AI-provided advice, I used Docker containers for the services,
@@ -113,16 +120,18 @@ so I installed Docker Compose to manage them.
 I followed the [official instructions](https://docs.docker.com/engine/install/raspberry-pi-os/#install-using-the-repository) and added my user to the
 `docker` group:
 
-```shell
+```sh
 sudo usermod -aG docker $USER
 ```
 Finally, I logged out and back in to apply the changes. 
 
 I also created a folder for my containers:
-```shell
+```sh
 mkdir ~/containers
 cd ~/containers
 ```
+
+--- 
 
 ### Step 2: Preparing the HDDs 
 Normally an external drive gets a device like `/dev/sda`, `/dev/sdb`, etc. I
@@ -137,19 +146,19 @@ share easily between machines.
 
 In any case, I created three mounting points:
 
-```shell
+```sh
 sudo mkdir -p /mnt/storage   # NTFS partition
 sudo mkdir -p /mnt/storage2  # exFAT partition
 sudo mkdir -p /mnt/storage3  # second disk
 ```
 Then, I needed to find the UUID of each partition: 
 
-```shell
+```sh
 sudo blkid
 ```
 I then modified `/etc/fstab` with entries like:
 
-```
+```sh
 UUID="xxxxxxxxx"  /mnt/storage  ntfs  defaults,auto,users,rw,uid=1000,gid=1000,nofail 0 0
 UUID="xxxxxxxxx"  /mnt/storage2 exfat defaults,auto,users,rw,uid=1000,gid=1000,nofail 0 0
 UUID="xxxxxxxxx"  /mnt/storage3 ntfs  defaults,auto,users,rw,uid=1000,gid=1000,nofail 0 0
@@ -175,12 +184,14 @@ sudo apt install exfat-fuse ntfs-3g
 ```
 :::
 
+---
+
 ### Step 3: Setting up Jellyfin
 I use [Jellyfin](https://jellyfin.org/) as a media server. It's open source and
 lets you stream media from the local network -- perfect for this setup.
 
 The set up was quite simple. First, I created the directory for the container:
-```shell
+```bash
 cd ~/containers
 mkdir jellyfin
 cd jellyfin
@@ -207,7 +218,7 @@ mount positions to locations inside the container. Adapt the paths to the locati
 and partition names that you are working with. 
 
 Then, I started the Jellyfin container in detached mode (`-d`):
-```shell
+```sh
 docker compose up -d
 ```
 
@@ -221,6 +232,8 @@ In order to access the Raspberry Pi from both Firefox and Vivaldi (the two web b
 A big advantage of using Jellyfin is that now I can access my media files from 
 any device that is connected to the local network, either by using the browser 
 or by using one of the mobile apps for Jellyfin. 
+
+---
 
 ### Step 4: Setting up Samba
 Setting up Samba was a bigger headache. I could access the Pi's data from my
@@ -265,7 +278,7 @@ and password I'd need to use in order to connect from my other devices.
 Note: `SAMBA_USERNAME` and `SAMBA_PASSWORD` can be provided via a `.env` file
 next to the `docker-compose.yml`:
 
-```shell
+```sh
 SAMBA_PASSWORD=mypassword
 SAMBA_USERNAME=myusername
 ```
@@ -308,7 +321,7 @@ Where:
    - `no` = Share is hidden (but still accessible if you know the name)
 
 4. **`yes`** - Read-only
-  - Set the drive to be read-only. The authenticated user can still write.
+    - Set the drive to be read-only. The authenticated user can still write.
 
 5. **`no`** - Guest access
    - `no` = Requires authentication (username/password)
@@ -340,7 +353,9 @@ These masks ensure that:
 - Others can only read
 - Directories are executable (required to enter them)
 
-[Step 5: Setting up Home Assistant]
+---
+
+### Step 5: Setting up Home Assistant
 [Home Assistant](https://www.home-assistant.io) is an open-source platform for
 home automation. It lets you connect IoT devices and monitor metrics via
 sensors.
@@ -381,7 +396,7 @@ These lines are needed to let the Home Assistant container communicate with the
 antenna, which is `/dev/ttyUSB0`. Depending on the device, the serial code may 
 be different: you should be able to find it with the command 
 
-```shell
+```sh
 ls /dev/tty*
 ```
 
@@ -395,7 +410,9 @@ it just fine.
 Finally, I was able to access the Home Assistant dashboard by connecting to 
 `http://raspberrypi:8123`. 
 
-### Step 5: Monitoring with Cockpit
+--- 
+
+### Step 6: Monitoring with Cockpit
 The final step (for this post, at any rate) consisted in finding a way to monitor
 the Raspberry from the Mac, to check that it was not melting itself down, and in
 general keep an eye on the setup. 
@@ -404,7 +421,7 @@ To do so, I installed `cockpit`, a monitoring software that monitors the resourc
 usage of the board, as well as its temperature. For this, no container: apt was
 sufficient.
 
-```shell
+```sh
 sudo apt install cockpit
 sudo systemctl enable --now cockpit.socket
 ```
