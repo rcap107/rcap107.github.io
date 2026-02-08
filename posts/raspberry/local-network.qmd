@@ -29,10 +29,15 @@ the videos stored on those same drives to any device on the local network.
 If you're interested in how I put everything together, read on!
 
 ::: {.callout-warning}
-### AI-generated content
+### Disclaimer on AI usage
 I used various coding agents to write most of the configuration in this post, 
 but I also had to do a lot of debugging of those same configurations myself. 
-The result is the combination of the output of the agents, and my debugging efforts. 
+
+If I trusted everything that the agents did, most of what is reported below would 
+not work. 
+
+This post is the results of combining the output of the agents, with a healthy
+amount of human debugging.
 :::
 
 
@@ -165,6 +170,7 @@ UUID="xxxxxxxxx"  /mnt/storage3 ntfs  defaults,auto,users,rw,uid=1000,gid=1000,n
 ```
 
 **Explanation of the options**:
+
     - `defaults`: Uses default mount options (rw, suid, dev, exec, auto, nouser, async).
     - `auto`: Allows the partition to be mounted automatically at boot.
     - `users`: Allows any user (not just root) to mount/unmount the partition.
@@ -348,6 +354,7 @@ Where:
     - New files created with these permissions
 
 These masks ensure that:
+
 - I (owner) can read/write/delete
 - My group members can read/write
 - Others can only read
