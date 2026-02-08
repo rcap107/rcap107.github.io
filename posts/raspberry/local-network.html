@@ -79,9 +79,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-17d01b5babc88cbee53e37b4dd766b3a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-7f54657f98cfd61baa5fc740dde4b5a5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-17d01b5babc88cbee53e37b4dd766b3a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-000f0825b9c55ed21d14970d810c14a9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-e76a3bd875c60c293afb8898fda78102.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-000f0825b9c55ed21d14970d810c14a9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -109,12 +109,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+<link rel="shortcut icon" href="../../favicon.ico">
+<link rel="manifest" href="../../site.webmanifest">
 
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -361,7 +366,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="99">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#requirements" id="toc-requirements" class="nav-link active" data-scroll-target="#requirements">Requirements</a>
+  <ul class="collapse">
+  <li><a href="#my-setup" id="toc-my-setup" class="nav-link" data-scroll-target="#my-setup">My setup</a></li>
+  </ul></li>
+  <li><a href="#building-a-local-network-from-inside-a-hotel-network" id="toc-building-a-local-network-from-inside-a-hotel-network" class="nav-link" data-scroll-target="#building-a-local-network-from-inside-a-hotel-network">Building a local network from inside a hotel network</a></li>
+  <li><a href="#change-your-passwords" id="toc-change-your-passwords" class="nav-link" data-scroll-target="#change-your-passwords">Change your passwords!</a></li>
+  <li><a href="#setting-up-the-raspberry-pi" id="toc-setting-up-the-raspberry-pi" class="nav-link" data-scroll-target="#setting-up-the-raspberry-pi">Setting up the Raspberry Pi</a>
+  <ul class="collapse">
+  <li><a href="#step-0-preparing-the-pi" id="toc-step-0-preparing-the-pi" class="nav-link" data-scroll-target="#step-0-preparing-the-pi">Step 0: Preparing the Pi</a></li>
+  <li><a href="#step-1-installing-docker-compose" id="toc-step-1-installing-docker-compose" class="nav-link" data-scroll-target="#step-1-installing-docker-compose">Step 1: Installing Docker compose</a></li>
+  <li><a href="#step-2-preparing-the-hdds" id="toc-step-2-preparing-the-hdds" class="nav-link" data-scroll-target="#step-2-preparing-the-hdds">Step 2: Preparing the HDDs</a></li>
+  <li><a href="#step-3-setting-up-jellyfin" id="toc-step-3-setting-up-jellyfin" class="nav-link" data-scroll-target="#step-3-setting-up-jellyfin">Step 3: Setting up Jellyfin</a></li>
+  <li><a href="#step-4-setting-up-samba" id="toc-step-4-setting-up-samba" class="nav-link" data-scroll-target="#step-4-setting-up-samba">Step 4: Setting up Samba</a></li>
+  <li><a href="#step-5-setting-up-home-assistant" id="toc-step-5-setting-up-home-assistant" class="nav-link" data-scroll-target="#step-5-setting-up-home-assistant">Step 5: Setting up Home Assistant</a></li>
+  <li><a href="#step-6-monitoring-with-cockpit" id="toc-step-6-monitoring-with-cockpit" class="nav-link" data-scroll-target="#step-6-monitoring-with-cockpit">Step 6: Monitoring with Cockpit</a></li>
+  </ul></li>
+  <li><a href="#wrapping-up" id="toc-wrapping-up" class="nav-link" data-scroll-target="#wrapping-up">Wrapping up</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
 
@@ -426,24 +455,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="setting-up-the-raspberry-pi" class="level2">
 <h2 class="anchored" data-anchor-id="setting-up-the-raspberry-pi">Setting up the Raspberry Pi</h2>
 <p>This part was the trickiest and involved a lot of querying LLMs for configuration snippets. I used outputs from ChatGPT and Mistral’s LeChat, but I still had to tinker and debug things myself.</p>
-<section id="step-0-prepare-the-raspberry-pi" class="level3">
-<h3 class="anchored" data-anchor-id="step-0-prepare-the-raspberry-pi">Step 0: Prepare the Raspberry Pi</h3>
+<section id="step-0-preparing-the-pi" class="level3">
+<h3 class="anchored" data-anchor-id="step-0-preparing-the-pi">Step 0: Preparing the Pi</h3>
 <p>Before doing anything else, I installed Raspberry Pi OS from the <a href="https://www.raspberrypi.com/software/">official image</a>. I wanted a general purpose Pi, so I avoided specialized images.</p>
 <p>The usual recommendation is to set up the Pi with a monitor, keyboard, and mouse. I did that – years ago I had to sniff a network to find a Pi’s IP so I could SSH in, and it wasn’t fun.</p>
 <p>Besides the OS setup, I enabled the SSH server (it’s disabled by default). See the official docs: https://www.raspberrypi.com/documentation/computers/remote-access.html#ssh</p>
 <p>Since I’ll mostly access the Pi from my Mac, I added the Pi’s IP to <code>/etc/hosts</code>, for example:</p>
-<pre class="shell"><code>raspberrypi 1.1.1.1</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">raspberrypi</span> 1.1.1.1</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>where <code>1.1.1.1</code> is the Pi’s address. This lets me just <code>ssh raspberrypi</code> instead of the full IP – very convenient.</p>
+<hr>
 </section>
 <section id="step-1-installing-docker-compose" class="level3">
 <h3 class="anchored" data-anchor-id="step-1-installing-docker-compose">Step 1: Installing Docker compose</h3>
 <p>Following some AI-provided advice, I used Docker containers for the services, so I installed Docker Compose to manage them.</p>
 <p>I followed the <a href="https://docs.docker.com/engine/install/raspberry-pi-os/#install-using-the-repository">official instructions</a> and added my user to the <code>docker</code> group:</p>
-<pre class="shell"><code>sudo usermod -aG docker $USER</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> usermod <span class="at">-aG</span> docker <span class="va">$USER</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Finally, I logged out and back in to apply the changes.</p>
 <p>I also created a folder for my containers:</p>
-<pre class="shell"><code>mkdir ~/containers
-cd ~/containers</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> ~/containers</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/containers</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
 </section>
 <section id="step-2-preparing-the-hdds" class="level3">
 <h3 class="anchored" data-anchor-id="step-2-preparing-the-hdds">Step 2: Preparing the HDDs</h3>
@@ -451,15 +482,15 @@ cd ~/containers</code></pre>
 <p>One disk had an exFAT partition and an NTFS partition, so I created separate mount points for each partition.</p>
 <p>Why two partitions? I have both a Mac and a Windows laptop. macOS can’t write to NTFS without extra software, so I made an exFAT partition for files I want to share easily between machines.</p>
 <p>In any case, I created three mounting points:</p>
-<pre class="shell"><code>sudo mkdir -p /mnt/storage   # NTFS partition
-sudo mkdir -p /mnt/storage2  # exFAT partition
-sudo mkdir -p /mnt/storage3  # second disk</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> mkdir <span class="at">-p</span> /mnt/storage   <span class="co"># NTFS partition</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> mkdir <span class="at">-p</span> /mnt/storage2  <span class="co"># exFAT partition</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> mkdir <span class="at">-p</span> /mnt/storage3  <span class="co"># second disk</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Then, I needed to find the UUID of each partition:</p>
-<pre class="shell"><code>sudo blkid</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> blkid</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>I then modified <code>/etc/fstab</code> with entries like:</p>
-<pre><code>UUID="xxxxxxxxx"  /mnt/storage  ntfs  defaults,auto,users,rw,uid=1000,gid=1000,nofail 0 0
-UUID="xxxxxxxxx"  /mnt/storage2 exfat defaults,auto,users,rw,uid=1000,gid=1000,nofail 0 0
-UUID="xxxxxxxxx"  /mnt/storage3 ntfs  defaults,auto,users,rw,uid=1000,gid=1000,nofail 0 0</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="va">UUID</span><span class="op">=</span><span class="st">"xxxxxxxxx"</span>  <span class="ex">/mnt/storage</span>  ntfs  defaults,auto,users,rw,uid=1000,gid=1000,nofail 0 0</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="va">UUID</span><span class="op">=</span><span class="st">"xxxxxxxxx"</span>  <span class="ex">/mnt/storage2</span> exfat defaults,auto,users,rw,uid=1000,gid=1000,nofail 0 0</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="va">UUID</span><span class="op">=</span><span class="st">"xxxxxxxxx"</span>  <span class="ex">/mnt/storage3</span> ntfs  defaults,auto,users,rw,uid=1000,gid=1000,nofail 0 0</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Explanation of the options</strong>: - <code>defaults</code>: Uses default mount options (rw, suid, dev, exec, auto, nouser, async). - <code>auto</code>: Allows the partition to be mounted automatically at boot. - <code>users</code>: Allows any user (not just root) to mount/unmount the partition. - <code>rw</code>: Mounts the filesystem as read-write. - <code>uid=1000,gid=1000</code>: Sets the owner and group of all files to the user/group with ID 1000 (my user account). - <code>nofail</code>: Prevents boot failures if the partition is unavailable (e.g., external drive not connected). <strong>0 0</strong>: Disables filesystem checks (<code>fsck</code>) and backup by <code>dump</code>.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -476,14 +507,15 @@ Tip
 <pre><code>sudo apt install exfat-fuse ntfs-3g</code></pre>
 </div>
 </div>
+<hr>
 </section>
 <section id="step-3-setting-up-jellyfin" class="level3">
 <h3 class="anchored" data-anchor-id="step-3-setting-up-jellyfin">Step 3: Setting up Jellyfin</h3>
 <p>I use <a href="https://jellyfin.org/">Jellyfin</a> as a media server. It’s open source and lets you stream media from the local network – perfect for this setup.</p>
 <p>The set up was quite simple. First, I created the directory for the container:</p>
-<pre class="shell"><code>cd ~/containers
-mkdir jellyfin
-cd jellyfin</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/containers</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> jellyfin</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> jellyfin</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Then, I wrote this <code>docker-compose.yml</code> file:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode yml code-with-copy"><code class="sourceCode yaml"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">services</span><span class="kw">:</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">jellyfin</span><span class="kw">:</span></span>
@@ -499,7 +531,7 @@ cd jellyfin</code></pre>
 <span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">restart</span><span class="kw">:</span><span class="at"> unless-stopped</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>I added both <code>storage</code> and <code>storage2</code> for the sake of the example: the point here is to provide Jellyfin with the locations of the media folders by binding the mount positions to locations inside the container. Adapt the paths to the locations and partition names that you are working with.</p>
 <p>Then, I started the Jellyfin container in detached mode (<code>-d</code>):</p>
-<pre class="shell"><code>docker compose up -d</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> compose up <span class="at">-d</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Jellyfin is now available at <code>raspberrypi:8096</code> (where <code>raspberrypi</code> is the Pi’s hostname or IP as set in <code>/etc/hosts</code>).</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -515,6 +547,7 @@ Tip
 </div>
 </div>
 <p>A big advantage of using Jellyfin is that now I can access my media files from any device that is connected to the local network, either by using the browser or by using one of the mobile apps for Jellyfin.</p>
+<hr>
 </section>
 <section id="step-4-setting-up-samba" class="level3">
 <h3 class="anchored" data-anchor-id="step-4-setting-up-samba">Step 4: Setting up Samba</h3>
@@ -546,8 +579,8 @@ Tip
 <span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a>      -s "shared-3;/shared-3;yes;yes;no;all;none;${SAMBA_USERNAME};0775;0664"</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>In the end, I decided to block any access to the drives behind authentication, with the <code>SAMBA_USERNAME</code> and <code>SAMBA_PASSWORD</code> variables containing the username and password I’d need to use in order to connect from my other devices.</p>
 <p>Note: <code>SAMBA_USERNAME</code> and <code>SAMBA_PASSWORD</code> can be provided via a <code>.env</code> file next to the <code>docker-compose.yml</code>:</p>
-<pre class="shell"><code>SAMBA_PASSWORD=mypassword
-SAMBA_USERNAME=myusername</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="va">SAMBA_PASSWORD</span><span class="op">=</span>mypassword</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="va">SAMBA_USERNAME</span><span class="op">=</span>myusername</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Explanation of the docker-compose command</strong></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">command</span><span class="kw">: </span><span class="ch">&gt;</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  -u "${SAMBA_USERNAME};${SAMBA_PASSWORD}"</span>
@@ -576,12 +609,10 @@ SAMBA_USERNAME=myusername</code></pre>
 <li><code>yes</code> = Share appears in network browser listings</li>
 <li><code>no</code> = Share is hidden (but still accessible if you know the name)</li>
 </ul></li>
-<li><strong><code>yes</code></strong> - Read-only</li>
-</ol>
+<li><strong><code>yes</code></strong> - Read-only
 <ul>
 <li>Set the drive to be read-only. The authenticated user can still write.</li>
-</ul>
-<ol start="5" type="1">
+</ul></li>
 <li><strong><code>no</code></strong> - Guest access
 <ul>
 <li><code>no</code> = Requires authentication (username/password)</li>
@@ -614,7 +645,11 @@ SAMBA_USERNAME=myusername</code></pre>
 </ul></li>
 </ol>
 <p>These masks ensure that: - I (owner) can read/write/delete - My group members can read/write - Others can only read - Directories are executable (required to enter them)</p>
-<p>[Step 5: Setting up Home Assistant] <a href="https://www.home-assistant.io">Home Assistant</a> is an open-source platform for home automation. It lets you connect IoT devices and monitor metrics via sensors.</p>
+<hr>
+</section>
+<section id="step-5-setting-up-home-assistant" class="level3">
+<h3 class="anchored" data-anchor-id="step-5-setting-up-home-assistant">Step 5: Setting up Home Assistant</h3>
+<p><a href="https://www.home-assistant.io">Home Assistant</a> is an open-source platform for home automation. It lets you connect IoT devices and monitor metrics via sensors.</p>
 <p>I’ve been looking into ways to track the temperature and humidity of my house for a long time, and in one earlier attempt I tried to set up Home Assistant with a standalone sensor. It was very complicated, did not work well, and I gave up after a while.</p>
 <p>For this set up I decided to make my life a bit easier by purchasing a connected temperature/humidity sensor and a Zigbee antenna to connect it with.</p>
 <p>Still, I first had to boot the Home Assistant software, and as before I used a Docker container with this <code>docker-compose.yml</code> file:</p>
@@ -634,17 +669,18 @@ SAMBA_USERNAME=myusername</code></pre>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">devices</span><span class="kw">:</span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="st">"/dev/ttyUSB0:/dev/ttyUSB0"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>These lines are needed to let the Home Assistant container communicate with the antenna, which is <code>/dev/ttyUSB0</code>. Depending on the device, the serial code may be different: you should be able to find it with the command</p>
-<pre class="shell"><code>ls /dev/tty*</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> /dev/tty<span class="pp">*</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>At this point, all I did was following the instructions shown by Home Assistant.</p>
 <p>The only thing I need to mention is that I had some issues connecting the sensor to the antenna, and the solution for that particular problem was turning it off and back on by taking out the battery. Once it rebooted, I was able to connect it just fine.</p>
 <p>Finally, I was able to access the Home Assistant dashboard by connecting to <code>http://raspberrypi:8123</code>.</p>
+<hr>
 </section>
-<section id="step-5-monitoring-with-cockpit" class="level3">
-<h3 class="anchored" data-anchor-id="step-5-monitoring-with-cockpit">Step 5: Monitoring with Cockpit</h3>
+<section id="step-6-monitoring-with-cockpit" class="level3">
+<h3 class="anchored" data-anchor-id="step-6-monitoring-with-cockpit">Step 6: Monitoring with Cockpit</h3>
 <p>The final step (for this post, at any rate) consisted in finding a way to monitor the Raspberry from the Mac, to check that it was not melting itself down, and in general keep an eye on the setup.</p>
 <p>To do so, I installed <code>cockpit</code>, a monitoring software that monitors the resource usage of the board, as well as its temperature. For this, no container: apt was sufficient.</p>
-<pre class="shell"><code>sudo apt install cockpit
-sudo systemctl enable --now cockpit.socket</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install cockpit</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> systemctl enable <span class="at">--now</span> cockpit.socket</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>After this, <code>cockpit</code> became accessible at the address <code>http://raspberrypi:9090</code>.</p>
 </section>
 </section>
